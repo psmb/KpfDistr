@@ -1,0 +1,3 @@
+# kp-f.ru Neos distribution
+
+Yet another Neos website that is being created by our company. Stay tuned...
