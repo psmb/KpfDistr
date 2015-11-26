@@ -24,7 +24,10 @@ prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 
 		mainMenu = Menu {
 			entryLevel = 1
-			maximumLevels = 2
+			maximumLevels = 1
+			normal.attributes.class = 'b-nav__element'
+			active.attributes.class = 'b-nav__element b-nav__element_clicked'
+			current.attributes.class = 'b-nav__element b-nav__element_clicked'
 		}
 
 		main = PrimaryContent {

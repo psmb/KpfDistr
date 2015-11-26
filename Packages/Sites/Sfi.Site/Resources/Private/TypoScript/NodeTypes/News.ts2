@@ -3,6 +3,9 @@ prototype(Sfi.Site:News) {
 	main = TYPO3.Neos:ContentCollection{
 		nodePath = 'main'
 	}
+	parentExhibition = Sfi.Site:ExhibitionBlock {
+		node = ${q(node).parent('[instanceof Sfi.Site:PageExhibition]').get(0)}
+	}
 	smiWidget = Sfi.Site:SmiWidget
 	announcementList = Sfi.Site:AnnouncementList
 	@process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping

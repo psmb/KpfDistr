@@ -32,18 +32,6 @@
 .b-breadcrumbs{
 	padding-top: 23px;
 }
-.b-partners{
-	float: right;
-	width: 270px;
-	height:100px;
-	margin-bottom: -40px;
-}
-.b-partners__header{
-	padding-top: 23px;
-	font-size: 13px;
-	color:#959595;
-	font-family:'Geometria-Medium', sans-serif; 
-}
 .b-breadcrumb_link{
 	color:#959595;
 	text-decoration: none;
@@ -277,5 +265,3 @@
 	text-align: center;
 	display: block;
 }
-
-

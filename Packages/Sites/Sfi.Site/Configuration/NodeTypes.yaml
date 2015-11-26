@@ -56,6 +56,24 @@ blah: &alohaRich
   abstract: TRUE
   superTypes:
     - 'TYPO3.Neos.NodeTypes:Page'
+  properties:
+    coverImage:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Обложка'
+        reloadIfChanged: FALSE
+        inspector:
+          group: document
+          editorOptions:
+            features:
+              resize: TRUE
+            crop:
+              aspectRatio:
+                enableOriginal: FALSE
+                allowCustom: FALSE
+                locked:
+                  width: 1170
+                  height: 440
 
 'Sfi.Site:Page':
   superTypes:
@@ -92,7 +110,24 @@ blah: &alohaRich
     - 'Sfi.Site:AbstractPage'
   ui:
     label: 'Выставка'
-
+  properties:
+    exhibitionCoverImage:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Обложка для каталога выставок'
+        reloadIfChanged: FALSE
+        inspector:
+          group: document
+          editorOptions:
+            features:
+              resize: TRUE
+            crop:
+              aspectRatio:
+                enableOriginal: FALSE
+                allowCustom: FALSE
+                locked:
+                  width: 220
+                  height: 254
 'Sfi.Site:PagePublishing':
   superTypes:
     - 'Sfi.Site:AbstractPage'
@@ -104,13 +139,19 @@ blah: &alohaRich
     - 'Sfi.Site:AbstractPage'
   ui:
     label: 'Проекты'
+    label: 'Издательство'
 
-'Sfi.Site:News':
+'Sfi.Site:PageSmi':
+  superTypes:
+    - 'Sfi.Site:AbstractPage'
+  ui:
+    label: 'СМИ о нас'
+
+
+'Sfi.Site:AbstractNews':
   superTypes:
     - 'Sfi.Site:AbstractPage'
     - 'Sfi.Listable:ListableMixin'
-  ui:
-    label: 'Новость'
   properties:
     teaser:
       type: string
@@ -131,10 +172,22 @@ blah: &alohaRich
             format: 'd-m-Y H:i'
       validation:
         'TYPO3.Neos/Validation/DateTimeValidator': []
+    important:
+      type: boolean
+      ui:
+        label: 'В карусель на главной'
+        inspector:
+          group: document
+
+'Sfi.Site:News':
+  superTypes:
+    - 'Sfi.Site:AbstractNews'
+  ui:
+    label: 'Новость'
 
 'Sfi.Site:Announcement':
   superTypes:
-    - 'Sfi.Site:News'
+    - 'Sfi.Site:AbstractNews'
   ui:
     label: 'Анонс'
   properties:

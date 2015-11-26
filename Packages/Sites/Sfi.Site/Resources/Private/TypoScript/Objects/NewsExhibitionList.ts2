@@ -1,0 +1,9 @@
+prototype(Sfi.Site:NewsExhibitionList) < prototype(Sfi.Listable:List) {
+	@context.listTitle = 'Выставки'
+	@context.listTitleClass = 'b-headline_red-line'
+	@context.limit = 3
+	prototype(Sfi.Listable:Listable) {
+		@context.itemRenderer = 'Sfi.Site:NewsExhibitionShort'
+		collection = ${q(site).find('[instanceof Sfi.Site:PageExhibition]').find('[instanceof Sfi.Site:News]').get()}
+	}
+}

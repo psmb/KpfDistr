@@ -20,7 +20,7 @@ body{
 	border-bottom:1px solid #EDEDED;
 }
 .b-upper__elem{
-	font-family:'Geometria-Medium', sans-serif;  
+	font-family:'Geometria-Medium', sans-serif;
 	font-size: 12px;
 	color:#B0B0B0;
 }
@@ -97,6 +97,7 @@ body{
 /*END header middle */
 /*BEGIN header lower */
 .b-header__lower{
+	position: relative;
 	margin:0 -15px;
 }
 .b-header__lower_background_img{
@@ -105,18 +106,19 @@ body{
 	z-index: 1;
 }
 .b-header__lower_content{
-	background-image: url('../images/main.jpg');
-	-moz-background-size: 100% auto; 
-	-o-background-size: 100% auto; 
-	-webkit-background-size: 100% auto; 
-	-khtml-background-size: 100% auto; 
+	-moz-background-size: 100% auto;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100% auto;
+	-khtml-background-size: 100% auto;
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 }
 .b-header__lower_nav{
 	background: rgba(0,0,0,0.7);
 	padding:10px 36px;
-	position: relative;
+	position: absolute;
+	left: 0;
+	right: 0;
 	z-index: 2;
 }
 .b-nav__element{
@@ -153,7 +155,7 @@ body{
 .b-lower__burger{
 	float: left;
 	margin-top: 4px;
-	padding-right: 10px;	
+	padding-right: 10px;
 }
 .b-lower__headline_wrap{
 	margin-top: 81px;
@@ -177,7 +179,7 @@ body{
 	margin: 15px 0px 20px 30px;
 }
 .b-lower__describtion{
-	font-family:'Geometria-Medium', sans-serif;  
+	font-family:'Geometria-Medium', sans-serif;
 	font-size: 14px;
 	color:#fff;
 	line-height: 1.1;
@@ -188,7 +190,7 @@ body{
 	text-shadow: 2px 2px 3px #1B1B1B;
 }
 .b-lower__exhibition{
-	font-family:'Geometria-Medium', sans-serif; 
+	font-family:'Geometria-Medium', sans-serif;
 	font-size: 14px;
 	cursor: pointer;
 	color:#fff;
@@ -252,7 +254,7 @@ body{
 .b-exhibition__name{
 	display: block;
 	color:#fff;
-	font-family:'Geometria-Bold', sans-serif; 
+	font-family:'Geometria-Bold', sans-serif;
 	font-size: 18px;
 }
 .b-exhibition__describtion{
@@ -272,13 +274,15 @@ body{
 .b-exhibition__block{
 	position: relative;
 	background-repeat: no-repeat;
-	-moz-background-size: 100% auto; 
-	-o-background-size: 100% auto; 
-	-webkit-background-size: 100% auto; 
-	-khtml-background-size: 100% auto; 
+	-moz-background-size: 100% auto;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100% auto;
+	-khtml-background-size: 100% auto;
 	background-size: 100% auto;
 	float: left;
 	padding: 22px;
+	width: 351px;
+	height: 166px;
 }
 .b-exhibition__block_content{
 	position: absolute;
@@ -296,8 +300,6 @@ body{
 }
 .b-exhibition__block_2{
 	background-image: url('../images/exhibition2.jpg');
-	width: 351px;
-	height: 166px;
 	margin-bottom: 34px;
 }
 .b-exhibition__block_3{
@@ -317,11 +319,11 @@ body{
 }
 .b-publishing__img{
 	background-repeat: no-repeat;
-	-moz-background-size: 100% auto; 
-	-o-background-size: 100% auto; 
+	-moz-background-size: 100% auto;
+	-o-background-size: 100% auto;
 	float: left;
-	-webkit-background-size: 100% auto; 
-	-khtml-background-size: 100% auto; 
+	-webkit-background-size: 100% auto;
+	-khtml-background-size: 100% auto;
 	background-size: 100% auto;
 	width: 100%;
 	height: 378px;
@@ -338,7 +340,7 @@ body{
 .b-publishing__headline{
 	font-size: 18px;
 	color:#000;
-	font-family:'Geometria-Bold', sans-serif;  
+	font-family:'Geometria-Bold', sans-serif;
 	border-left:2px solid #F5A46D;
 	margin-top: 25px;
 	padding: 0 12px 0 12px;
@@ -361,16 +363,16 @@ body{
 .b-project__block{
 	float: left;
 	background-repeat: no-repeat;
-	-moz-background-size: 100% auto; 
-	-o-background-size: 100% auto; 
-	-webkit-background-size: 100% auto; 
-	-khtml-background-size: 100% auto; 
+	-moz-background-size: 100% auto;
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100% auto;
+	-khtml-background-size: 100% auto;
 	background-size: 100% auto;
 	width: 349px;
 	height: 230px;
 	padding:22px;
 	margin-bottom: 34px;
-	margin:15px;
+	margin: 0;
 	position: relative;
 }
 .b-project__content{
@@ -382,7 +384,7 @@ body{
 	color:#fff;
 }
 .b-project__headline{
-	font-family:'Geometria-Bold', sans-serif; 
+	font-family:'Geometria-Bold', sans-serif;
 	display: block;
 	font-size: 18px;
 	color:#fff;
@@ -413,7 +415,7 @@ body{
 .b-project__block_4{
 	background-image: url('../images/project4.jpg');
 }
-/*END main 
+/*END main
 /*BEGIN sidebar */
 .b-sidebar{
 	width: 349px;
@@ -431,13 +433,13 @@ body{
 .vk__wrapper{
 	width: 348px;
 	border:2px solid #5B7FA6;
-	-webkit-border-radius: 0 0 5px 5px; 
-	-moz-border-radius: 0 0 5px 5px; 
-	-ms-border-radius: 0 0 5px 5px; 
-	-o-border-radius: 0 0 5px 5px; 
-	border-radius: 0 0 5px 5px; 
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	-ms-border-radius: 0 0 5px 5px;
+	-o-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
 	padding-bottom: 20px;
-	padding-top: 20px;	
+	padding-top: 20px;
 }
 .b-slider1__wrapper{
 	position: relative;
@@ -449,11 +451,11 @@ body{
 	margin-top: 39px;
 }
 .b-slider__name{
-	font-family:'YesevaOne-Regular', serif; 
+	font-family:'YesevaOne-Regular', serif;
 	font-size: 18px;
 }
 .b-slider__describtion{
-	font-family:'Geometria-Regular', sans-serif; 
+	font-family:'Geometria-Regular', sans-serif;
 	font-size: 14px;
 	color:#3E3E3E;
 	max-width: 228px;
@@ -502,10 +504,10 @@ body{
 	color:#000;
 	width: 210px;
 	margin:auto;
-	text-align: center;	
+	text-align: center;
 }
 .b-sidebar__tape{
-	font-family:'Geometria-Bold', sans-serif; 
+	font-family:'Geometria-Bold', sans-serif;
 	background-repeat: no-repeat;
 	height: 50px;
 	color:#fff;
@@ -589,7 +591,7 @@ body{
 /*END sidebar */
 /*BEGIN headmaster */
 .b-headmaster{
-	margin: auto 39px 0 15px; 
+	margin: auto 39px 0 15px;
 	background-image: url('../images/bg_logo.png');
 	background-repeat: no-repeat;
 	background-position: right 106px;
@@ -638,7 +640,7 @@ body{
 .b-headmaster__tel{
 	color:#F08778;
 	font-size: 20px;
-	font-family:'Geometria-Regular', sans-serif; 
+	font-family:'Geometria-Regular', sans-serif;
 	float: right;
 	margin-top: -7px;
 }
@@ -655,7 +657,7 @@ body{
 	padding-bottom: 11px;
 }
 .b-right-block__elem{
-	font-family:'Geometria-Medium', sans-serif;  
+	font-family:'Geometria-Medium', sans-serif;
 	font-size: 12px;
 	color:#B0B0B0;
 	float: right;

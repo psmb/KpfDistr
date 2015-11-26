@@ -1,19 +1,8 @@
 <div class="b-slider2__wrapper">
-  <div class="next_arrow"><img src="images/arrow_next.png"></div>
-  <div class="prev_arrow"><img src="images/arrow_prev.png"></div>
-  <p class="b-slider__headline">Сми о нас</p>
+  <div class="next_arrow"><img src="{f:uri.resource(path: 'images/arrow_next.png', package: 'Sfi.Site')}"></div>
+  <div class="prev_arrow"><img src="{f:uri.resource(path: 'images/arrow_prev.png', package: 'Sfi.Site')}"></div>
+  <p class="b-slider__headline">СМИ о нас</p>
   <div class="b-slider__text">
-    <div class="b-slider_item b-slider_item_mod slide_item">
-      <p class="b-slider__describtion b-slider__describtion_mod">“Значимость этих проблем очевидна, что реализация намеченных плановых заданий требуют от нас проверки систем массового участия”</p>
-      <p class="b-slider__channel">Телеканал “Россия”</p>
-    </div>
-    <div class="b-slider_item b-slider_item_mod slide_item">
-      <p class="b-slider__describtion b-slider__describtion_mod">“Значимость этих проблем очевидна, что реализация намеченных плановых заданий требуют от нас проверки систем массового участия”</p>
-      <p class="b-slider__channel">Телеканал “Россия”</p>
-    </div>
-    <div class="b-slider_item b-slider_item_mod slide_item">
-      <p class="b-slider__describtion b-slider__describtion_mod">“Значимость этих проблем очевидна, что реализация намеченных плановых заданий требуют от нас проверки систем массового участия”</p>
-      <p class="b-slider__channel">Телеканал “Россия”</p>
-    </div>
+    {list -> f:format.raw()}
   </div>
 </div>

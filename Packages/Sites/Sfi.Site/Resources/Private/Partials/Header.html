@@ -1,4 +1,5 @@
 {namespace neos=TYPO3\Neos\ViewHelpers}
+
 <header class="b-header container">
   <div class="b-header__upper clearfix">
     <div class="b-upper_left_block clearfix">
@@ -12,15 +13,17 @@
     </div>
   </div>
   <div class="b-header__middle clearfix">
-    <div class="b-middle__logo">
-      <div class="b-logo__wrapper-img">
-        <img class="b-logo__img" src="{f:uri.resource(path: 'images/logo.png', package: 'Sfi.Site')}"  alt="Культурно-просветительский фонд Преображение">
+    <a href="/">
+      <div class="b-middle__logo">
+        <div class="b-logo__wrapper-img">
+          <img class="b-logo__img" src="{f:uri.resource(path: 'images/logo.png', package: 'Sfi.Site')}"  alt="Культурно-просветительский фонд Преображение">
+        </div>
+        <div class="b-logo__name">
+          <p class="b-logo__name_item1">Преображение</p>
+          <p class="b-logo__name_item2">КУЛЬТУРНО-ПРОСВЕТИТЕЛЬСКИЙ ФОНД</p>
+        </div>
       </div>
-      <div class="b-logo__name">
-        <p class="b-logo__name_item1">Преображение</p>
-        <p class="b-logo__name_item2">КУЛЬТУРНО-ПРОСВЕТИТЕЛЬСКИЙ ФОНД</p>
-      </div>
-    </div>
+    </a>
     <div class="b-middle__describtion">
       <p class="b-middle__describtion_item">Нерелигиозная неполитическая организация, для содействия духовному возрождению общества, а также интеллектуальному и творческому развитию личности.</p>
     </div>
@@ -30,28 +33,12 @@
       <i class="b-lower__burger fa fa-bars visible-xs"></i>
       <p class="b-lower__menu_word visible-xs">меню</p>
     </div>
-    <div class="b-header__lower_content clearfix">
+    <div class="clearfix">
       <nav class="b-header__lower_nav clearfix">
         <ul>
           {mainMenu -> f:format.raw()}
-          <li class="b-nav__element b-nav__element_clicked"><a href="#">главная</a></li>
-          <li class="b-nav__element"><a href="#">выставки</a></li>
-          <li class="b-nav__element"><a href="#">издательство</a></li>
-          <li class="b-nav__element"><a href="#">проекты</a></li>
-          <li class="b-nav__element"><a href="#">о нас</a></li>
         </ul>
       </nav>
-      <div class="b-lower__headline_wrap">
-        <p class="b-lower__headline">Отчет о выставке “Преображение” в декабре 2015</p>
-      </div>
-      <div class="b-lower__describtion_wrap">
-        <p class="b-lower__describtion">Задача организации, в особенности же рамки и место обучения кадров требуют определения и уточнения новых предложений.</p>
-      </div>
-      <div class="b-lower__exhibition_wrap">
-        <div class="b-lower__exhibition b-lower__exhibition_1"><p>Отчет о выставке “Преображение” в декабре 2015</p></div>
-        <div class="b-lower__exhibition b-lower__exhibition_2"><p>Название выставки или другого мероприятия</p></div>
-        <div class="b-lower__exhibition b-lower__exhibition_3 clearfix"><p>Название выставки или другого мероприятия</p></div>
-      </div>
     </div>
   </div>
 </header>

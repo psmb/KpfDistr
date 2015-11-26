@@ -1,0 +1,10 @@
+prototype(Sfi.Site:PageExhibitions) {
+	partialRootPath = 'resource://Sfi.Site/Private/Partials'
+	layoutRootPath = 'resource://Sfi.Site/Private/Layouts'
+
+	exhibitionCatalog = Sfi.Site:ExhibitionCatalog
+	newsBlogList = Sfi.Site:NewsBlogList
+
+	smiWidget = Sfi.Site:SmiWidget
+	announcementList = Sfi.Site:AnnouncementList
+}
