@@ -1,0 +1,12 @@
+prototype(Sfi.Site:AnnouncementShort) < prototype(TYPO3.TypoScript:Template) {
+	templatePath = 'resource://Sfi.Site/Private/Templates/NodeTypes/AnnouncementShort.html'
+	title = ${String.stripTags(node.properties.title)}
+	date = ${node.properties.date}
+	place = ${node.properties.place}
+	image = TYPO3.Neos:ImageUri {
+		asset = ${q(node).find('[instanceof TYPO3.Neos.NodeTypes:Image]').property('image')}
+		width = 350
+		height = 368
+		allowCropping = TRUE
+	}
+}

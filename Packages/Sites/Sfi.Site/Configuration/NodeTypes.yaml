@@ -1,8 +1,147 @@
+# Define Aloha presets to reuse throughout the document
+blah: &alohaPlain
+  placeholder: 'Enter title here'
+  format:
+    b: false
+    i: false
+    u: false
+    sub: false
+    sup: false
+    p: false
+    h1: false
+    h2: false
+    h3: false
+    pre: false
+    removeFormat: false
+  table: {  }
+  list: {  }
+  link:
+    a: false
+  alignment: {  }
+  formatlesspaste:
+    'button': FALSE
+    'formatlessPasteOption': TRUE
+    'autoparagraph': TRUE
+
+blah: &alohaRich
+  placeholder: 'Enter title here'
+  format:
+    b: true
+    i: true
+    u: false
+    sub: true
+    sup: true
+    p: true
+    h1: false
+    h2: true
+    h3: true
+    pre: false
+    removeFormat: false
+  table: {  }
+  list:
+    'ul': TRUE
+    'ol': TRUE
+  link:
+    a: true
+  alignment: {  }
+  formatlesspaste:
+    'button': TRUE
+    'formatlessPasteOption': TRUE
+    'autoparagraph': TRUE
+
 'TYPO3.Neos.NodeTypes:Page':
   abstract: TRUE
 
-'Sfi.Site:Page':
+'Sfi.Site:AbstractPage':
+  abstract: TRUE
   superTypes:
     - 'TYPO3.Neos.NodeTypes:Page'
+
+'Sfi.Site:Page':
+  superTypes:
+    - 'Sfi.Site:AbstractPage'
   ui:
     label: 'Обычная страница'
+
+'Sfi.Site:PageMain':
+  superTypes:
+    - 'Sfi.Site:AbstractPage'
+  ui:
+    label: 'Главная страница'
+
+'Sfi.Site:PageAbout':
+  superTypes:
+    - 'Sfi.Site:AbstractPage'
+  ui:
+    label: 'О проекте'
+
+'Sfi.Site:PageAbout':
+  superTypes:
+    - 'Sfi.Site:AbstractPage'
+  ui:
+    label: 'О проекте'
+
+'Sfi.Site:PageExhibitions':
+  superTypes:
+    - 'Sfi.Site:AbstractPage'
+  ui:
+    label: 'Выставки'
+
+'Sfi.Site:PageExhibition':
+  superTypes:
+    - 'Sfi.Site:AbstractPage'
+  ui:
+    label: 'Выставка'
+
+'Sfi.Site:PagePublishing':
+  superTypes:
+    - 'Sfi.Site:AbstractPage'
+  ui:
+    label: 'Издательство'
+
+'Sfi.Site:PageProjects':
+  superTypes:
+    - 'Sfi.Site:AbstractPage'
+  ui:
+    label: 'Проекты'
+
+'Sfi.Site:News':
+  superTypes:
+    - 'Sfi.Site:AbstractPage'
+    - 'Sfi.Listable:ListableMixin'
+  ui:
+    label: 'Новость'
+  properties:
+    teaser:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          <<: *alohaRich
+          placeholder: 'Тизер'
+    date:
+      type: DateTime
+      defaultValue: 'now'
+      ui:
+        label: 'Дата'
+        reloadIfChanged: true
+        inspector:
+          group: document
+          editorOptions:
+            format: 'd-m-Y H:i'
+      validation:
+        'TYPO3.Neos/Validation/DateTimeValidator': []
+
+'Sfi.Site:Announcement':
+  superTypes:
+    - 'Sfi.Site:News'
+  ui:
+    label: 'Анонс'
+  properties:
+    place:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          <<: *alohaPlain
+          placeholder: 'Место'

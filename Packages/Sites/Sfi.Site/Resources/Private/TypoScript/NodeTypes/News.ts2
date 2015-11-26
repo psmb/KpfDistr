@@ -1,0 +1,9 @@
+prototype(Sfi.Site:News) {
+	partialRootPath = 'resource://Sfi.Site/Private/Partials'
+	main = TYPO3.Neos:ContentCollection{
+		nodePath = 'main'
+	}
+	smiWidget = Sfi.Site:SmiWidget
+	announcementList = Sfi.Site:AnnouncementList
+	@process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping
+}

@@ -1,0 +1,25 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+
+<div class="b-main__wrapper">
+  <main class="b-main">
+    <div class="b-headline_red-line_wrapper">
+      <p class="b-headline_red-line">{neos:contentElement.editable(property: 'title', tag: 'span')}</p>
+      <p class="b-news__title1">{neos:contentElement.editable(property: 'teaser', tag: 'span')}</p>
+    </div>
+    <div class="b-news__wrapper">
+      {main -> f:format.raw()}
+    </div>
+    <div class="b-block__exhibition">
+      <p class="b-block__headline">Название выставки “Не должно вам быть”</p>
+      <p class="b-block__describtion">Задача организации, в особенности же консультация с широким активом укрепляет и развивает структуры в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач</p>
+      <a class="b-block__button" href="#">Перейти к выставке</a>
+    </div>
+  </main>
+</div>
+<div class="b-sidebar__wrapper clearfix">
+  <div class="b-sidebar clearfix">
+    {announcementList -> f:format.raw()}
+    {smiWidget -> f:format.raw()}
+    <f:render partial="SocialWidgets" />
+  </div>
+</div>

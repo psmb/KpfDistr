@@ -1,0 +1,11 @@
+prototype(Sfi.Site:AnnouncementList) < prototype(Sfi.Listable:List) {
+	@context.listTitle = 'Анонсы'
+	@context.listTitleClass = 'b-headline_red-line'
+	prototype(Sfi.Listable:Listable) {
+		collection = ${q(site).find('[instanceof Sfi.Site:PageExhibition]').find('[instanceof Sfi.Site:Announcement]').get()}
+		collection.@process.filterOutSelf {
+			expression = ${q(value).filter('[_name != ' + q(node).property('_name') + ']').get()}
+			@position = 'start'
+		}
+	}
+}
