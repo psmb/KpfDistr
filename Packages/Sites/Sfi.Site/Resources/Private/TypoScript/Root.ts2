@@ -37,6 +37,12 @@ prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 			}
 		}
 
+		breadcrumbs = TYPO3.Neos:BreadcrumbMenu {
+			attributes.class = 'b-breadcrumbs clearfix'
+			normal.attributes.class = 'b-breadcrumb b-breadcrumb_link'
+			active.attributes.class = 'b-breadcrumb b-breadcrumb_current'
+		}
+
 		javascripts.bodyScripts = TYPO3.TypoScript:Template {
 			templatePath = 'resource://Sfi.Site/Private/Partials/SharedResources.html'
 			partialRootPath = 'resource://Sfi.Site/Private/Partials'

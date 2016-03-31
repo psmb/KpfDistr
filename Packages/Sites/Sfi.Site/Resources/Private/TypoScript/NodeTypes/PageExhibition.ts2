@@ -1,0 +1,19 @@
+prototype(Sfi.Site:PageExhibition) {
+	partialRootPath = 'resource://Sfi.Site/Private/Partials'
+	main = TYPO3.Neos:ContentCollection{
+		nodePath = 'main'
+	}
+
+    parentNode = ${q(node).parent('[instanceof Sfi.Site:PageExhibitions]').get(0)}
+    prevNode = ${q(node).prev('[instanceof Sfi.Site:PageExhibition]').get(0)}
+    nextNode = ${q(node).next('[instanceof Sfi.Site:PageExhibition]').get(0)}
+
+    newsExhibitionList = Sfi.Site:NewsExhibitionList {
+        @context.listTitle = 'Последние новости об этой выставке'
+        @context.listTitleClass = 'b-last-news__headline'
+        prototype(Sfi.Listable:Listable) {
+            collection = ${q(node).find('[instanceof Sfi.Site:News]').get()}
+        }
+    }
+	@process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping
+}

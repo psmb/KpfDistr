@@ -1,101 +1,50 @@
+{namespace m=TYPO3\Media\ViewHelpers}
+{namespace neos=TYPO3\Neos\ViewHelpers}
 <div class="b-wrapper-main-content">
   <!-- BEGIN b-main-content -->
   <div class="b-main-content">
-    <div class="b-partners">
-      <p class="b-partners__header">При содействии:</p>
-      <img class="b-partners__img" src="images/partner3_small.png" alt="">
-      <img class="b-partners__img" src="images/partner1_small.png" alt="">
-      <img class="b-partners__img" src="images/partner2_small.png" alt="">
-      <img class="b-partners__img" src="images/partner3_small.png" alt="">
-      <img class="b-partners__img" src="images/partner1_small.png" alt="">
-    </div>
-    <div class="b-breadcrumbs clearfix">
-      <a href="#" class="b-breadcrumb b-breadcrumb_link">Преображение</a><span class="b-breadcrumb__span">&#160;/&#160;</span>
-      <a href="#" class="b-breadcrumb b-breadcrumb_link">Выставки</a><span class="b-breadcrumb__span">&#160;/&#160;</span>
-      <p class="b-breadcrumb b-breadcrumb_current">Заголовок статьи</p>
-    </div>
     <div class="b-headline_red-line_wrapper">
-      <p class="b-headline_red-line">Заголовок статьи</p>
+      <p class="b-headline_red-line">{title}</p>
     </div>
     <div class="b-content__main-img_wrapper">
-      <img class="b-content__main-img" src="images/article_main.jpg" alt="">
+        <m:image class="b-content__main-img" asset="{coverImage}" maximumWidth="1110" maximumHeight="440" allowCropping="true" allowUpScaling="true" alt="{title}" />
     </div>
-    <!-- BEGIN b-wrapper__narrow-block -->
-    <div class="b-wrapper__narrow-block">
-      <!-- BEGIN b-narrow-block-->
-      <div class="b-narrow-block">
-        <div class="b-narrow-block__article1">
-          <h1 class="b-article1__h1">Образование – от слова «образ»</h1>
-          <p class="b-article1__text">Ни для кого не секрет, что все люди пишущие – «невероятно креативны, талантливы и оригинальны». Да и как иначе – чай, литераторы, а не какое-нибудь сообщество не очень трезвых штукатуров… Все мы пишем, все мы – кто открыто, кто втайне – надеемся, что наши произведения заинтересуют редакторов и… Вот книга задумана, сюжет проработан, стонут под быстрыми пальцами клавиши терпеливого бедняги компьютера… Всё – рукопись готова, вычитана, любовно тронута ладошкой. «Ай, да Пушкин!» и все остальное раз тридцать крикнули и, тридцать три раза сплюнув через оба плеча, отправляем рукопись в издательство. Начинается первая китайскаям пытка – из предстоящих трехсот.</p>
-        </div>
-        <div class="b-narrow-block__article2">
-          <h2 class="b-article2__h2">Важные гости</h2>
-          <p class="b-article2__text">Уныние радостно потирает ладошки, отмечая зарубкой на ложке седьмой съеденный килограмм ваших нервов, и тут… Между «нервами» и «тутом» может проскочить и месяц, и два, но, при хорошем раскладе, и месяца хватает. Так вот, тут вам и звонит редактор. Вы, натурально, чуть ли не теряете голос, сердце пытается расслышать переговоры и одновременно пыхтит, выбираясь из самых пяток, а редактор, понимая ваше полуобморочное состояние, начинает втолковывать, что в вашей рукописи все хорошо и издательство готово взять ее в работу, но… Тут вы ощущаете, что сердце, наконец-то, вернулось в свою клетку из ребер, а голос обрел-таки силу, и вы начинаете все более уверенно объяснять редактору, что…</p>
-        </div>
-        <div class=\"b-image-blocks__wrapper">
-          <img class="b-image-block1" src="images/exhibition1.jpg" alt="">
-          <img class="b-image-block2" src="images/article_books.png" alt="">
-        </div>
-        <div class="clearfix"></div>
-        <div class="b-narrow-block__article3">
-          <h3 class="b-article3__h3">Выставка прошла еще в пяти городах</h3>
-          <p class="b-article3__text">Уныние радостно потирает ладошки, отмечая зарубкой на ложке седьмой съеденный килограмм ваших нервов, и тут… Между «нервами» и «тутом» может проскочить и месяц, и два, но, при хорошем раскладе, и месяца хватает. Так вот, тут вам и звонит редактор. Вы, натурально, чуть ли не теряете голос, сердце пытается расслышать переговоры и одновременно пыхтит, выбираясь из самых пяток, а редактор, понимая ваше полуобморочное состояние, начинает втолковывать, что в вашей рукописи все хорошо и издательство готово взять ее в работу, но… Тут вы ощущаете, что сердце, наконец-то, вернулось в свою клетку из ребер, а голос обрел-таки силу, и вы начинаете все более уверенно объяснять редактору, что…</p>
-        </div>
-        <img class="b-image-block3" src="images/water.png" alt="">
-        <div class="b-narrow-block__article4">
-          <p class="b-article4__text">Все мы пишем, все мы – кто открыто, кто втайне – надеемся, что наши произведения заинтересуют редакторов и… Вот книга задумана, сюжет проработан, стонут под быстрыми пальцами клавиши терпеливого бедняги компьютера… Всё – рукопись готова, вычитана, любовно тронута ладошкой. «Ай, да Пушкин!» и все остальное раз тридцать крикнули и, тридцать три раза сплюнув через оба плеча, отправляем рукопись в издательство. Начинается первая китайская пытка – из предстоящих трехсот. Остановитесь. Как там у Шукшина? «Вот примерно так он каждый раз зарабатывал себе срок». Вы же «примерно так» рубите голову вашей мечте, которая постучала в вашу дверь. Это на сайте для «любителей литературы» вы можете биться за каждую букву, за образ и даже за каждую запятую. И вам за это, кроме уважения к вашей стойкости, ничего не будет. за образ и даже за каждую запятую. И вам за это, кроме уважения к вашей стойкости, ничего не будет. А вот для переговоров с редакторами стоит запомнить одно простое правило: «Редактор всегда прав!» Если редактор говорит, что «надо бы здесь изменить то-то и то-то, а вот то лучше вообще убрать», то надо не спорить, а послушно кивать и обещать перетереть салфеточкой, смоченной спиртом, каждую буковку рукописи. Уныние радостно потирает ладошки, отмечая зарубкой на ложке седьмой съеденный килограмм ваших нервов, и тут… Между «нервами» и «тутом» может проскочить и месяц, и два, но, </p>
-        </div>
-        <img class="b-image-block4" src="images/mountains.jpg" alt="">
-        <p class="b-image__describtion">Текстовая подпись и описание фотографии этой выставки</p>
-        <div class="b-narrow__quotes clearfix">
-          <img class="b-quotes__img" src="images/conference.jpg" alt="">
-          <div class="b-quotes__right-block">
-            <p class="b-quotes__text">Вы, натурально, чуть ли не теряете голос, сердце пытается расслышать переговоры и одновременно пыхтит, выбираясь из самых пяток, а редактор, понимая ваше полуобморочное состояние, начинает втолковывать, что в вашей рукописи все хорошо и издательство готово взять ее в работу, но… Тут вы ощущаете, что сердце, наконец-то, вернулось в свою клетку из ребер, а голос обрел-таки силу.</p>
-            <p class="b-quotes__name">Сергей Юрьевич Юрский</p>
-            <div class="b-quotes__image1"></div>
-            <div class="b-quotes__image2"></div>
+    <div style="margin-top:36px">
+        {main -> f:format.raw()}
+    </div>
+    <div style="overflow: auto">
+        {newsExhibitionList -> f:format.raw()}
+    </div>
+    <div class="b-projects-nav" style="position: relative; height: 200px;">
+      <f:if condition="{prevNode}">
+          <neos:link.node class="b-breadcrumb b-breadcrumb_link" node="{prevNode}" style="position: absolute; left: 0;">
+              <div class="b-nav__prev" style="display:flex">
+                <div class="b-projects__arrow-prev" href="#"></div>
+                <div class="b-projects__text_block_prev">
+                  <p class="b-projects__name">{prevNode.properties.title}</p>
+                  <div class="b-projects__link" href="#">Предыдущий проект</div>
+                </div>
+              </div>
+          </neos:link.node>
+      </f:if>
+      <f:if condition="{nextNode}">
+          <neos:link.node class="b-breadcrumb b-breadcrumb_link" node="{nextNode}" style="position: absolute; right: 0;">
+              <div class="b-nav__next" style="display:flex">
+                <div class="b-projects__text_block_next">
+                  <p class="b-projects__name">{nextNode.properties.title}</p>
+                  <div class="b-projects__link">Следующий проект</div>
+                </div>
+                <div class="b-projects__arrow-next"></div>
+              </div>
+          </neos:link.node>
+      </f:if>
+      <neos:link.node class="b-breadcrumb b-breadcrumb_link" node="{parentNode}" style="float: none">
+          <div>
+            <div class="b-nav__list"></div>
+            <div class="b-projects__link b-projects__link_list" href="#">Вернуться к списку</div>
           </div>
-          <div class="clearfix"></div>
-          <p class="b-article5__text">Уныние радостно потирает ладошки, отмечая зарубкой на ложке седьмой съеденный килограмм ваших нервов, и тут… Между «нервами» и «тутом» может проскочить и месяц, и два, но, при хорошем раскладе, и месяца хватает. Так вот, тут вам и звонит редактор. Вы, натурально, чуть ли не теряете голос, сердце пытается расслышать переговоры и одновременно пыхтит, выбираясь из самых пяток, а редактор, понимая ваше полуобморочное состояние, начинает втолковывать, что в вашей рукописи все хорошо и издательство готово взять ее в работу, но… Тут вы ощущаете, что сердце, наконец-то, вернулось в свою клетку из ребер, а голос обрел-таки силу, и вы начинаете все более уверенно объяснять редактору, что…</p>
-        </div>
-      </div>
-      <!-- END b-narrow-block-->
-    </div>
-    <!-- END b-wrapper__narrow-block -->
-    <div class="b-last-news clearfix">
-      <p class="b-last-news__headline">Последние новости об этой выставке</p>
-      <div class="b-last-news__item">
-        <img class="b-last-news__img" src="images/project3.jpg" alt="">
-        <p class="b-last-news__describtion">Название последнего проекта</p>
-      </div>
-      <div class="b-last-news__item">
-        <img class="b-last-news__img" src="images/project1.jpg" alt="">
-        <p class="b-last-news__describtion">Презентация книги с интереным названием</p>
-      </div>
-      <div class="b-last-news__item">
-        <img class="b-last-news__img" src="images/project2.jpg" alt="">
-        <p class="b-last-news__describtion">Публичное выступление в Омске</p>
-      </div>
-    </div>
-    <div class="b-projects-nav">
-      <div class="b-nav__prev">
-        <a class="b-projects__arrow-prev" href="#"></a>
-        <div class="b-projects__text_block_prev">
-          <p class="b-projects__name">Название проекта</p>
-          <a class="b-projects__link" href="#">Предыдущий проект</a>
-        </div>
-      </div>
-      <div class="b-nav__next">
-        <a class="b-projects__arrow-next" href="#"></a>
-        <div class="b-projects__text_block_next">
-          <p class="b-projects__name">Название проекта</p>
-          <a class="b-projects__link" href="#">Следующий проект</a>
-        </div>
-      </div>
-      <div class="b-nav__back">
-        <div class="b-nav__list"></div>
-        <a class="b-projects__link b-projects__link_list" href="#">Вернуться к списку</a>
-      </div>
+      </neos:link.node>
+
     </div>
   </div>
   <!-- END b-main-content -->
