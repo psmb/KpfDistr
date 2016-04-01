@@ -1,0 +1,13 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+
+<neos:link.node node="{node}" >
+    <div class="js-exhibition__wrapper">
+      <div class="b-exhibition__wrapper">
+        <div class="b-exhibition__img" style="background-image: url('{image}')"></div>
+        <div class="b-exhibition__text">
+          <p class="b-exhibition__headline">{node.properties.title}</p>
+          <p class="b-exhibition__describtion">{node.properties.teaser}</p>
+        </div>
+      </div>
+    </div>
+</neos:link.node>

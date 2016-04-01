@@ -1,64 +1,7 @@
 <div class="b-main__wrapper">
   <!-- BEGIN b-main -->
   <main class="b-main">
-    <div class="b-headline_red-line_wrapper">
-      <p class="b-headline_red-line">Каталог выставок</p>
-    </div>
-    <div class="js-exhibition__wrapper">
-      <div class="b-exhibition__wrapper">
-        <div class="b-exhibition__img b-exhibition__img_1"></div>
-        <div class="b-exhibition__text">
-          <p class="b-exhibition__headline">Название выставки1</p>
-          <p class="b-exhibition__describtion">Строка описания выставки1</p>
-        </div>
-      </div>
-    </div>
-    <div class="js-exhibition__wrapper">
-      <div class="b-exhibition__wrapper">
-        <div class="b-exhibition__img b-exhibition__img_2"></div>
-        <div class="b-exhibition__text">
-          <p class="b-exhibition__headline">Название выставки2</p>
-          <p class="b-exhibition__describtion">Строка описания выставки2</p>
-        </div>
-      </div>
-    </div>
-    <!-- b-exhibition__wrapper_extreme этот класс нужно добавлять к каждому элементу кратному трем-->
-    <div class="js-exhibition__wrapper">
-      <div class="b-exhibition__wrapper b-exhibition__wrapper_extreme">
-        <div class="b-exhibition__img b-exhibition__img_3"></div>
-        <div class="b-exhibition__text">
-          <p class="b-exhibition__headline">Название выставки3</p>
-          <p class="b-exhibition__describtion">Строка описания выставки3</p>
-        </div>
-      </div>
-    </div>
-    <div class="js-exhibition__wrapper">
-      <div class="b-exhibition__wrapper">
-        <div class="b-exhibition__img b-exhibition__img_4"></div>
-        <div class="b-exhibition__text">
-          <p class="b-exhibition__headline">Название выставки4</p>
-          <p class="b-exhibition__describtion">Строка описания выставки4</p>
-        </div>
-      </div>
-    </div>
-    <div class="js-exhibition__wrapper">
-      <div class="b-exhibition__wrapper">
-        <div class="b-exhibition__img b-exhibition__img_5"></div>
-        <div class="b-exhibition__text">
-          <p class="b-exhibition__headline">Название выставки5</p>
-          <p class="b-exhibition__describtion">Строка описания выставки5</p>
-        </div>
-      </div>
-    </div>
-    <div class="js-exhibition__wrapper">
-      <div class="b-exhibition__wrapper b-exhibition__wrapper_extreme">
-        <div class="b-exhibition__img b-exhibition__img_6"></div>
-        <div class="b-exhibition__text">
-          <p class="b-exhibition__headline">Название выставки6</p>
-          <p class="b-exhibition__describtion">Строка описания выставки6</p>
-        </div>
-      </div>
-    </div>
+    {exhibitionCatalog -> f:format.raw()}
     <div class="clearfix"></div>
     <div class="b-blocks__news">
       <div class="b-headline_red-line_wrapper b-headline_red-line_wrapper_mod">
@@ -83,9 +26,9 @@
         <p class="b-news__title">Задача организации, в особенности же рамки и место обучения кадров играет важную роль в формировании существенных финансовых и административных условий. Таким образом консультация с широким активом способствует подготовки и реализации позиций, занимаемых участниками в... <a class="b-read-more" href="#">читать далее</a></p>
       </div>
     </div>
-  </main> 
+  </main>
   <!-- END b-main  -->
-</div> 
+</div>
 <!-- END b-main__wrapper -->
 <!-- BEGIN b-sidebar__wrapper -->
 <div class="b-sidebar__wrapper clearfix">
