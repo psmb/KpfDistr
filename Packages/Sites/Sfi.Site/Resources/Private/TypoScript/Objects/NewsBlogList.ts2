@@ -1,0 +1,7 @@
+prototype(Sfi.Site:NewsBlogList) < prototype(Sfi.Listable:List) {
+	@context.listTitle = ''
+	prototype(Sfi.Listable:Listable) {
+		@context.itemRenderer = 'Sfi.Site:NewsBlogShort'
+		collection = ${q(node).find('[instanceof Sfi.Site:News]').get()}
+	}
+}

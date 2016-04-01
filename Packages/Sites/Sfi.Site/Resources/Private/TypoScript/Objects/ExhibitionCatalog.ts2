@@ -1,7 +1,9 @@
 prototype(Sfi.Site:ExhibitionCatalogItem) < prototype(TYPO3.TypoScript:Template) {
-    templatePath = 'resource://Sfi.Site/Private/Templates/NodeTypes/ExhibitionCatalogItem.html'
-    node = ${node}
-    image = TYPO3.Neos:ImageUri {
+	templatePath = 'resource://Sfi.Site/Private/Templates/NodeTypes/ExhibitionCatalogItem.html'
+	node = ${node}
+	title = ${String.stripTags(node.properties.title)}
+	teaser = ${String.stripTags(node.properties.teaser)}
+	image = TYPO3.Neos:ImageUri {
 		asset = ${node.properties.coverImage}
 		width = 220
 		height = 254
