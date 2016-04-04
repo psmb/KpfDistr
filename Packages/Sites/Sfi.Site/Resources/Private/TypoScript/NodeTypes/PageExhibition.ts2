@@ -15,5 +15,4 @@ prototype(Sfi.Site:PageExhibition) {
             collection = ${q(node).find('[instanceof Sfi.Site:News]').get()}
         }
     }
-	@process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping
 }
