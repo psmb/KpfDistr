@@ -6,4 +6,10 @@ prototype(Sfi.Site:NewsExhibitionList) < prototype(Sfi.Listable:List) {
 		@context.itemRenderer = 'Sfi.Site:NewsExhibitionShort'
 		collection = ${q(site).find('[instanceof Sfi.Site:PageExhibition]').find('[instanceof Sfi.Site:News]').get()}
 	}
+	@cache {
+		mode = 'cached'
+		entryTags {
+			1 = ${'NodeType_Sfi.Site:PageExhibition'}
+		}
+	}
 }

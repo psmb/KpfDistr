@@ -11,4 +11,10 @@ prototype(Sfi.Site:AnnouncementList) < prototype(Sfi.Listable:List) {
 			@position = 'start'
 		}
 	}
+	@cache {
+		mode = 'cached'
+		entryTags {
+			1 = ${'NodeType_Sfi.Site:Announcement'}
+		}
+	}
 }

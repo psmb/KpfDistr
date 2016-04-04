@@ -4,4 +4,10 @@ prototype(Sfi.Site:NewsTopList) < prototype(Sfi.Listable:List) {
 		@context.itemRenderer = 'Sfi.Site:NewsTopShort'
 		collection = ${q(site).find('[instanceof Sfi.Site:AbstractNews]').filter('[important = TRUE]').get()}
 	}
+	@cache {
+		mode = 'cached'
+		entryTags {
+			1 = ${'NodeType_Sfi.Site:AbstractNews'}
+		}
+	}
 }

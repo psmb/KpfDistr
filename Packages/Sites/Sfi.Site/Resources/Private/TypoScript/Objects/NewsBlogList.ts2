@@ -4,4 +4,10 @@ prototype(Sfi.Site:NewsBlogList) < prototype(Sfi.Listable:List) {
 		@context.itemRenderer = 'Sfi.Site:NewsBlogShort'
 		collection = ${q(node).find('[instanceof Sfi.Site:News]').get()}
 	}
+	@cache {
+		mode = 'cached'
+		entryTags {
+			1 = ${'DescendantOf_' + documentNode.identifier}
+		}
+	}
 }
