@@ -41,6 +41,7 @@ prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 			attributes.class = 'b-breadcrumbs clearfix'
 			normal.attributes.class = 'b-breadcrumb b-breadcrumb_link'
 			active.attributes.class = 'b-breadcrumb b-breadcrumb_current'
+			@if.notMain = ${documentNode != site}
 		}
 
 		javascripts.bodyScripts = TYPO3.TypoScript:Template {
