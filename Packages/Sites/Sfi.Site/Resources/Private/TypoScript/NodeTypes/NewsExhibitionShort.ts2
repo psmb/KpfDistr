@@ -1,12 +1,13 @@
 prototype(Sfi.Site:NewsExhibitionShort) < prototype(TYPO3.TypoScript:Template) {
 	node = ${node}
+	iterator = ${iterator}
 	templatePath = 'resource://Sfi.Site/Private/Templates/NodeTypes/NewsExhibitionShort.html'
 	title = ${String.stripTags(node.properties.title)}
 	teaser = ${String.stripTags(node.properties.teaser)}
 	image = TYPO3.Neos:ImageUri {
 		asset = ${q(node).property('coverImage')}
 		width = 350
-		height = 167
+		height = ${iterator.isFirst ? 367 : 167}
 		allowCropping = TRUE
 	}
 }

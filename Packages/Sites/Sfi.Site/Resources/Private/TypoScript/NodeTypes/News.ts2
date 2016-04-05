@@ -8,4 +8,6 @@ prototype(Sfi.Site:News) {
 	}
 	smiWidget = Sfi.Site:SmiWidget
 	announcementList = Sfi.Site:AnnouncementList
+
+	@process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping
 }

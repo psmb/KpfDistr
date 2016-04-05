@@ -64,6 +64,13 @@ blah: &alohaRich
         reloadIfChanged: FALSE
         inspector:
           group: document
+    topCoverImage:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Обложка для карусели (если не задана, используется обычная обложка)'
+        reloadIfChanged: FALSE
+        inspector:
+          group: document
           editorOptions:
             features:
               resize: TRUE
@@ -151,7 +158,7 @@ blah: &alohaRich
 'Sfi.Site:AbstractNews':
   superTypes:
     - 'Sfi.Site:AbstractPage'
-    - 'Sfi.Listable:ListableMixin'
+    - 'Flowpack.Listable:ListableMixin'
   properties:
     teaser:
       type: string
