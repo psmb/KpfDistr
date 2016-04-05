@@ -1,7 +1,5 @@
-{namespace neos=TYPO3\Neos\ViewHelpers}
-
 <div class="container">
-	<f:render partial="Callout" />
+	<f:render partial="Callout" arguments="{_all}"/>
 </div>
 
 <footer class="b-footer container">
@@ -12,9 +10,9 @@
     </div>
     <div class="clearfix_on_580px"></div>
     <div class="b-footer__right-block">
-      <p class="b-right-block__elem">Москва, ул. Покровка</p>
-      <p class="b-right-block__elem">8(495) 322-32-43</p>
-      <p class="b-right-block__elem">email@mail.ru</p>
+      <p class="b-right-block__elem">{address}</p>
+      <p class="b-right-block__elem">{phone}</p>
+      <p class="b-right-block__elem">{email}</p>
     </div>
   </div>
   <div class="b-footer__lower">

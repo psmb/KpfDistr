@@ -1,0 +1,13 @@
+prototype(Sfi.Site:PagePublishing) {
+	partialRootPath = 'resource://Sfi.Site/Private/Partials'
+	layoutRootPath = 'resource://Sfi.Site/Private/Layouts'
+
+	newsBlogList = Sfi.Site:NewsBlogList
+
+	smiWidget = Sfi.Site:SmiWidget
+	announcementList = Sfi.Site:AnnouncementList
+
+    main = TYPO3.Neos:ContentCollection{
+        nodePath = 'main'
+    }
+}

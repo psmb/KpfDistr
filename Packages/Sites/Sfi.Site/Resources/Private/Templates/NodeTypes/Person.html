@@ -1,0 +1,23 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace m=TYPO3\Media\ViewHelpers}
+
+<div class="b-headmaster clearfix">
+    <div class="b-headmaster__wrapper clearfix">
+        <div class="b-headmaster__inner-wrapper">
+            <f:if condition="{image}">
+                <m:image class="b-headmaster__img" asset="{image}" maximumWidth="137" maximumHeight="164" allowCropping="true" allowUpScaling="true" alt="{name}" />
+            </f:if>
+            <div class="b-headmaster__right-block">
+                <p class="b-headmaster__name">{neos:contentElement.editable(property: 'name', tag: 'span')}</p>
+                <p class="b-headmaster__post">{neos:contentElement.editable(property: 'position', tag: 'span')}</p>
+                <p class="b-headmaster__quotes">“{neos:contentElement.editable(property: 'quote', tag: 'span')}”</p>
+                <p class="b-headmaster__email hidden-lg">{email}</p>
+                <p class="b-headmaster__tel hidden-lg">{phone}</p>
+            </div>
+        </div>
+        <div class="b-separated-block visible-lg">
+            <p class="b-headmaster__tel b-headmaster__tel_mod">{phone}</p>
+            <p class="b-headmaster__email b-headmaster__email_mod">{email}</p>
+        </div>
+    </div>
+</div>

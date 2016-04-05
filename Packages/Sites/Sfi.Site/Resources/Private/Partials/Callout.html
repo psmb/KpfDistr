@@ -1,12 +1,19 @@
-<div class="b-headmaster clearfix">
-  <div class="b-headmaster__wrapper clearfix">
-    <img class="b-headmaster__img" src="{f:uri.resource(path: 'images/man.png', package: 'Sfi.Site')}" alt="Алексей Наумов">
-    <div class="b-headmaster__right-block">
-      <p class="b-headmaster__name">Алексей Наумов</p>
-      <p class="b-headmaster__post">Генеральный директор</p>
-      <p class="b-headmaster__quotes">“Задача организации, в особенности же консультация с широким активом укрепляет и развивает структуры в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач”</p>
-      <p class="b-headmaster__questions">По вопросам сотрудничества обращайтесь:</p>
-      <p class="b-headmaster__tel">8(495)322-32-23</p>
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace m=TYPO3\Media\ViewHelpers}
+
+<neos:contentElement.wrap node="{site}">
+    <div class="b-headmaster clearfix">
+        <div class="b-headmaster__wrapper clearfix">
+            <f:if condition="{contactPersonImage}">
+                <m:image class="b-headmaster__img" asset="{contactPersonImage}" maximumWidth="137" maximumHeight="164" allowCropping="true" allowUpScaling="true" alt="{name}" />
+            </f:if>
+            <div class="b-headmaster__right-block">
+                <p class="b-headmaster__name">{neos:contentElement.editable(property: 'contactPersonName', tag: 'span')}</p>
+                <p class="b-headmaster__post">{neos:contentElement.editable(property: 'contactPersonPosition', tag: 'span')}</p>
+                <p class="b-headmaster__quotes">“{neos:contentElement.editable(property: 'contactPersonQuote', tag: 'span')}”</p>
+                <p class="b-headmaster__questions">По вопросам сотрудничества обращайтесь:</p>
+                <p class="b-headmaster__tel">{phone}</p>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+</neos:contentElement.wrap>

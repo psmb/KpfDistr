@@ -49,6 +49,18 @@ prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 			partialRootPath = 'resource://Sfi.Site/Private/Partials'
 			sectionName = 'bodyScripts'
 		}
+
+		# Editable info in header and footer
+		site = ${site}
+		headerInfo = ${q(site).property('headerInfo')}
+		headerDescription = ${q(site).property('headerDescription')}
+		address = ${q(site).property('address')}
+		phone = ${q(site).property('phone')}
+		email = ${q(site).property('email')}
+		contactPersonName = ${q(site).property('contactPersonName')}
+		contactPersonPosition = ${q(site).property('contactPersonPosition')}
+		contactPersonQuote = ${q(site).property('contactPersonQuote')}
+		contactPersonImage = ${q(site).property('contactPersonImage')}
 	}
 }
 

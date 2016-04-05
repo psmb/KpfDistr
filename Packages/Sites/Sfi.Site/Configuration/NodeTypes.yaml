@@ -93,19 +93,100 @@ blah: &alohaRich
     - 'Sfi.Site:AbstractPage'
   ui:
     label: 'Главная страница'
-
+  properties:
+    headerInfo:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          <<: *alohaPlain
+          placeholder: 'Строка дополнительной информации'
+    headerDescription:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          <<: *alohaPlain
+          placeholder: 'Описание о фонде и центре'
+    address:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          <<: *alohaPlain
+          placeholder: 'Адрес'
+    phone:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          <<: *alohaPlain
+          placeholder: 'Телефон'
+    email:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          <<: *alohaPlain
+          placeholder: 'e-mail'
+    contactPersonName:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          <<: *alohaPlain
+          placeholder: 'имя контактного лица'
+    contactPersonPosition:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          <<: *alohaPlain
+          placeholder: 'должность контактного лица'
+    contactPersonQuote:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          <<: *alohaPlain
+          placeholder: 'цитата контактного лица'
+    contactPersonImage:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Фотка контактной персоны'
+        reloadIfChanged: TRUE
+        inspector:
+          group: document
+          editorOptions:
+            features:
+              resize: TRUE
+            crop:
+              aspectRatio:
+                enableOriginal: FALSE
+                allowCustom: FALSE
+                locked:
+                  width: 137
+                  height: 164
 'Sfi.Site:PageAbout':
   superTypes:
     - 'Sfi.Site:AbstractPage'
   ui:
     label: 'О проекте'
-
-'Sfi.Site:PageAbout':
-  superTypes:
-    - 'Sfi.Site:AbstractPage'
-  ui:
-    label: 'О проекте'
-
+  properties:
+    fondDescription:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          <<: *alohaPlain
+          placeholder: 'Описание КПФ'
+    centreDescription:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          <<: *alohaPlain
+          placeholder: 'Описание КПЦ'
 'Sfi.Site:PageExhibitions':
   superTypes:
     - 'Sfi.Site:AbstractPage'
@@ -205,3 +286,93 @@ blah: &alohaRich
         aloha:
           <<: *alohaPlain
           placeholder: 'Место'
+
+'Sfi.Site:Person':
+  superTypes:
+    - 'TYPO3.Neos:Content'
+  ui:
+    label: 'Персона'
+  properties:
+    name:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          <<: *alohaPlain
+          placeholder: 'Место'
+    position:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          <<: *alohaPlain
+          placeholder: 'Должность'
+    quote:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          <<: *alohaPlain
+          placeholder: 'Цитата'
+    image:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Фотка персоны'
+        reloadIfChanged: FALSE
+        inspector:
+          group: type
+          editorOptions:
+            features:
+              resize: TRUE
+            crop:
+              aspectRatio:
+                enableOriginal: FALSE
+                allowCustom: FALSE
+                locked:
+                  width: 137
+                  height: 164
+
+'Sfi.Site:Book':
+  superTypes:
+    - 'TYPO3.Neos:Content'
+  ui:
+    label: 'Книжка'
+  properties:
+    title:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          <<: *alohaPlain
+          placeholder: 'Название книги'
+    subTitle:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          <<: *alohaPlain
+          placeholder: 'Краткое описание книги'
+    description:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          <<: *alohaPlain
+          placeholder: 'Развернутое описание книги'
+    image:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Обложка книги'
+        reloadIfChanged: FALSE
+        inspector:
+          group: type
+          editorOptions:
+            features:
+              resize: TRUE
+            crop:
+              aspectRatio:
+                enableOriginal: FALSE
+                allowCustom: FALSE
+                locked:
+                  width: 315
+                  height: 366

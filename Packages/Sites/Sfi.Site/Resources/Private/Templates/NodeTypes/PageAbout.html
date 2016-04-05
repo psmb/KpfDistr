@@ -1,6 +1,6 @@
-<!-- BEGIN b-main__wrapper -->
+{namespace neos=TYPO3\Neos\ViewHelpers}
+
 <div class="b-main__wrapper">
-  <!-- BEGIN b-main -->
   <main class="b-main">
     <div class="b-cultural__fund clearfix">
       <div class="b-headline_red-line_wrapper">
@@ -9,94 +9,18 @@
       <div class="b-wrapper__logo-img">
         <img class="b-logo-img" src="{f:uri.resource(path: 'images/logo.png', package: 'Sfi.Site')}"  alt="">
       </div>
-      <p class="b-fund__text">Не следует, однако забывать, что рамки и место обучения кадров требуют от нас анализа систем массового участия. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач.</p>
+      <p class="b-fund__text">{neos:contentElement.editable(property: 'fondDescription', tag: 'span')}</p>
     </div>
     <div class="b-cultural__center clearfix">
       <div class="b-headline_red-line_wrapper">
-        <p class="b-headline_red-line b-headline_red-line_color_mod">Культурно-просветительский фонд</p>
+        <p class="b-headline_red-line b-headline_red-line_color_mod">Культурно-просветительский центр</p>
       </div>
       <div class="b-wrapper__logo-img">
         <img class="b-logo-img" src="{f:uri.resource(path: 'images/logo_blue.png', package: 'Sfi.Site')}"  alt="">
       </div>
-      <p class="b-fund__text">Не следует, однако забывать, что рамки и место обучения кадров требуют от нас анализа систем массового участия. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач.</p>
+      <p class="b-fund__text">{neos:contentElement.editable(property: 'centreDescription', tag: 'span')}</p>
     </div>
   </main>
-  <!-- END b-main  -->
   <div class="clearfix"></div>
 </div>
-<!-- END b-main__wrapper -->
-<!-- BEGIN b-headmaster -->
-<div class="b-headmaster clearfix">
-  <div class="b-headmaster__wrapper clearfix">
-    <div class="b-headmaster__inner-wrapper">
-      <img class="b-headmaster__img" src="{f:uri.resource(path: 'images/man.png', package: 'Sfi.Site')}" alt="headmaster">
-      <div class="b-headmaster__right-block">
-        <p class="b-headmaster__name">Евгения Литвиненко</p>
-        <p class="b-headmaster__post">Должность</p>
-        <p class="b-headmaster__quotes">“Задача организации, в особенности же консультация с широким активом укрепляет и развивает структуры в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач”</p>
-        <p class="b-headmaster__email hidden-lg">email@site.ru</p>
-        <p class="b-headmaster__tel hidden-lg">8(495)322-32-23</p>
-      </div>
-    </div>
-    <div class="b-separated-block visible-lg">
-      <p class="b-headmaster__tel b-headmaster__tel_mod">8(495)322-32-23</p><!-- телефон и email одной и той же ячейки продублированы! -->
-      <p class="b-headmaster__email b-headmaster__email_mod">email@site.ru</p>
-    </div>
-  </div>
-</div>
-
-<div class="b-headmaster clearfix">
-  <div class="b-headmaster__wrapper clearfix">
-    <div class="b-headmaster__inner-wrapper">
-      <img class="b-headmaster__img" src="{f:uri.resource(path: 'images/man.png', package: 'Sfi.Site')}" alt="headmaster">
-      <div class="b-headmaster__right-block">
-        <p class="b-headmaster__name">Мария Иванова</p>
-        <p class="b-headmaster__post">Должность</p>
-        <p class="b-headmaster__quotes">“Задача организации, в особенности же консультация с широким активом укрепляет и развивает структуры в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач”</p>
-        <p class="b-headmaster__email hidden-lg">email@site.ru</p>
-        <p class="b-headmaster__tel hidden-lg">8(495)322-32-23</p>
-      </div>
-    </div>
-    <div class="b-separated-block visible-lg">
-      <p class="b-headmaster__tel b-headmaster__tel_mod">8(495)322-32-23</p><!-- телефон и email одной и той же ячейки продублированы! -->
-      <p class="b-headmaster__email b-headmaster__email_mod">email@site.ru</p>
-    </div>
-  </div>
-</div>
-
-<div class="b-headmaster clearfix">
-  <div class="b-headmaster__wrapper clearfix">
-    <div class="b-headmaster__inner-wrapper">
-      <img class="b-headmaster__img" src="{f:uri.resource(path: 'images/man.png', package: 'Sfi.Site')}" alt="headmaster">
-      <div class="b-headmaster__right-block">
-        <p class="b-headmaster__name">Иван Петров</p>
-        <p class="b-headmaster__post">Должность</p>
-        <p class="b-headmaster__quotes">“Задача организации, в особенности же консультация с широким активом укрепляет и развивает структуры в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач”</p>
-        <p class="b-headmaster__email hidden-lg">email@site.ru</p>
-        <p class="b-headmaster__tel hidden-lg">8(495)322-32-23</p>
-      </div>
-    </div>
-    <div class="b-separated-block visible-lg">
-      <p class="b-headmaster__tel b-headmaster__tel_mod">8(495)322-32-23</p><!-- телефон и email одной и той же ячейки продублированы! -->
-      <p class="b-headmaster__email b-headmaster__email_mod">email@site.ru</p>
-    </div>
-  </div>
-</div>
-<div class="b-headmaster clearfix">
-  <div class="b-headmaster__wrapper clearfix">
-    <div class="b-headmaster__inner-wrapper">
-      <img class="b-headmaster__img" src="{f:uri.resource(path: 'images/man.png', package: 'Sfi.Site')}" alt="headmaster">
-      <div class="b-headmaster__right-block">
-        <p class="b-headmaster__name">Мария Иванова</p>
-        <p class="b-headmaster__post">Должность</p>
-        <p class="b-headmaster__quotes">“Задача организации, в особенности же консультация с широким активом укрепляет и развивает структуры в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач”</p>
-        <p class="b-headmaster__email hidden-lg">email@site.ru</p>
-        <p class="b-headmaster__tel hidden-lg">8(495)322-32-23</p>
-      </div>
-    </div>
-    <div class="b-separated-block visible-lg">
-      <p class="b-headmaster__tel b-headmaster__tel_mod">8(495)322-32-23</p><!-- телефон и email одной и той же ячейки продублированы! -->
-      <p class="b-headmaster__email b-headmaster__email_mod">email@site.ru</p>
-    </div>
-  </div>
-</div>
+{main -> f:format.raw()}
