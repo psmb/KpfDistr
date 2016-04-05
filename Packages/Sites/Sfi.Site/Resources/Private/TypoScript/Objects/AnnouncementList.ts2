@@ -1,8 +1,8 @@
-prototype(Sfi.Site:AnnouncementList) < prototype(Sfi.Listable:List) {
+prototype(Sfi.Site:AnnouncementList) < prototype(Flowpack.Listable:List) {
 	@context.listTitle = 'Анонсы'
 	@context.listTitleClass = 'b-headline_red-line'
 	@context.limit = 3
-	prototype(Sfi.Listable:Listable) {
+	prototype(Flowpack.Listable:Listable) {
 		# Show for announcements from current section, or show all when on main page
 		rootNode = ${q(documentNode).parents().count() > 1 ? q(documentNode).parents().get(q(documentNode).parents().count() - 2) : site}
 		collection = ${q(this.rootNode).find('[instanceof Sfi.Site:Announcement]').get()}

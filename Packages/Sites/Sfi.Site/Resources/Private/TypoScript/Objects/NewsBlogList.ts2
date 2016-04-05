@@ -1,6 +1,6 @@
-prototype(Sfi.Site:NewsBlogList) < prototype(Sfi.Listable:List) {
+prototype(Sfi.Site:NewsBlogList) < prototype(Flowpack.Listable:List) {
 	@context.listTitle = ''
-	prototype(Sfi.Listable:Listable) {
+	prototype(Flowpack.Listable:Listable) {
 		@context.itemRenderer = 'Sfi.Site:NewsBlogShort'
 		collection = ${q(node).find('[instanceof Sfi.Site:News]').get()}
 	}

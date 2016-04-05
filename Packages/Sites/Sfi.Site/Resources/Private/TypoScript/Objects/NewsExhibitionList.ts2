@@ -1,8 +1,8 @@
-prototype(Sfi.Site:NewsExhibitionList) < prototype(Sfi.Listable:List) {
+prototype(Sfi.Site:NewsExhibitionList) < prototype(Flowpack.Listable:List) {
 	@context.listTitle = 'Выставки'
 	@context.listTitleClass = 'b-headline_red-line'
-	@context.limit = 3
-	prototype(Sfi.Listable:Listable) {
+	prototype(Flowpack.Listable:Listable) {
+		@context.limit = 3
 		@context.itemRenderer = 'Sfi.Site:NewsExhibitionShort'
 		collection = ${q(site).find('[instanceof Sfi.Site:PageExhibition]').find('[instanceof Sfi.Site:News]').get()}
 	}

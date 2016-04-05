@@ -15,9 +15,9 @@
         "typo3/imagine": "~2.0",
         "typo3/form": "~2.0",
         "typo3/setup": "~2.0",
-        "sfi/listable": "^0.1.0",
         "sfi/grid": "^0.1.0",
-        "sfi/youtube": "^0.1.5"
+        "sfi/youtube": "^0.1.5",
+        "flowpack/listable": "^0.3.0"
     },
     "require-dev": {
         "typo3/buildessentials": "3.0.*@rc",

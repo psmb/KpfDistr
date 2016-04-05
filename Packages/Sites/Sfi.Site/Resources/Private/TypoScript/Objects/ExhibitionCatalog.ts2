@@ -10,10 +10,10 @@ prototype(Sfi.Site:ExhibitionCatalogItem) < prototype(TYPO3.TypoScript:Template)
 		allowCropping = TRUE
 	}
 }
-prototype(Sfi.Site:ExhibitionCatalog) < prototype(Sfi.Listable:List) {
+prototype(Sfi.Site:ExhibitionCatalog) < prototype(Flowpack.Listable:List) {
 	@context.listTitle = 'Каталог выставок'
 	@context.listTitleClass = 'b-headline_red-line'
-	prototype(Sfi.Listable:Listable) {
+	prototype(Flowpack.Listable:Listable) {
 		@context.itemRenderer = 'Sfi.Site:ExhibitionCatalogItem'
 		collection = ${q(site).find('[instanceof Sfi.Site:PageExhibition]').get()}
 	}

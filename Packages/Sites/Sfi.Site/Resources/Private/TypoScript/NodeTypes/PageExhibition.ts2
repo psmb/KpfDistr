@@ -11,7 +11,7 @@ prototype(Sfi.Site:PageExhibition) {
     newsExhibitionList = Sfi.Site:NewsExhibitionList {
         @context.listTitle = 'Последние новости об этой выставке'
         @context.listTitleClass = 'b-last-news__headline'
-        prototype(Sfi.Listable:Listable) {
+        prototype(Flowpack.Listable:Listable) {
             collection = ${q(node).find('[instanceof Sfi.Site:News]').get()}
         }
     }
