@@ -5,7 +5,7 @@
     <div class="b-headmaster__wrapper clearfix">
         <div class="b-headmaster__inner-wrapper">
             <f:if condition="{image}">
-                <m:image class="b-headmaster__img" asset="{image}" maximumWidth="137" maximumHeight="164" allowCropping="true" allowUpScaling="true" alt="{name}" />
+                <m:image class="b-headmaster__img" asset="{image}" alt="{name}" />
             </f:if>
             <div class="b-headmaster__right-block">
                 <p class="b-headmaster__name">{neos:contentElement.editable(property: 'name', tag: 'span')}</p>

@@ -321,16 +321,6 @@ blah: &alohaRich
         reloadIfChanged: FALSE
         inspector:
           group: type
-          editorOptions:
-            features:
-              resize: TRUE
-            crop:
-              aspectRatio:
-                enableOriginal: FALSE
-                allowCustom: FALSE
-                locked:
-                  width: 137
-                  height: 164
 
 'Sfi.Site:Book':
   superTypes:
