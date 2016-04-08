@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="b-header__middle clearfix">
-        <a href="/">
+        <neos:link.node node="~" title="На главную" >
           <div class="b-middle__logo">
             <div class="b-logo__wrapper-img">
               <img class="b-logo__img" src="{f:uri.resource(path: 'images/logo.png', package: 'Sfi.Site')}"  alt="Культурно-просветительский фонд Преображение">
@@ -24,7 +24,7 @@
               <p class="b-logo__name_item2">КУЛЬТУРНО-ПРОСВЕТИТЕЛЬСКИЙ ФОНД</p>
             </div>
           </div>
-        </a>
+        </neos:link.node>
         <div class="b-middle__describtion">
           <p class="b-middle__describtion_item">{neos:contentElement.editable(property: 'headerDescription', tag: 'span')}</p>
         </div>

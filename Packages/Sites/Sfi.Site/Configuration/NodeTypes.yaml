@@ -57,17 +57,10 @@ blah: &alohaRich
   superTypes:
     - 'TYPO3.Neos.NodeTypes:Page'
   properties:
-    coverImage:
+    imageWide:
       type: TYPO3\Media\Domain\Model\ImageInterface
       ui:
-        label: 'Обложка'
-        reloadIfChanged: FALSE
-        inspector:
-          group: document
-    topCoverImage:
-      type: TYPO3\Media\Domain\Model\ImageInterface
-      ui:
-        label: 'Обложка для карусели (если не задана, используется обычная обложка)'
+        label: 'Широкая фотка (для карусели и др.)'
         reloadIfChanged: FALSE
         inspector:
           group: document
@@ -81,6 +74,40 @@ blah: &alohaRich
                 locked:
                   width: 1170
                   height: 440
+    imageNormal:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Стандартная фотка'
+        reloadIfChanged: FALSE
+        inspector:
+          group: document
+          editorOptions:
+            features:
+              resize: TRUE
+            crop:
+              aspectRatio:
+                enableOriginal: FALSE
+                allowCustom: FALSE
+                locked:
+                  width: 960
+                  height: 640
+    imageSquare:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Почти квадратная фотка'
+        reloadIfChanged: FALSE
+        inspector:
+          group: document
+          editorOptions:
+            features:
+              resize: TRUE
+            crop:
+              aspectRatio:
+                enableOriginal: FALSE
+                allowCustom: FALSE
+                locked:
+                  width: 350
+                  height: 367
 
 'Sfi.Site:Page':
   superTypes:
@@ -198,24 +225,6 @@ blah: &alohaRich
     - 'Sfi.Site:AbstractPage'
   ui:
     label: 'Выставка'
-  properties:
-    exhibitionCoverImage:
-      type: TYPO3\Media\Domain\Model\ImageInterface
-      ui:
-        label: 'Обложка для каталога выставок'
-        reloadIfChanged: FALSE
-        inspector:
-          group: document
-          editorOptions:
-            features:
-              resize: TRUE
-            crop:
-              aspectRatio:
-                enableOriginal: FALSE
-                allowCustom: FALSE
-                locked:
-                  width: 220
-                  height: 254
 'Sfi.Site:PagePublishing':
   superTypes:
     - 'Sfi.Site:AbstractPage'

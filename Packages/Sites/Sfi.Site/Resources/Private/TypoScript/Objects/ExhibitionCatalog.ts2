@@ -4,7 +4,7 @@ prototype(Sfi.Site:ExhibitionCatalogItem) < prototype(TYPO3.TypoScript:Template)
 	title = ${String.stripTags(node.properties.title)}
 	teaser = ${String.stripTags(node.properties.teaser)}
 	image = TYPO3.Neos:ImageUri {
-		asset = ${node.properties.coverImage}
+		asset = ${node.properties.imageSquare}
 		width = 220
 		height = 254
 		allowCropping = TRUE

@@ -4,15 +4,31 @@ prototype(Sfi.Site:PageExhibition) {
 		nodePath = 'main'
 	}
 
-    parentNode = ${q(node).parent('[instanceof Sfi.Site:PageExhibitions]').get(0)}
-    prevNode = ${q(node).prev('[instanceof Sfi.Site:PageExhibition]').get(0)}
-    nextNode = ${q(node).next('[instanceof Sfi.Site:PageExhibition]').get(0)}
+	image = TYPO3.Neos:ImageUri {
+		asset = ${node.properties.imageWide}
+		width = 1168
+		height = 437
+		allowCropping = TRUE
+		allowUpScaling = TRUE
+	}
 
-    newsExhibitionList = Sfi.Site:NewsExhibitionList {
-        @context.listTitle = 'Последние новости об этой выставке'
-        @context.listTitleClass = 'b-last-news__headline'
-        prototype(Flowpack.Listable:Listable) {
-            collection = ${q(node).find('[instanceof Sfi.Site:News]').get()}
-        }
-    }
+	parentNode = ${q(node).parent('[instanceof Sfi.Site:PageExhibitions]').get(0)}
+	prevNode = ${q(node).prev('[instanceof Sfi.Site:PageExhibition]').get(0)}
+	nextNode = ${q(node).next('[instanceof Sfi.Site:PageExhibition]').get(0)}
+
+	newsExhibitionList = Flowpack.Listable:List {
+		@context.listTitle = 'Последние новости об этой выставке'
+		@context.listTitleClass = 'b-last-news__headline'
+		prototype(Flowpack.Listable:Listable) {
+			@context.limit = 3
+			@context.itemRenderer = 'Sfi.Site:NewsRelatedShort'
+			collection = ${q(node).find('[instanceof Sfi.Site:News]').get()}
+		}
+		@cache {
+			mode = 'cached'
+			entryTags {
+				1 = ${'DescendantOf_' + documentNode.identifier}
+			}
+		}
+	}
 }

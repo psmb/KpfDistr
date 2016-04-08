@@ -9,5 +9,13 @@ prototype(Sfi.Site:News) {
 	smiWidget = Sfi.Site:SmiWidget
 	announcementList = Sfi.Site:AnnouncementList
 
+	image = TYPO3.Neos:ImageUri {
+		asset = ${node.properties.imageNormal}
+		width = 960
+		height = 640
+		allowCropping = TRUE
+		allowUpScaling = TRUE
+	}
+
 	@process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping
 }

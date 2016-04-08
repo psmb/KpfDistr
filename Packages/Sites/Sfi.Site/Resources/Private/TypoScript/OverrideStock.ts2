@@ -1,0 +1,4 @@
+prototype(TYPO3.Neos.NodeTypes:Image) {
+  maximumWidth = 960
+  maximumHeight = 640
+}

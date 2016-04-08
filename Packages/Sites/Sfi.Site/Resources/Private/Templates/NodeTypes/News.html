@@ -7,6 +7,9 @@
       <p class="b-news__title1">{neos:contentElement.editable(property: 'teaser', tag: 'span')}</p>
     </div>
     <div class="b-news__wrapper">
+      <f:if condition="{image}">
+        <img class="Image" src="{image}" alt="{title}" />
+      </f:if>
       {main -> f:format.raw()}
     </div>
     {parentExhibition -> f:format.raw()}

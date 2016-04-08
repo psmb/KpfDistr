@@ -7,8 +7,8 @@
       <p class="b-headline_red-line">{title}</p>
     </div>
     <div class="b-content__main-img_wrapper">
-        <f:if condition="{coverImage}">
-            <m:image class="b-content__main-img" asset="{coverImage}" maximumWidth="1110" maximumHeight="440" allowCropping="true" allowUpScaling="true" alt="{title}" />
+        <f:if condition="{image}">
+            <img class="Image b-content__main-img" src="{image}" alt="{title}" />
         </f:if>
     </div>
     <div style="margin-top:36px">
