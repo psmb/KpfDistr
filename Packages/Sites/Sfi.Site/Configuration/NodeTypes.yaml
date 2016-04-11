@@ -52,11 +52,21 @@ blah: &alohaRich
 'TYPO3.Neos.NodeTypes:Page':
   abstract: TRUE
 
+'Sfi.Site:HasCover':
+  abstract: TRUE
+
 'Sfi.Site:AbstractPage':
   abstract: TRUE
   superTypes:
     - 'TYPO3.Neos.NodeTypes:Page'
   properties:
+    description:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          <<: *alohaPlain
+          placeholder: 'Описание раздела'
     imageWide:
       type: TYPO3\Media\Domain\Model\ImageInterface
       ui:
@@ -197,6 +207,7 @@ blah: &alohaRich
 'Sfi.Site:PageAbout':
   superTypes:
     - 'Sfi.Site:AbstractPage'
+    - 'Sfi.Site:HasCover'
   ui:
     label: 'О проекте'
   properties:
@@ -217,6 +228,7 @@ blah: &alohaRich
 'Sfi.Site:PageExhibitions':
   superTypes:
     - 'Sfi.Site:AbstractPage'
+    - 'Sfi.Site:HasCover'
   ui:
     label: 'Выставки'
 
@@ -228,12 +240,14 @@ blah: &alohaRich
 'Sfi.Site:PagePublishing':
   superTypes:
     - 'Sfi.Site:AbstractPage'
+    - 'Sfi.Site:HasCover'
   ui:
     label: 'Издательство'
 
 'Sfi.Site:PageProjects':
   superTypes:
     - 'Sfi.Site:AbstractPage'
+    - 'Sfi.Site:HasCover'
   ui:
     label: 'Проекты'
     label: 'Издательство'
@@ -241,6 +255,7 @@ blah: &alohaRich
 'Sfi.Site:PageSmi':
   superTypes:
     - 'Sfi.Site:AbstractPage'
+    - 'Sfi.Site:HasCover'
   ui:
     label: 'СМИ о нас'
 
@@ -295,7 +310,17 @@ blah: &alohaRich
         aloha:
           <<: *alohaPlain
           placeholder: 'Место'
-
+    dateStart:
+      type: DateTime
+      ui:
+        label: 'Дата начала (пусто для однодневных событий)'
+        reloadIfChanged: true
+        inspector:
+          group: document
+          editorOptions:
+            format: 'd-m-Y H:i'
+      validation:
+        'TYPO3.Neos/Validation/DateTimeValidator': []
 'Sfi.Site:Person':
   superTypes:
     - 'TYPO3.Neos:Content'

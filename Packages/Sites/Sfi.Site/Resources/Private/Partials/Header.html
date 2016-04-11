@@ -1,34 +1,60 @@
 {namespace neos=TYPO3\Neos\ViewHelpers}
 
-<neos:contentElement.wrap node="{site}">
-    <header class="b-header container">
-      <div class="b-header__upper clearfix">
-        <div class="b-upper_left_block clearfix">
-          <i class="b-upper_burger fa fa-bars visible-xs"></i>
-          <p class="b-upper__elem b-upper_info">{neos:contentElement.editable(property: 'headerInfo', tag: 'span')}</p>
-        </div>
-        <div class="b-upper_right_block">
-          <p class="b-upper__elem">{neos:contentElement.editable(property: 'address', tag: 'span')}</p>
-          <p class="b-upper__elem">{neos:contentElement.editable(property: 'phone', tag: 'span')}</p>
-          <p class="b-upper__elem">{neos:contentElement.editable(property: 'email', tag: 'span')}</p>
-        </div>
+<header class="b-header container">
+  <neos:contentElement.wrap node="{site}">
+    <div class="b-header__upper clearfix">
+      <div class="b-upper_left_block clearfix">
+        <i class="b-upper_burger fa fa-bars visible-xs"></i>
+        <p class="b-upper__elem b-upper_info">{neos:contentElement.editable(property: 'headerInfo', tag: 'span')}</p>
       </div>
-      <div class="b-header__middle clearfix">
-        <neos:link.node node="~" title="На главную" >
-          <div class="b-middle__logo">
-            <div class="b-logo__wrapper-img">
-              <img class="b-logo__img" src="{f:uri.resource(path: 'images/logo.png', package: 'Sfi.Site')}"  alt="Культурно-просветительский фонд Преображение">
-            </div>
-            <div class="b-logo__name">
-              <p class="b-logo__name_item1">Преображение</p>
-              <p class="b-logo__name_item2">КУЛЬТУРНО-ПРОСВЕТИТЕЛЬСКИЙ ФОНД</p>
-            </div>
+      <div class="b-upper_right_block">
+        <p class="b-upper__elem">{neos:contentElement.editable(property: 'address', tag: 'span')}</p>
+        <p class="b-upper__elem">{neos:contentElement.editable(property: 'phone', tag: 'span')}</p>
+        <p class="b-upper__elem">{neos:contentElement.editable(property: 'email', tag: 'span')}</p>
+      </div>
+    </div>
+    <div class="b-header__middle clearfix">
+      <neos:link.node node="~" title="На главную" >
+        <div class="b-middle__logo">
+          <div class="b-logo__wrapper-img">
+            <img class="b-logo__img" src="{f:uri.resource(path: 'images/logo.png', package: 'Sfi.Site')}"  alt="Культурно-просветительский фонд Преображение">
           </div>
-        </neos:link.node>
-        <div class="b-middle__describtion">
-          <p class="b-middle__describtion_item">{neos:contentElement.editable(property: 'headerDescription', tag: 'span')}</p>
+          <div class="b-logo__name">
+            <p class="b-logo__name_item1">Преображение</p>
+            <p class="b-logo__name_item2">КУЛЬТУРНО-ПРОСВЕТИТЕЛЬСКИЙ ФОНД</p>
+          </div>
         </div>
+      </neos:link.node>
+      <div class="b-middle__describtion">
+        <p class="b-middle__describtion_item">{neos:contentElement.editable(property: 'headerDescription', tag: 'span')}</p>
       </div>
+    </div>
+  </neos:contentElement.wrap>
+  <f:if condition="{showCover}">
+      <f:then>
+      <neos:contentElement.wrap node="{node}">
+        <div class="b-header__lower">
+    			<div class="b-lower__menu clearfix">
+    				<i class="b-lower__burger fa fa-bars visible-xs"></i>
+    				<p class="b-lower__menu_word visible-xs">меню</p>
+    			</div>
+    			<div class="b-header__lower_content clearfix" style="background: url('{coverImage}') no-repeat">
+    				<nav class="b-header__lower_nav clearfix">
+    					<ul>
+    						{mainMenu -> f:format.raw()}
+    					</ul>
+    				</nav>
+    				<div class="b-lower__headline_wrap b-lower__headline_wrap_mod">
+    					<p class="b-lower__headline">{title}</p>
+    				</div>
+    				<div class="b-lower__describtion_wrap b-lower__describtion_wrap_mod">
+    					<p class="b-lower__describtion">{neos:contentElement.editable(property: 'description', tag: 'span')}</p>
+    				</div>
+    			</div>
+    		</div>
+      </neos:contentElement.wrap>
+    </f:then>
+    <f:else>
       <div class="b-header__lower" style="height: 36px">
         <div class="b-lower__menu clearfix">
           <i class="b-lower__burger fa fa-bars visible-xs"></i>
@@ -42,5 +68,6 @@
           </nav>
         </div>
       </div>
-    </header>
-</neos:contentElement.wrap>
+    </f:else>
+  </f:if>
+</header>

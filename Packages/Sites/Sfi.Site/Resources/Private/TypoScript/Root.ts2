@@ -51,6 +51,19 @@ prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 			sectionName = 'bodyScripts'
 		}
 
+		# Cover
+		showCover = ${q(node).is('[instanceof Sfi.Site:HasCover]')}
+		node = ${node}
+		title = ${node.properties.title}
+		description = ${node.properties.description}
+		coverImage = TYPO3.Neos:ImageUri {
+			asset = ${node.properties.imageWide}
+			width = 1168
+			height = 437
+			allowCropping = TRUE
+			allowUpScaling = TRUE
+		}
+
 		# Editable info in header and footer
 		site = ${site}
 		headerInfo = ${q(site).property('headerInfo')}
