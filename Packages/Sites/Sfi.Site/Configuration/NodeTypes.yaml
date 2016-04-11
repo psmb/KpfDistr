@@ -375,3 +375,11 @@ blah: &alohaRich
                 locked:
                   width: 315
                   height: 366
+    link:
+      type: string
+      ui:
+        label: 'Ссылка на магазин предание'
+        reloadIfChanged: FALSE
+        inspector:
+          group: type
+          editor: 'TYPO3.Neos/Inspector/Editors/LinkEditor'
