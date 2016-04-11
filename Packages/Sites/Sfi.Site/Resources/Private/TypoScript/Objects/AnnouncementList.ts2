@@ -4,7 +4,8 @@ prototype(Sfi.Site:AnnouncementList) < prototype(Flowpack.Listable:List) {
 	@context.limit = 3
 	prototype(Flowpack.Listable:Listable) {
 		# Show for announcements from current section, or show all when on main page
-		rootNode = ${q(documentNode).parents().count() > 1 ? q(documentNode).parents().get(q(documentNode).parents().count() - 2) : site}
+		parentsCount = ${q(documentNode).parents().count()}
+		rootNode = ${this.parentsCount == 0 ? site : this.parentsCount == 1 ? documentNode : q(documentNode).parents().get(this.parentsCount - 2)}
 		collection = ${q(this.rootNode).find('[instanceof Sfi.Site:Announcement]').get()}
 		collection.@process.filterOutSelf {
 			expression = ${q(value).filter('[_name != ' + q(node).property('_name') + ']').get()}
