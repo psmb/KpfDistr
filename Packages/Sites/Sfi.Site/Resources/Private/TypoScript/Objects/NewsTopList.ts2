@@ -1,6 +1,7 @@
 prototype(Sfi.Site:NewsTopList) < prototype(Flowpack.Listable:List) {
 	prototype(Flowpack.Listable:Listable) {
-    	@context.limit = 4
+		@context.limit = 4
+		@context.paginationEnabled = ${false}
 		@context.itemRenderer = 'Sfi.Site:NewsTopShort'
 		collection = ${q(site).find('[instanceof Sfi.Site:AbstractNews]').filter('[important = TRUE]').get()}
 	}

@@ -2,6 +2,7 @@ prototype(Sfi.Site:SmiWidget) < prototype(TYPO3.TypoScript:Template) {
 	templatePath = 'resource://Sfi.Site/Private/Templates/Objects/SmiWidget.html'
 	list = Flowpack.Listable:Listable {
 		@context.limit = 3
+		@context.paginationEnabled = ${false}
 		@context.itemRenderer = 'Sfi.Site:SmiShort'
 		collection = ${q(site).find('[instanceof Sfi.Site:PageSmi]').find('[instanceof Sfi.Site:News]').get()}
 	}

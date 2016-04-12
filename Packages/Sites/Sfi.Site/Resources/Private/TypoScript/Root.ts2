@@ -2,7 +2,6 @@ include: OverrideStock.ts2
 include: NodeTypes/**/*.ts2
 include: Objects/**/*.ts2
 
-#This is a default page object. It's being extended and never used directly.
 prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 	head {
 		titleTag.content = ${String.stripTags(q(node).property('title'))}
@@ -32,6 +31,10 @@ prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 		}
 
 		main = PrimaryContent {
+			renderArchive {
+				condition = ${request.arguments.archive}
+				type = 'Sfi.Site:NewsBlogArchive'
+			}
 			renderByType {
 				condition = TRUE
 				type = ${q(node).property('_nodeType.name')}
@@ -52,7 +55,7 @@ prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 		}
 
 		# Cover
-		showCover = ${q(node).is('[instanceof Sfi.Site:HasCover]')}
+		showCover = ${q(node).is('[instanceof Sfi.Site:HasCover]') && !request.arguments.archive}
 		node = ${node}
 		title = ${node.properties.title}
 		description = ${node.properties.description}
@@ -77,6 +80,12 @@ prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 		contactPersonImage = ${q(site).property('contactPersonImage')}
 	}
 }
+
+root.@cache.entryIdentifier.paginationFlag = ${request.arguments.archive}
+root.@cache.entryIdentifier.pagination = ${request.pluginArguments.listable-paginate.currentPage}
+prototype(TYPO3.Neos:Page).@cache.entryIdentifier.paginationFlag = ${request.arguments.archive}
+prototype(TYPO3.Neos:Page).@cache.entryIdentifier.pagination = ${request.pluginArguments.listable-paginate.currentPage}
+
 
 root.fallbackPage {
 	@position = 'before default'

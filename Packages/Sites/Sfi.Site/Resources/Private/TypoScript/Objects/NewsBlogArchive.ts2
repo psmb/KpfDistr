@@ -1,13 +1,12 @@
-prototype(Sfi.Site:NewsBlogList) < prototype(Flowpack.Listable:List) {
-	@context.listTitle = ''
+prototype(Sfi.Site:NewsBlogArchive) < prototype(Flowpack.Listable:List) {
+	@context.listTitle = ${node.properties.title}
 	prototype(Flowpack.Listable:Listable) {
-		@context.limit = 3
-		@context.paginationEnabled = ${false}
 		@context.itemRenderer = 'Sfi.Site:NewsBlogShort'
 		collection = ${q(node).find('[instanceof Sfi.Site:News]').get()}
 	}
 	@cache {
 		mode = 'cached'
+		entryIdentifier.pagination = ${request.pluginArguments.listable-paginate.currentPage}
 		entryTags {
 			1 = ${'DescendantOf_' + documentNode.identifier}
 		}

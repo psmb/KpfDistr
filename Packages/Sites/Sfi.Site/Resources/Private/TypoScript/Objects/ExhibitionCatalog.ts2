@@ -14,6 +14,7 @@ prototype(Sfi.Site:ExhibitionCatalog) < prototype(Flowpack.Listable:List) {
 	@context.listTitle = 'Каталог выставок'
 	@context.listTitleClass = 'b-headline_red-line'
 	prototype(Flowpack.Listable:Listable) {
+		@context.paginationEnabled = ${false}
 		@context.itemRenderer = 'Sfi.Site:ExhibitionCatalogItem'
 		collection = ${q(site).find('[instanceof Sfi.Site:PageExhibition]').get()}
 	}

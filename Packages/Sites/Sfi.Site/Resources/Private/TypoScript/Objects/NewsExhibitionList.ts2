@@ -3,6 +3,7 @@ prototype(Sfi.Site:NewsExhibitionList) < prototype(Flowpack.Listable:List) {
 	@context.listTitleClass = 'b-headline_red-line'
 	prototype(Flowpack.Listable:Listable) {
 		@context.limit = 3
+		@context.paginationEnabled = ${false}
 		@context.itemRenderer = 'Sfi.Site:NewsExhibitionShort'
 		collection = ${q(site).find('[instanceof Sfi.Site:PageExhibition]').find('[instanceof Sfi.Site:News]').get()}
 	}

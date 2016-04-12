@@ -2,7 +2,8 @@ prototype(Sfi.Site:NewsPublishingList) < prototype(Flowpack.Listable:List) {
 	@context.listTitle = 'Издательство'
 	@context.listTitleClass = 'b-headline_red-line'
 	prototype(Flowpack.Listable:Listable) {
-    	@context.limit = 2
+		@context.limit = 2
+		@context.paginationEnabled = ${false}
 		@context.itemRenderer = 'Sfi.Site:NewsPublishingShort'
 		collection = ${q(site).find('[instanceof Sfi.Site:PagePublishing]').find('[instanceof Sfi.Site:News]').get()}
 	}
