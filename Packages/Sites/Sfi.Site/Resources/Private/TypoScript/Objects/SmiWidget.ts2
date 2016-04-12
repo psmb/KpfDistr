@@ -1,4 +1,8 @@
 prototype(Sfi.Site:SmiWidget) < prototype(TYPO3.TypoScript:Template) {
+	@context.archiveLink = ${q(site).find('[instanceof Sfi.Site:PageSmi]').get(0)}
+	@context.archiveLinkTitle = 'Все публикации о нас'
+	@context.archiveLinkAdditionalParams = ${{archive: 1}}
+
 	templatePath = 'resource://Sfi.Site/Private/Templates/Objects/SmiWidget.html'
 	list = Flowpack.Listable:Listable {
 		@context.limit = 3

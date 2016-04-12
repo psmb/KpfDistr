@@ -1,5 +1,9 @@
 prototype(Sfi.Site:NewsBlogList) < prototype(Flowpack.Listable:List) {
 	@context.listTitle = ''
+	@context.archiveLink = ${node}
+	@context.archiveLinkTitle = 'Все новости'
+	@context.archiveLinkAdditionalParams = ${{archive: 1}}
+
 	prototype(Flowpack.Listable:Listable) {
 		@context.limit = 3
 		@context.paginationEnabled = ${false}

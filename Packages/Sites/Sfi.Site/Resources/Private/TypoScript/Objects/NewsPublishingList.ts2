@@ -1,6 +1,10 @@
 prototype(Sfi.Site:NewsPublishingList) < prototype(Flowpack.Listable:List) {
 	@context.listTitle = 'Издательство'
 	@context.listTitleClass = 'b-headline_red-line'
+	@context.archiveLink = ${q(site).find('[instanceof Sfi.Site:PagePublishing]').get(0)}
+	@context.archiveLinkTitle = 'Все новости издательства'
+	@context.archiveLinkAdditionalParams = ${{archive: 1}}
+
 	prototype(Flowpack.Listable:Listable) {
 		@context.limit = 2
 		@context.paginationEnabled = ${false}

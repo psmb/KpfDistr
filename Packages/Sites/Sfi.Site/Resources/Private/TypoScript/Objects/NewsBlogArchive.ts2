@@ -6,7 +6,10 @@ prototype(Sfi.Site:NewsBlogArchive) < prototype(Flowpack.Listable:List) {
 	}
 	@cache {
 		mode = 'cached'
-		entryIdentifier.pagination = ${request.pluginArguments.listable-paginate.currentPage}
+		entryIdentifier {
+			pagination = ${request.pluginArguments.listable-paginate.currentPage}
+			node = ${node}
+		}
 		entryTags {
 			1 = ${'DescendantOf_' + documentNode.identifier}
 		}

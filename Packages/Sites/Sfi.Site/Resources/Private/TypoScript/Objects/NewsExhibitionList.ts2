@@ -1,11 +1,14 @@
 prototype(Sfi.Site:NewsExhibitionList) < prototype(Flowpack.Listable:List) {
 	@context.listTitle = 'Выставки'
 	@context.listTitleClass = 'b-headline_red-line'
+	@context.archiveLink = ${q(site).find('[instanceof Sfi.Site:PageExhibitions]').get(0)}
+	@context.archiveLinkTitle = 'Все новости о выставках'
+	@context.archiveLinkAdditionalParams = ${{archive: 1}}
 	prototype(Flowpack.Listable:Listable) {
 		@context.limit = 3
 		@context.paginationEnabled = ${false}
 		@context.itemRenderer = 'Sfi.Site:NewsExhibitionShort'
-		collection = ${q(site).find('[instanceof Sfi.Site:PageExhibition]').find('[instanceof Sfi.Site:News]').get()}
+		collection = ${q(site).find('[instanceof Sfi.Site:PageExhibitions]').find('[instanceof Sfi.Site:News]').get()}
 	}
 	@cache {
 		mode = 'cached'

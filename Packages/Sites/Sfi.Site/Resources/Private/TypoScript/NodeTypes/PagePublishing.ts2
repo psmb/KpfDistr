@@ -7,7 +7,7 @@ prototype(Sfi.Site:PagePublishing) {
 	smiWidget = Sfi.Site:SmiWidget
 	announcementList = Sfi.Site:AnnouncementList
 
-    main = TYPO3.Neos:ContentCollection{
-        nodePath = 'main'
-    }
+	main = TYPO3.Neos:ContentCollection{
+		nodePath = 'main'
+	}
 }

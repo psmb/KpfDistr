@@ -1,0 +1,19 @@
+prototype(Sfi.Site:NewsForExhibitionList) < prototype(Flowpack.Listable:List) {
+  @context.listTitle = 'Последние новости об этой выставке'
+  @context.listTitleClass = 'b-last-news__headline'
+  @context.archiveLink = ${node}
+  @context.archiveLinkTitle = 'Все новости об этой выставке'
+  @context.archiveLinkAdditionalParams = ${{archive: 1}}
+
+  prototype(Flowpack.Listable:Listable) {
+    @context.limit = 3
+    @context.itemRenderer = 'Sfi.Site:NewsRelatedShort'
+    collection = ${q(node).find('[instanceof Sfi.Site:News]').get()}
+  }
+  @cache {
+    mode = 'cached'
+    entryTags {
+      1 = ${'DescendantOf_' + documentNode.identifier}
+    }
+  }
+}
