@@ -1,0 +1,56 @@
+/*
+Font declarations
+ */
+
+@font-face {
+	font-family: "PTSerif";
+	src: url("../fonts/PTSerif.woff") format("woff");
+	font-weight:400;
+	font-style:normal;
+}
+@font-face {
+	font-family: "Geometria";
+	src: url("../fonts/Geometria.woff") format("woff");
+	font-weight:400;
+	font-style:normal;
+}
+@font-face {
+	font-family: "Geometria";
+	src: url("../fonts/Geometria-bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Geometria";
+	src: url("../fonts/Geometria-medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Regal";
+	src: url("../fonts/Regal.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Regal";
+	src: url("../fonts/Regal-italic.woff") format("woff");
+	font-weight: 400;
+	font-style: italic;
+}
+@font-face {
+	font-family: "YesevaOne";
+	src: url("../fonts/YesevaOne.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+$fontFamily-main: "Georgia",serif;
+$fontFamily-alt: "Franklin",sans-serif;
+
+body {
+	font-size: rem-calc(14);
+	font-family: Tahoma, sans-serif;
+	color: $gray-dark;
+}

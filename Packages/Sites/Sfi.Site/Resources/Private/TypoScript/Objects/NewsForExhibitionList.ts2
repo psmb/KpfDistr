@@ -3,7 +3,7 @@ prototype(Sfi.Site:NewsForExhibitionList) < prototype(Flowpack.Listable:List) {
   @context.listTitleClass = 'b-last-news__headline'
   @context.archiveLink = ${node}
   @context.archiveLinkTitle = 'Все новости об этой выставке'
-  @context.archiveLinkAdditionalParams = ${{archive: 1}}
+  @context.archiveLinkAdditionalParams = ${{'--listable-paginate': {'@action': 'index'}}}
 
   prototype(Flowpack.Listable:Listable) {
     @context.limit = 3

@@ -1,0 +1,37 @@
+$gray-dark: #161616;
+$gray: #464646;
+$gray-lighter: #969696;
+$gray-light: #bebebe;
+$gray-line: #ededed;
+$gray-bg: #222222;
+
+
+$red: #ee785f;
+$orange: #f5a46d;
+$blue: #23527c;
+
+
+$color-primary: $red;
+$color-primaryAlt: $blue;
+
+
+
+.color-white {
+	color: white !important;
+}
+.color-primary {
+	color: $color-primary !important;
+}
+.color-primaryAlt {
+	color: $color-primaryAlt !important;
+}
+
+.backgroundColor-primary {
+	background-color: $color-primary !important;
+}
+.backgroundColor-primaryAlt {
+	background-color: $color-primaryAlt !important;
+}
+.backgroundColor-white {
+	background-color: white !important;
+}

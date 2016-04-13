@@ -25,14 +25,15 @@ prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 		mainMenu = Menu {
 			entryLevel = 1
 			maximumLevels = 1
-			normal.attributes.class = 'b-nav__element'
-			active.attributes.class = 'b-nav__element b-nav__element_clicked'
-			current.attributes.class = 'b-nav__element b-nav__element_clicked'
+			attributes.class = 'MainMenu'
+			normal.attributes.class = 'MainMenu-item'
+			active.attributes.class = 'MainMenu-item isActive'
+			current.attributes.class = 'MainMenu-item isActive'
 		}
 
 		main = PrimaryContent {
 			renderArchive {
-				condition = ${request.arguments.archive}
+				condition = ${request.pluginArguments.listable-paginate['@action']}
 				type = 'Sfi.Site:NewsBlogArchive'
 			}
 			renderByType {
@@ -55,7 +56,7 @@ prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 		}
 
 		# Cover
-		showCover = ${q(node).is('[instanceof Sfi.Site:HasCover]') && !request.arguments.archive}
+		showCover = ${q(node).is('[instanceof Sfi.Site:HasCover]') && !request.pluginArguments.listable-paginate['@action']}
 		node = ${node}
 		title = ${node.properties.title}
 		description = ${node.properties.description}
@@ -81,9 +82,9 @@ prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 	}
 }
 
-root.@cache.entryIdentifier.paginationFlag = ${request.arguments.archive}
+root.@cache.entryIdentifier.paginationFlag = ${request.pluginArguments.listable-paginate['@action']}
 root.@cache.entryIdentifier.pagination = ${request.pluginArguments.listable-paginate.currentPage}
-prototype(TYPO3.Neos:Page).@cache.entryIdentifier.paginationFlag = ${request.arguments.archive}
+prototype(TYPO3.Neos:Page).@cache.entryIdentifier.paginationFlag = ${request.pluginArguments.listable-paginate['@action']}
 prototype(TYPO3.Neos:Page).@cache.entryIdentifier.pagination = ${request.pluginArguments.listable-paginate.currentPage}
 
 

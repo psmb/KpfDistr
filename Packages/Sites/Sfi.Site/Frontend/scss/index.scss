@@ -1,0 +1,16 @@
+@import "../node_modules/foundation-sites/scss/foundation";
+@import "reset";
+@import "overrideVendor";
+@import "Global/**/*.scss";
+@import "Modules/**/*.scss";
+
+@include foundation-flex-grid;
+@include foundation-flex-video;
+@include foundation-visibility-classes;
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: $gray-dark;
+  background-image: url('../images/bg_grey.png');
+}
