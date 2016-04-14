@@ -1,12 +1,11 @@
 {namespace neos=TYPO3\Neos\ViewHelpers}
 
 <neos:link.node node="{node}">
-  <div class="b-header__lower_content clearfix b-header__lower" style="background-image: url('{image}')">
-    <div class="b-lower__headline_wrap">
-      <p class="b-lower__headline">{title}</p>
-    </div>
-    <div class="b-lower__describtion_wrap">
-      <p class="b-lower__describtion">{teaser}</p>
+  <div class="overlay">
+    <img src="{image}" alt="{title}"/>
+    <div class="overlay-contents">
+      <h2 class="H0 color-white textShadow medium-10 large-8 marginBottom-single">{title}</h2>
+      <p class="H4 color-white textShadow-deep medium-6 large-4">{teaser}</p>
     </div>
   </div>
 </neos:link.node>

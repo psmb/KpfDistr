@@ -1,0 +1,15 @@
+.ArchiveLink {
+  display: block;
+  color: $red;
+  padding-top: 1.5*$u;
+  padding-bottom: $u;
+  font-size: 12px;
+  &:hover {
+    text-decoration: underline;
+  }
+  @media screen and #{breakpoint(450px up)} and #{breakpoint(640px down)}, screen and #{breakpoint(880px up)} {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

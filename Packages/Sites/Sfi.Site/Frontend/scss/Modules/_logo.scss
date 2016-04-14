@@ -1,0 +1,15 @@
+.Logo {
+  display: flex;
+  @include breakpoint(400px down) {
+    flex-direction: column;
+  }
+}
+.Logo-img {
+  padding-right: $u;
+  @include breakpoint(520px up) {
+    padding-right: 2*$u;
+  }
+}
+.Logo-sign {
+  padding-top: $u/2;
+}

@@ -1,10 +1,14 @@
 prototype(Sfi.Site:NewsExhibitionList) < prototype(Flowpack.Listable:List) {
 	@context.listTitle = 'Выставки'
-	@context.listTitleClass = 'b-headline_red-line'
+	@context.listTitleClass = 'H1'
 	@context.archiveLink = ${q(site).find('[instanceof Sfi.Site:PageExhibitions]').get(0)}
 	@context.archiveLinkTitle = 'Все новости о выставках'
 	@context.archiveLinkAdditionalParams = ${{'--listable-paginate': {'@action': 'index'}}}
+	@context.archiveLinkClass = 'ArchiveLink'
+	@context.wrapClass = 'position-relative'
 	prototype(Flowpack.Listable:Listable) {
+		@context.listClass = 'NewsExhibitionsList'
+		@context.itemClass = 'NewsExhibitionsList-item'
 		@context.limit = 3
 		@context.paginationEnabled = ${false}
 		@context.itemRenderer = 'Sfi.Site:NewsExhibitionShort'

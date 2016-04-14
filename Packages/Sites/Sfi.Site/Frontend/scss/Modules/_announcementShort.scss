@@ -1,0 +1,49 @@
+.AnnouncementShort {
+  border: 1px solid $orange;
+  position: relative;
+}
+.AnnouncementShort-image {
+  width: 100%;
+}
+.AnnouncementShort-place, .AnnouncementShort-date {
+  background-color: $orange;
+  padding: 10px 2*$u;
+  position: absolute;
+}
+.AnnouncementShort-cornerLeft {
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid darken($orange, 30%);
+  border-left: 8px solid transparent;
+}
+.AnnouncementShort-cornerRight {
+  position: absolute;
+  right: 0;
+  bottom: -8px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid darken($orange, 30%);
+  border-right: 8px solid transparent;
+}
+.AnnouncementShort-place {
+  left: -8px;
+  top: 3*$u;
+}
+.AnnouncementShort-date {
+  right: -8px;
+  bottom: 3*$u;
+}
+.AnnouncementShort-inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

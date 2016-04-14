@@ -1,0 +1,15 @@
+.NewsExhibitionsList {
+  margin: -$u;
+  @include breakpoint(large up) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 420px;
+  }
+}
+.NewsExhibitionsList-item {
+  padding: $u;
+  @include breakpoint(large up) {
+    width: 50%;
+  }
+}

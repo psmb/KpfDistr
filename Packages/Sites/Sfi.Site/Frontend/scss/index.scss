@@ -1,3 +1,8 @@
+$grid-column-gutter: (
+  small: 12px,
+  medium: 24px,
+);
+
 @import "../node_modules/foundation-sites/scss/foundation";
 @import "reset";
 @import "overrideVendor";

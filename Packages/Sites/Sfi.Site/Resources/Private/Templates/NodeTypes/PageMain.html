@@ -1,29 +1,12 @@
 {newsTopList -> f:format.raw()}
-
-<div class="b-main__wrapper">
-  <main class="b-main">
-    <div class="b-exhibition__blocks clearfix">
-      {newsExhibitionList -> f:format.raw()}
-    </div>
-    <div class="b-publishing_wrapper clearfix">
-      {newsPublishingList -> f:format.raw()}
-    </div>
-    <div class="clearfix">
-      {newsProjectsList -> f:format.raw()}
-    </div>
-
-    <div class="b-partners clearfix">
-      <p class="b-partners__headline">Наши партнеры</p>
-      <img class="b-channel__item" src="{f:uri.resource(path: 'images/partner1.png', package: 'Sfi.Site')}" alt="the weather channel">
-      <img class="b-channel__item" src="{f:uri.resource(path: 'images/partner2.png', package: 'Sfi.Site')}" alt="visa">
-      <img class="b-channel__item" src="{f:uri.resource(path: 'images/partner3.png', package: 'Sfi.Site')}" alt="oscar mayer">
-      <img class="b-channel__item" src="{f:uri.resource(path: 'images/partner1.png', package: 'Sfi.Site')}" alt="the weather channel">
-      <img class="b-channel__item" src="{f:uri.resource(path: 'images/partner2.png', package: 'Sfi.Site')}" alt="visa">
-    </div>
-  </main>
-</div>
-<div class="b-sidebar__wrapper clearfix">
-  <div class="b-sidebar clearfix">
+<div class="row marginLeft-single">
+  <div class="small-12 medium-6 large-8 columns">
+    {newsExhibitionList -> f:format.raw()}
+    {newsPublishingList -> f:format.raw()}
+    {newsProjectsList -> f:format.raw()}
+    <f:render partial="Partners" />
+  </div>
+  <div class="small-12 medium-6 large-4 columns">
     {announcementList -> f:format.raw()}
     {smiWidget -> f:format.raw()}
     <f:render partial="SocialWidgets" />

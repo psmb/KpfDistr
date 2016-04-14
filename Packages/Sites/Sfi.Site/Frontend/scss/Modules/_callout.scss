@@ -1,0 +1,40 @@
+.Callout {
+  display: flex;
+  @include breakpoint(450px down) {
+    flex-flow: column;
+  }
+  background-image: url('../images/line.png');
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+.Callout-wrap {
+  @include breakpoint(380px up) {
+    background-image: url('../images/bg_logo.png');
+    background-repeat: no-repeat;
+    background-position: right 0 bottom -174px;
+  }
+}
+
+.Callout-img {
+  flex: 0 0 auto;
+  @include breakpoint(450px up) {
+    flex: 0 0 100px;
+  }
+  @include breakpoint(550px up) {
+    flex: 0 0 auto;
+  }
+  align-self: center;
+  padding-right: 2*$u;
+}
+.Callout-email {}
+.Callout-quote {
+  font-family: 'PT Serif', serif;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.Callout-phone {
+  font-family: Geometria, sans-serif;
+  font-size: 20px;
+  color: $red;
+}

@@ -11,13 +11,13 @@
                 <p class="b-headmaster__name">{neos:contentElement.editable(property: 'name', tag: 'span')}</p>
                 <p class="b-headmaster__post">{neos:contentElement.editable(property: 'position', tag: 'span')}</p>
                 <p class="b-headmaster__quotes">“{neos:contentElement.editable(property: 'quote', tag: 'span')}”</p>
-                <p class="b-headmaster__email hidden-lg">{email}</p>
+                <p class="b-headmaster__email hidden-lg"><a href="mail-to:{email}">{email}</a></p>
                 <p class="b-headmaster__tel hidden-lg">{phone}</p>
             </div>
         </div>
         <div class="b-separated-block visible-lg">
             <p class="b-headmaster__tel b-headmaster__tel_mod">{phone}</p>
-            <p class="b-headmaster__email b-headmaster__email_mod">{email}</p>
+            <p class="b-headmaster__email b-headmaster__email_mod"><a href="mail-to:{email}">{email}</a></p>
         </div>
     </div>
 </div>

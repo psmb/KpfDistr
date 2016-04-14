@@ -1,0 +1,41 @@
+.Footer {
+  background-color: $gray-bg;
+  padding-top: $u;
+  padding-bottom: $u;
+  @include breakpoint(small only) {
+    text-align: center;
+  }
+  @include breakpoint(medium up) {
+    padding-top: 2*$u;
+  }
+}
+
+.Footer-sign {
+  margin-bottom: $u;
+}
+
+.Footer-copyright {
+  border-top: 1px solid $gray;
+  margin-top: $u;
+  padding-top: $u;
+}
+
+.Footer-top {
+  @include breakpoint(medium up) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.Footer-contacts {
+  @include breakpoint(medium up) {
+    text-align: right;
+  }
+}
+
+.Footer-copyright {
+  @include breakpoint(medium up) {
+    display: flex;
+    justify-content: space-between;
+  }
+}

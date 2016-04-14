@@ -1,22 +1,21 @@
-<div class="container">
-	<f:render partial="Callout" arguments="{_all}"/>
+<div class="contentPadding">
+  <f:render partial="Callout" arguments="{_all}"/>
 </div>
 
-<footer class="b-footer container">
-  <div class="b-footer__upper clearfix">
-    <div class="b-logo__name">
-      <p class="b-logo__name_item1">преображение</p>
-      <p class="b-logo__name_item2">КУЛЬТУРНО-ПРОСВЕТИТЕЛЬСКИЙ ФОНД</p>
-    </div>
-    <div class="clearfix_on_580px"></div>
-    <div class="b-footer__right-block">
-      <p class="b-right-block__elem">{address}</p>
-      <p class="b-right-block__elem">{phone}</p>
-      <p class="b-right-block__elem">{email}</p>
+<footer class="Footer contentPadding">
+  <div class="Footer-top">
+		<div class="Sign Footer-sign">
+			<p class="Sign-title">Преображение</p>
+			<p class="Sign-subTitle">Культурно-просветительский фонд</p>
+		</div>
+    <div class="Footer-contacts">
+      <p class="H4s marginBottom-single">{address}</p>
+      <p class="H4s marginBottom-single">{phone}</p>
+      <p class="H4s marginBottom-single"><a href="mail-to:{email}">{email}</a></p>
     </div>
   </div>
-  <div class="b-footer__lower">
-    <p class="b-lower__left-block">Культурно просфетительский фонд “Преображение”</p>
-    <p class="b-lower__right-block">Все права защищены</p>
+  <div class="Footer-copyright">
+    <p class="H3s">Культурно просфетительский фонд “Преображение”</p>
+    <p class="H3s">Все права защищены</p>
   </div>
 </footer>

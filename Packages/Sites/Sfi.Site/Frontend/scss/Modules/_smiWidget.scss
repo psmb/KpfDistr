@@ -1,0 +1,20 @@
+.SmiWidget {
+  margin-top: 2*$u;
+  border: 1px solid $orange;
+}
+.SmiWidget-title {
+  background-color: $orange;
+  padding: 8px $u;
+}
+.SmiWidget-contents {
+  padding: 2*$u;
+}
+.SmiShort-title {
+  font-family: 'Geometria', sans-serif;
+	font-size: 14px;
+	line-height: $lineHeight-tight;
+}
+.SmiShort-smi {
+  font-family: YesevaOne, serif;
+  font-size: 18px;
+}

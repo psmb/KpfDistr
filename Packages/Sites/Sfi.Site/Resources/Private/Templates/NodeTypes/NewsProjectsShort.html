@@ -1,10 +1,10 @@
 {namespace neos=TYPO3\Neos\ViewHelpers}
 
 <neos:link.node node="{node}">
-  <div class="b-project__block" style="background-image: url('{image}')">
-    <div class="b-project__content">
-      <div class="b-project__headline">{title}</div>
-      <div class="b-project__describtion">{teaser}</div>
+  <div class="overlay marginBottom-double">
+    <img src="{image}" class="fullWidth" alt="{title}"/>
+    <div class="overlay-contents">
+      <div class="H2s color-white marginBottom-half textShadow">{title}</div>
     </div>
   </div>
 </neos:link.node>

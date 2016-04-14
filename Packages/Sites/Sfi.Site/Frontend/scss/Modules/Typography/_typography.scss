@@ -1,8 +1,69 @@
+.H0 {
+	font-family: 'Geometria', sans-serif;
+	font-size: 35px;
+	font-weight: bold;
+	line-height: 1.2;
+}
+
+.H1 {
+	font-family: 'Regal', sans-serif;
+	font-style: italic;
+	font-size: 30px;
+	color: $gray-dark;
+	background-image: url('../images/line.png');
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	padding-bottom: $u/2;
+	margin-top: 2*$u;
+	margin-bottom: 2*$u;
+}
+.H1s {
+	font-family: 'Regal', sans-serif;
+  font-style: italic;
+	font-size: 26px
+}
+
+.H2 {
+	font-family: 'Geometria', sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 1.2;
+}
+.H2s {
+	@extend .H2;
+	font-size: 18px;
+}
+.H25 {
+	font-family: 'Geometria', sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.2;
+	color: $gray-lighter;
+}
+.H3 {
+	font-family: 'Geometria', sans-serif;
+	font-weight: 500;
+	font-size: 13px;
+	text-transform: uppercase;
+	color: $gray-lighter;
+}
+.H3s {
+	@extend .H3;
+	font-size: 11px;
+}
 .H4 {
 	font-family: 'Geometria', sans-serif;
 	font-weight: 500;
-	font-size: 12px;
+	font-size: 14px;
 	color: $gray-lighter;
+}
+.H4b {
+	@extend .H4;
+	font-weight: bold;
+}
+.H4s {
+	@extend .H4;
+	font-size: 12px;
 }
 
 .ParagraphSans {
@@ -13,4 +74,14 @@
 	}
 	line-height: $lineHeight-normal;
 	color: $gray;
+}
+.ParagraphSerif {
+	font-family: PTSerif, serif;
+	font-size: 14px;
+	line-height: $lineHeight-normal;
+	color: $gray;
+}
+
+.HeadingWithLeftLine {
+	border-left: 2px solid $red;
 }

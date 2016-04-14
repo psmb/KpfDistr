@@ -1,0 +1,33 @@
+.Sign {
+  display: inline-block;
+}
+.Sign-title {
+  color: $red;
+  font-family: YesevaOne, serif;
+  font-size: 24px;
+  @include breakpoint(400px up) {
+    font-size: 30px;
+  }
+  @include breakpoint(520px up) {
+    font-size: 35px;
+  }
+  text-transform: uppercase;
+  background-image: url('../images/underline.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-bottom: 6px;
+}
+.Sign-subTitle {
+  color: $gray-light;
+  font-family: Geometria, sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  @include breakpoint(400px up) {
+    font-size: 12px;
+  }
+  @include breakpoint(520px up) {
+    font-size: 14px;
+  }
+  text-transform: uppercase;
+  padding-top: 6px;
+}

@@ -1,9 +1,10 @@
 {namespace neos=TYPO3\Neos\ViewHelpers}
 
 <neos:link.node node="{node}">
-  <div class="b-exhibition__block b-exhibition__block_1" style="background-image: url('{image}')">
+  <div class="b-exhibition__block b-exhibition__block_1">
+    <img src="{image}" alt="{title}"/>
     <div class="b-exhibition__block_content">
-      <div class="b-exhibition__name">{title}</div>
+      <div class="H2s">{title}</div>
       <div class="b-exhibition__describtion">{teaser}</div>
     </div>
   </div>

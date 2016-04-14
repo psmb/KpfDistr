@@ -1,10 +1,13 @@
 {namespace neos=TYPO3\Neos\ViewHelpers}
 
 <neos:link.node node="{node}">
-  <div class="b-exhibition__block {f:if(condition: iterator.isFirst, then: 'b-exhibition__block_1')}" style="background-image: url('{image}')">
-    <div class="b-exhibition__block_content">
-      <div class="b-exhibition__name">{title}</div>
-      <div class="b-exhibition__describtion">{teaser}</div>
+  <div class="overlay">
+    <img src="{image}" class="fullWidth" alt="{title}"/>
+    <div class="overlay-contents">
+      <h3 class="H2s color-white marginBottom-half textShadow">{title}</h3>
+      <f:if condition="{iterator.isFirst}">
+        <div class="ParagraphSerif color-white textShadow">{teaser}</div>
+      </f:if>
     </div>
   </div>
 </neos:link.node>
