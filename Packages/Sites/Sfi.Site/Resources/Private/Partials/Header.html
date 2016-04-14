@@ -35,6 +35,7 @@
     </div>
   </div>
   <f:if condition="{showCover}">
+    <f:then>
       <neos:contentElement.wrap node="{node}">
         <div class="overlay">
           <f:if condition="{coverImage}">
@@ -46,6 +47,13 @@
           </div>
         </div>
       </neos:contentElement.wrap>
+    </f:then>
+    <f:else>
+      <!-- It's 1 am and I'm sick... -->
+      <f:if condition="{site} != {node}">
+        <div style="height: 36px;"></div>
+      </f:if>
+    </f:else>
   </f:if>
   {breadcrumbs -> f:format.raw()}
 </header>
