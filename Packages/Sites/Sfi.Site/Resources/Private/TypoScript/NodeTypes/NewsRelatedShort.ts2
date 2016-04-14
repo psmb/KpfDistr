@@ -6,7 +6,7 @@ prototype(Sfi.Site:NewsRelatedShort) < prototype(TYPO3.TypoScript:Template) {
 	image = TYPO3.Neos:ImageUri {
 		asset = ${q(node).property('imageSquare')}
 		width = 350
-		height = 367
+		height = 384
 		allowCropping = TRUE
 	}
 }

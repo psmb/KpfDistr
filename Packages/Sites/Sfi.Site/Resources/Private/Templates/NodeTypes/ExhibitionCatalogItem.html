@@ -1,13 +1,9 @@
 {namespace neos=TYPO3\Neos\ViewHelpers}
 
 <neos:link.node node="{node}" >
-    <div class="js-exhibition__wrapper">
-      <div class="b-exhibition__wrapper">
-        <div class="b-exhibition__img" style="background-image: url('{image}')"></div>
-        <div class="b-exhibition__text">
-          <p class="b-exhibition__headline">{title}</p>
-          <p class="b-exhibition__describtion">{teaser}</p>
-        </div>
-      </div>
-    </div>
+  <div class="marginVertical-double">
+    <img src="{image}" class="fullWidth" alt="{title}" />
+    <p class="H2s HeadingWithLeftLine paddingLeft-single paddingVertical-half marginTop-sesquialteral marginBottom-half">{title}</p>
+    <p class="ParagraphSerif">{description}</p>
+  </div>
 </neos:link.node>

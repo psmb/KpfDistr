@@ -1,0 +1,13 @@
+.Breadcrumbs {
+  padding: $u 2*$u;
+  color: $gray-lighter;
+}
+
+.Breadcrumbs-item {
+  text-decoration: underline;
+  display: inline;
+  &.isActive {
+    color: $orange;
+    text-decoration: none;
+  }
+}

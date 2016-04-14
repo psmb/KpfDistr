@@ -1,16 +1,5 @@
-<div class="b-main__wrapper">
-  <main class="b-main">
-    {exhibitionCatalog -> f:format.raw()}
-    <div class="clearfix"></div>
-    <div class="b-blocks__news">
-        {newsBlogList -> f:format.raw()}
-    </div>
-  </main>
-</div>
-<div class="b-sidebar__wrapper clearfix">
-    <div class="b-sidebar clearfix">
-        {announcementList -> f:format.raw()}
-        {smiWidget -> f:format.raw()}
-        <f:render partial="SocialWidgets" />
-    </div>
-</div>
+<f:layout name="2col" />
+<f:section name="Main">
+  {exhibitionCatalog -> f:format.raw()}
+  {newsBlogList -> f:format.raw()}
+</f:section>

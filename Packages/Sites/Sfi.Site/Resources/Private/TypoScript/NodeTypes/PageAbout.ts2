@@ -2,9 +2,9 @@ prototype(Sfi.Site:PageAbout) {
 	partialRootPath = 'resource://Sfi.Site/Private/Partials'
 	layoutRootPath = 'resource://Sfi.Site/Private/Layouts'
 
-    main = TYPO3.Neos:ContentCollection{
-        nodePath = 'main'
-    }
+	main = TYPO3.Neos:ContentCollection{
+		nodePath = 'main'
+	}
 
-    @process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping
+	@process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping
 }

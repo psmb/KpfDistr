@@ -3,3 +3,7 @@ TYPO3:
     typoScript:
       autoInclude:
         'Sfi.Site': TRUE
+
+Sfi:
+  YouTube:
+    className: 'YouTube flex-video'

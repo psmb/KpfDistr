@@ -1,0 +1,19 @@
+<f:render section="Top" optional="True" />
+<div class="row paddingHorizontal-single">
+  <div class="small-12 medium-12 large-8 columns">
+    <f:render section="Main" />
+  </div>
+  <div class="small-12 medium-12 large-4 columns">
+    <div class="row large-up-1 small-up-1 medium-up-2">
+      <div class="column">
+        {announcementList -> f:format.raw()}
+      </div>
+      <div class="column">
+        {smiWidget -> f:format.raw()}
+      </div>
+      <div class="column">
+        <f:render partial="SocialWidgets" />
+      </div>
+    </div>
+  </div>
+</div>

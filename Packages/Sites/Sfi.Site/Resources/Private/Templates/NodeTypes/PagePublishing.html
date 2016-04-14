@@ -1,20 +1,8 @@
-<div class="b-main__wrapper">
-  <main class="b-main">
-    <div class="b-blocks__news">
-        {newsBlogList -> f:format.raw()}
-    </div>
-
-    <div class="b-headline_red-line_wrapper">
-      <p class="b-headline_red-line">Каталог книг</p>
-    </div>
+<f:layout name="2col" />
+<f:section name="Main">
+  {newsBlogList -> f:format.raw()}
+  <h2 class="H1">Каталог книг</h2>
+  <div class="">
     {main -> f:format.raw()}
-
-  </main>
-</div>
-<div class="b-sidebar__wrapper clearfix">
-    <div class="b-sidebar clearfix">
-        {announcementList -> f:format.raw()}
-        {smiWidget -> f:format.raw()}
-        <f:render partial="SocialWidgets" />
-    </div>
-</div>
+  </div>
+</f:section>

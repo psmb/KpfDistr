@@ -1,23 +1,23 @@
 {namespace neos=TYPO3\Neos\ViewHelpers}
 {namespace m=TYPO3\Media\ViewHelpers}
 
-<div class="b-headmaster clearfix">
-    <div class="b-headmaster__wrapper clearfix">
-        <div class="b-headmaster__inner-wrapper">
-            <f:if condition="{image}">
-                <m:image class="b-headmaster__img" asset="{image}" alt="{name}" />
-            </f:if>
-            <div class="b-headmaster__right-block">
-                <p class="b-headmaster__name">{neos:contentElement.editable(property: 'name', tag: 'span')}</p>
-                <p class="b-headmaster__post">{neos:contentElement.editable(property: 'position', tag: 'span')}</p>
-                <p class="b-headmaster__quotes">“{neos:contentElement.editable(property: 'quote', tag: 'span')}”</p>
-                <p class="b-headmaster__email hidden-lg"><a href="mail-to:{email}">{email}</a></p>
-                <p class="b-headmaster__tel hidden-lg">{phone}</p>
-            </div>
+<div class="Callout-wrap1">
+  <div class="large-8">
+    <neos:contentElement.wrap node="{node}">
+      <div class="Callout marginTop-double paddingVertical-double">
+        <div class="Callout-img marginBottom-single">
+          <f:if condition="{image}">
+            <m:image asset="{image}" maximumWidth="137" maximumHeight="164" allowCropping="true" allowUpScaling="true" alt="{name}" />
+          </f:if>
         </div>
-        <div class="b-separated-block visible-lg">
-            <p class="b-headmaster__tel b-headmaster__tel_mod">{phone}</p>
-            <p class="b-headmaster__email b-headmaster__email_mod"><a href="mail-to:{email}">{email}</a></p>
+        <div class="Callout-info">
+          <p class="Callout-name H2 marginBottom-half">{neos:contentElement.editable(property: 'name', tag: 'span')}</p>
+          <p class="Callout-position H4 marginBottom-single">{neos:contentElement.editable(property: 'position', tag: 'span')}</p>
+          <p class="Callout-quote marginBottom-single">“{neos:contentElement.editable(property: 'quote', tag: 'span')}”</p>
+          <p class="H3 marginBottom-half">По вопросам сотрудничества обращайтесь:</p>
+          <p class="Callout-phone">{phone}</p>
         </div>
-    </div>
+      </div>
+    </neos:contentElement.wrap>
+  </div>
 </div>

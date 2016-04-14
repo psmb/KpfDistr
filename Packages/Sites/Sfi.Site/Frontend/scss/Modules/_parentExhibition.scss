@@ -1,0 +1,15 @@
+.ParentExhibition {
+  background-color: $grayBg-light;
+  border-left: 2px solid $orange;
+  padding: 2*$u;
+}
+.ParentExhibition-link {
+  margin: $u 0;
+  color: white !important;
+  display: inline-block;
+  background-color: $red;
+  padding: $u;
+  &:hover {
+    background-color: darken($red, 10%);
+  }
+}

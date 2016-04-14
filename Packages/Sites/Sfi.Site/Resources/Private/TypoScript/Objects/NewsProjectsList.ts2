@@ -4,7 +4,7 @@ prototype(Sfi.Site:NewsProjectsList) < prototype(Flowpack.Listable:List) {
 	@context.archiveLink = ${q(site).find('[instanceof Sfi.Site:PageProjects]').get(0)}
 	@context.archiveLinkTitle = 'Все новости о проектах'
 	@context.archiveLinkAdditionalParams = ${{'--listable-paginate': {'@action': 'index'}}}
-	@context.archiveLinkClass = 'ArchiveLink'
+	@context.archiveLinkClass = 'ArchiveLink--main'
 	@context.wrapClass = 'position-relative'
 
 	prototype(Flowpack.Listable:Listable) {

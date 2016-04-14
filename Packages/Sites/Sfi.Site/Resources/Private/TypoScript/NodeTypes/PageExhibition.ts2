@@ -1,5 +1,7 @@
 prototype(Sfi.Site:PageExhibition) {
 	partialRootPath = 'resource://Sfi.Site/Private/Partials'
+	layoutRootPath = 'resource://Sfi.Site/Private/Layouts'
+
 	main = TYPO3.Neos:ContentCollection{
 		nodePath = 'main'
 	}
@@ -17,4 +19,6 @@ prototype(Sfi.Site:PageExhibition) {
 	nextNode = ${q(node).next('[instanceof Sfi.Site:PageExhibition]').get(0)}
 
 	newsExhibitionList = Sfi.Site:NewsForExhibitionList
+
+	@process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping
 }

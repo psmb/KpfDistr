@@ -7,6 +7,9 @@
   &:hover {
     text-decoration: underline;
   }
+}
+.ArchiveLink--main {
+  @extend .ArchiveLink;
   @media screen and #{breakpoint(450px up)} and #{breakpoint(640px down)}, screen and #{breakpoint(880px up)} {
     position: absolute;
     right: 0;

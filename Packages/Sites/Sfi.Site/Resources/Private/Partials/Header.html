@@ -29,32 +29,23 @@
       </div>
     </div>
   </neos:contentElement.wrap>
-  <f:if condition="{showCover1}">
-      <f:then>
-      <neos:contentElement.wrap node="{node}">
-        <div class="b-header__lower">
-    			<div class="b-lower__menu clearfix">
-    				<i class="b-lower__burger fa fa-bars visible-xs"></i>
-    				<p class="b-lower__menu_word visible-xs">меню</p>
-    			</div>
-    			<div class="b-header__lower_content clearfix" style="background: url('{coverImage}') no-repeat">
-    				<nav class="b-header__lower_nav clearfix">
-    					<ul>
-    						{mainMenu -> f:format.raw()}
-    					</ul>
-    				</nav>
-    				<div class="b-lower__headline_wrap b-lower__headline_wrap_mod">
-    					<p class="b-lower__headline">{title}</p>
-    				</div>
-    				<div class="b-lower__describtion_wrap b-lower__describtion_wrap_mod">
-    					<p class="b-lower__describtion">{neos:contentElement.editable(property: 'description', tag: 'span')}</p>
-    				</div>
-    			</div>
-    		</div>
-      </neos:contentElement.wrap>
-    </f:then>
-    <f:else>
+  <div class="position-relative">
+    <div style="position: absolute; top: 0; left: 0; right: 0; z-index: 1">
       {mainMenu -> f:format.raw()}
-    </f:else>
+    </div>
+  </div>
+  <f:if condition="{showCover}">
+      <neos:contentElement.wrap node="{node}">
+        <div class="overlay">
+          <f:if condition="{coverImage}">
+            <img src="{coverImage}" >
+          </f:if>
+          <div class="overlay-contents padding-single">
+            <h1 class="H0 color-white textShadow medium-10 large-8 marginBottom-single">{title}</h1>
+            <p class="H4 color-white textShadow-deep medium-6 large-4">{neos:contentElement.editable(property: 'description', tag: 'span')}</p>
+          </div>
+        </div>
+      </neos:contentElement.wrap>
   </f:if>
+  {breadcrumbs -> f:format.raw()}
 </header>

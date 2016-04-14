@@ -1,11 +1,13 @@
 prototype(Sfi.Site:News) {
 	partialRootPath = 'resource://Sfi.Site/Private/Partials'
+	layoutRootPath = 'resource://Sfi.Site/Private/Layouts'
 	main = TYPO3.Neos:ContentCollection{
 		nodePath = 'main'
 	}
 	parentExhibition = Sfi.Site:ExhibitionBlock {
 		node = ${q(node).parent('[instanceof Sfi.Site:PageExhibition]').get(0)}
 	}
+
 	smiWidget = Sfi.Site:SmiWidget
 	announcementList = Sfi.Site:AnnouncementList
 

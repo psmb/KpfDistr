@@ -66,6 +66,11 @@
 	font-size: 12px;
 }
 
+.HDecor {
+	font-family: YesevaOne, serif;
+	font-size: 18px;
+}
+
 .ParagraphSans {
 	font-family: 'Geometria', sans-serif;
 	font-size: 14px;
@@ -84,4 +89,9 @@
 
 .HeadingWithLeftLine {
 	border-left: 2px solid $red;
+}
+.HeadingWithTopLine {
+	background-image: url('../images/line.png');
+	background-position: top left;
+	background-repeat: no-repeat;
 }

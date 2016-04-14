@@ -1,14 +1,11 @@
 {namespace neos=TYPO3\Neos\ViewHelpers}
 {namespace m=TYPO3\Media\ViewHelpers}
-
-<div class="js-exhibition__wrapper">
-    <div class="b-exhibition__wrapper">
-        <f:if condition="{image}">
-            <div class="b-exhibition__img" style="background-image: url('{m:uri.image(asset:image, maximumWidth: 315, maximumHeight: 366, allowCropping: true, allowUpScaling: true)}')"></div>
-        </f:if>
-        <div class="b-exhibition__text">
-            <p class="b-exhibition__headline">{neos:contentElement.editable(property: 'title', tag: 'span')}</p>
-            <p class="b-exhibition__describtion">{neos:contentElement.editable(property: 'subTitle', tag: 'span')}</p>
-        </div>
+<div class="column">
+  <a href="{link}" target="_blank">
+    <div class="marginBottom-double">
+      <img src="{m:uri.image(asset:image, maximumWidth: 315, maximumHeight: 366, allowCropping: true, allowUpScaling: true)}" class="fullWidth" alt="{title}" />
+      <p class="H2s HeadingWithLeftLine paddingLeft-single paddingVertical-half marginVertical-sesquialteral">{neos:contentElement.editable(property: 'title', tag: 'span')}</p>
+      <p class="ParagraphSerif">{neos:contentElement.editable(property: 'subTitle', tag: 'span')}</p>
     </div>
+  </a>
 </div>

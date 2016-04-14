@@ -30,6 +30,9 @@ prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 			active.attributes.class = 'MainMenu-item isActive'
 			current.attributes.class = 'MainMenu-item isActive'
 		}
+		breadcrumbs = TYPO3.Neos:BreadcrumbMenu {
+			@if.notMain = ${documentNode != site}
+		}
 
 		main = PrimaryContent {
 			renderArchive {
@@ -42,12 +45,6 @@ prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 			}
 		}
 
-		breadcrumbs = TYPO3.Neos:BreadcrumbMenu {
-			attributes.class = 'b-breadcrumbs clearfix'
-			normal.attributes.class = 'b-breadcrumb b-breadcrumb_link'
-			active.attributes.class = 'b-breadcrumb b-breadcrumb_current'
-			@if.notMain = ${documentNode != site}
-		}
 
 		javascripts.bodyScripts = TYPO3.TypoScript:Template {
 			templatePath = 'resource://Sfi.Site/Private/Partials/SharedResources.html'
@@ -55,11 +52,12 @@ prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 			sectionName = 'bodyScripts'
 		}
 
+		showCallout = ${q(node).is('[instanceof Sfi.Site:PageAbout]') ? false : true}
+
 		# Cover
-		showCover = ${q(node).is('[instanceof Sfi.Site:HasCover]') && !request.pluginArguments.listable-paginate['@action']}
-		node = ${node}
 		title = ${node.properties.title}
 		description = ${node.properties.description}
+		showCover = ${q(node).is('[instanceof Sfi.Site:HasCover]') && !request.pluginArguments.listable-paginate['@action']}
 		coverImage = TYPO3.Neos:ImageUri {
 			asset = ${node.properties.imageWide}
 			width = 1168

@@ -1,5 +1,7 @@
 <div class="contentPadding">
-  <f:render partial="Callout" arguments="{_all}"/>
+  <f:if condition="{showCallout}">
+    <f:render partial="Callout" arguments="{_all}"/>
+  </f:if>
 </div>
 
 <footer class="Footer contentPadding">

@@ -2,7 +2,7 @@ prototype(Sfi.Site:ExhibitionCatalogItem) < prototype(TYPO3.TypoScript:Template)
 	templatePath = 'resource://Sfi.Site/Private/Templates/NodeTypes/ExhibitionCatalogItem.html'
 	node = ${node}
 	title = ${String.stripTags(node.properties.title)}
-	teaser = ${String.stripTags(node.properties.teaser)}
+	description = ${String.stripTags(node.properties.description)}
 	image = TYPO3.Neos:ImageUri {
 		asset = ${node.properties.imageSquare}
 		width = 220
@@ -12,8 +12,10 @@ prototype(Sfi.Site:ExhibitionCatalogItem) < prototype(TYPO3.TypoScript:Template)
 }
 prototype(Sfi.Site:ExhibitionCatalog) < prototype(Flowpack.Listable:List) {
 	@context.listTitle = 'Каталог выставок'
-	@context.listTitleClass = 'b-headline_red-line'
+	@context.listTitleClass = 'H1'
 	prototype(Flowpack.Listable:Listable) {
+		@context.listClass = 'row small-up-1 medium-up-2 large-up-3'
+		@context.itemClass = 'column'
 		@context.paginationEnabled = ${false}
 		@context.itemRenderer = 'Sfi.Site:ExhibitionCatalogItem'
 		collection = ${q(site).find('[instanceof Sfi.Site:PageExhibition]').get()}
