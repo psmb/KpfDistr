@@ -180,13 +180,6 @@ blah: &alohaRich
         aloha:
           <<: *alohaPlain
           placeholder: 'должность контактного лица'
-    contactPersonQuote:
-      type: string
-      ui:
-        inlineEditable: true
-        aloha:
-          <<: *alohaPlain
-          placeholder: 'цитата контактного лица'
     contactPersonImage:
       type: TYPO3\Media\Domain\Model\ImageInterface
       ui:
@@ -341,13 +334,6 @@ blah: &alohaRich
         aloha:
           <<: *alohaPlain
           placeholder: 'Должность'
-    quote:
-      type: string
-      ui:
-        inlineEditable: true
-        aloha:
-          <<: *alohaPlain
-          placeholder: 'Цитата'
     image:
       type: TYPO3\Media\Domain\Model\ImageInterface
       ui:

@@ -75,7 +75,6 @@ prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 		email = ${q(site).property('email')}
 		contactPersonName = ${q(site).property('contactPersonName')}
 		contactPersonPosition = ${q(site).property('contactPersonPosition')}
-		contactPersonQuote = ${q(site).property('contactPersonQuote')}
 		contactPersonImage = ${q(site).property('contactPersonImage')}
 	}
 }
