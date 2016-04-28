@@ -1,11 +1,12 @@
 {namespace neos=TYPO3\Neos\ViewHelpers}
 {namespace m=TYPO3\Media\ViewHelpers}
 <div class="column">
-  <a href="{link}" target="_blank">
-    <div class="marginBottom-double">
-      <img src="{m:uri.image(asset:image, maximumWidth: 315, maximumHeight: 366, allowCropping: true, allowUpScaling: true)}" class="fullWidth" alt="{title}" />
-      <p class="H2s HeadingWithLeftLine paddingLeft-single paddingVertical-half marginVertical-sesquialteral">{neos:contentElement.editable(property: 'title', tag: 'span')}</p>
-      <p class="ParagraphSerif">{neos:contentElement.editable(property: 'subTitle', tag: 'span')}</p>
-    </div>
-  </a>
+  <div class="marginBottom-double">
+    <img src="{m:uri.image(asset:image, maximumWidth: 315, maximumHeight: 366, allowCropping: true, allowUpScaling: true)}" class="fullWidth" alt="{title}" />
+    <p class="H2s HeadingWithLeftLine paddingLeft-single paddingVertical-half marginVertical-sesquialteral">{neos:contentElement.editable(property: 'title', tag: 'span')}</p>
+    <p class="ParagraphSerif">{neos:contentElement.editable(property: 'subTitle', tag: 'span')}</p>
+    <a class="Button marginVertical-single" href="{link}" target="_blank">
+      Заказать
+    </a>
+  </div>
 </div>

@@ -1,13 +1,18 @@
-prototype(Sfi.Site:SmiWidget) < prototype(TYPO3.TypoScript:Template) {
-	@context.archiveLink = ${q(site).find('[instanceof Sfi.Site:PageSmi]').get(0)}
-	@context.archiveLinkTitle = 'Все публикации о нас'
-	@context.archiveLinkAdditionalParams = ${{'--listable-paginate': {'@action': 'index'}}}
+prototype(Sfi.Site:SmiWidget) < prototype(Flowpack.Listable:List) {
+	@context.listTitle = 'СМИ о нас'
+	@context.listTitleClass = 'SmiWidget-title color-white H4'
+	@context.wrapClass = 'SmiWidget'
+	// @context.archiveLink = ${q(site).find('[instanceof Sfi.Site:PageSmi]').get(0)}
+	// @context.archiveLinkTitle = 'Все публикации о нас'
+	// @context.archiveLinkAdditionalParams = ${{'--listable-paginate': {'@action': 'index'}}}
+	// @context.archiveLinkClass = 'ArchiveLink'
 
-	templatePath = 'resource://Sfi.Site/Private/Templates/Objects/SmiWidget.html'
-	list = Flowpack.Listable:Listable {
+	prototype(Flowpack.Listable:Listable) {
 		@context.limit = 3
 		@context.paginationEnabled = ${false}
 		@context.itemRenderer = 'Sfi.Site:SmiShort'
+		@context.listClass = 'SmiWidget-contents js-Carousel--slider Carousel'
+		@context.itemClass = 'js-Carousel-item'
 		collection = ${q(site).find('[instanceof Sfi.Site:PageSmi]').find('[instanceof Sfi.Site:News]').get()}
 	}
 	@cache {

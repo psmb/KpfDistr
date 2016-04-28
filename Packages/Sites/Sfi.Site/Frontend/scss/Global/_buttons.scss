@@ -1,0 +1,10 @@
+.Button {
+  display: inline-block;
+  background-color: $red;
+  color: white;
+  padding: 10px 20px;
+  transition: $transition;
+  &:hover {
+    background-color: darken($red, 10%);
+  }
+}

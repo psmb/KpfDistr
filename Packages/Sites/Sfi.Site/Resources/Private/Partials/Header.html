@@ -4,7 +4,7 @@
   <neos:contentElement.wrap node="{site}">
     <div class="HeaderTop paddingVertical-single contentPadding">
       <div>
-        <p class="H4s">{neos:contentElement.editable(property: 'headerInfo', tag: 'span')}</p>
+        <p class="H4s hide">{neos:contentElement.editable(property: 'headerInfo', tag: 'span')}</p>
       </div>
       <div class="HeaderTop-right">
         <p class="H4s HeaderTop-rightItem">{neos:contentElement.editable(property: 'address', tag: 'span')}</p>
@@ -39,7 +39,7 @@
       <neos:contentElement.wrap node="{node}">
         <div class="overlay">
           <f:if condition="{coverImage}">
-            <img src="{coverImage}" >
+            <img class="fullWidth" src="{coverImage}" >
           </f:if>
           <div class="overlay-contents padding-single">
             <h1 class="H0 color-white textShadow medium-10 large-8 marginBottom-single">{title}</h1>

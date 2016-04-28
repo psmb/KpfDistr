@@ -1,6 +1,10 @@
 prototype(Sfi.Site:NewsBlogArchive) < prototype(Flowpack.Listable:List) {
 	@context.listTitle = ${node.properties.title}
+	@context.listTitleClass = 'H0 marginTop-double'
+	@context.wrapClass = 'contentPadding'
 	prototype(Flowpack.Listable:Listable) {
+		@context.listClass = 'row small-up-1 medium-up-2 large-up-2 marginHorizontal-negative'
+		@context.itemClass = 'column'
 		@context.itemRenderer = 'Sfi.Site:NewsBlogShort'
 		collection = ${q(node).find('[instanceof Sfi.Site:News]').get()}
 	}

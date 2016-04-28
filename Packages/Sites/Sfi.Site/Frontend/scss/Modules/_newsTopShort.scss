@@ -1,0 +1,11 @@
+.NewsTopShort {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 360px;
+  @include breakpoint(400px up) {
+    height: 320px;
+  }
+  @include breakpoint(medium up) {
+    height: 437px;
+  }
+}

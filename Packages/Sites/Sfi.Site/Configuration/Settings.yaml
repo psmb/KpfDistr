@@ -6,4 +6,4 @@ TYPO3:
 
 Sfi:
   YouTube:
-    className: 'YouTube flex-video'
+    className: 'YouTube flex-video widescreen marginVertical-double'

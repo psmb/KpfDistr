@@ -48,16 +48,22 @@
   }
 }
 
-.NewsTopShort {
-  background-size: cover;
-  height: 360px;
-  @include breakpoint(400px up) {
-    height: 320px;
-  }
-  @include breakpoint(medium up) {
-    height: 437px;
-  }
+
+
+.Carousel-links .arrow {
+  fill: $gray-light;
 }
 
-.NewsTopShort-teaser {
+.Carousel-linksPrev, .Carousel-linksNext {
+  position: absolute;
+  width: 44px;
+  padding: $u;
+  top: 40%;
+  cursor: pointer;
+}
+.Carousel-linksPrev {
+  left: 0;
+}
+.Carousel-linksNext {
+  right: 0;
 }
