@@ -1,0 +1,63 @@
+.is-enabled .js-Carousel-item {
+  @include breakpoint(medium up) {
+    display: none;
+    &.is-active {
+      display: initial;
+    }
+  }
+}
+
+.Carousel {
+  position: relative;
+}
+
+.Carousel-nav {
+  display: none;
+  @include breakpoint(medium up) {
+    display: initial;
+  }
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  margin: 0 $u;
+}
+.Carousel-navItem {
+  @extend .H4;
+  @extend .color-white;
+  @extend .textShadow-deep;
+  &.is-active {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-top: 2px solid $orange;
+  }
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-top: 2px solid $gray-light;
+  padding: $u;
+  margin: 0 $u;
+  width: calc(33% - 24px);
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.Carousel .overlay-contents {
+  @include breakpoint(medium up) {
+    bottom: 60px;
+  }
+}
+
+.NewsTopShort {
+  background-size: cover;
+  height: 360px;
+  @include breakpoint(400px up) {
+    height: 320px;
+  }
+  @include breakpoint(medium up) {
+    height: 437px;
+  }
+}
+
+.NewsTopShort-teaser {
+}

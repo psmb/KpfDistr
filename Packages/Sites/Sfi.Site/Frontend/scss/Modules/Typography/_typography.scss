@@ -1,6 +1,12 @@
 .H0 {
 	font-family: 'Geometria', sans-serif;
-	font-size: 35px;
+	font-size: 22px;
+	@include breakpoint(medium up) {
+		font-size: 26px;
+	}
+	@include breakpoint(large up) {
+		font-size: 35px;
+	}
 	font-weight: bold;
 	line-height: 1.2;
 }

@@ -3,6 +3,8 @@ prototype(Sfi.Site:NewsTopList) < prototype(Flowpack.Listable:List) {
 		@context.limit = 4
 		@context.paginationEnabled = ${false}
 		@context.itemRenderer = 'Sfi.Site:NewsTopShort'
+		@context.listClass = 'js-Carousel Carousel'
+		@context.itemClass = 'js-Carousel-item Carousel-item'
 		collection = ${q(site).find('[instanceof Sfi.Site:AbstractNews]').filter('[important = TRUE]').get()}
 	}
 	@cache {

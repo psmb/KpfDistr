@@ -6,7 +6,17 @@
     <div class="AnnouncementShort-inner">
       <p class="AnnouncementShort-place H4b color-white">{place}<span class="AnnouncementShort-cornerLeft"/></p>
       <p class="H1s color-white textAlign-center paddingHorizontal-double textShadow">{title}</p>
-      <p class="AnnouncementShort-date H4b color-white"><f:format.date localeFormatLength="long" localeFormatType="date" forceLocale="ru">{date}</f:format.date><span class="AnnouncementShort-cornerRight"/></p>
+      <p class="AnnouncementShort-date H4b color-white">
+        <f:if condition="{dateStart}">
+          <f:then>
+            <f:format.date format="d.m">{dateStart}</f:format.date> –
+            <f:format.date format="d.m">{date}</f:format.date><span class="AnnouncementShort-cornerRight"/>
+          </f:then>
+          <f:else>
+            <f:format.date localeFormatLength="short" localeFormatType="date" forceLocale="ru">{date}</f:format.date><span class="AnnouncementShort-cornerRight"/>
+          </f:else>
+        </f:if>
+      </p>
     </div>
   </div>
 </neos:link.node>

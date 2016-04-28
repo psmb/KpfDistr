@@ -7,14 +7,18 @@ prototype(Sfi.Site:AnnouncementList) < prototype(Flowpack.Listable:List) {
 		# Show for announcements from current section, or show all when on main page
 		parentsCount = ${q(documentNode).parents().count()}
 		rootNode = ${this.parentsCount == 0 ? site : this.parentsCount == 1 ? documentNode : q(documentNode).parents().get(this.parentsCount - 2)}
-		collection = ${q(this.rootNode).find('[instanceof Sfi.Site:Announcement]').get()}
-		collection.@process.filterOutSelf {
+
+		@override.collection = ${q(this.rootNode).find('[instanceof Sfi.Site:Announcement]').get()}
+		@override.collection.@process.filterByDate = ${q(value).count() > 0 ? q(value).filterByDate('date', Date.Now()).get() : value}
+		@override.collection.@process.filterOutSelf {
 			expression = ${q(value).filter('[_name != ' + q(node).property('_name') + ']').get()}
 			@position = 'start'
 		}
+		collection = ${collection}
 	}
 	@cache {
 		mode = 'cached'
+		maximumLifetime = ${q(collection).first().property('date').timestamp - Date.now().timestamp}
 		entryTags {
 			1 = ${'NodeType_Sfi.Site:Announcement'}
 		}
