@@ -5,8 +5,8 @@ prototype(Sfi.Site:NewsPublishingShort) < prototype(TYPO3.TypoScript:Template) {
 	teaser = ${String.stripTags(node.properties.teaser)}
 	image = TYPO3.Neos:ImageUri {
 		asset = ${q(node).property('imageSquare')}
-		width = 370
-		height = 406
+		width = 358
+		height = 392
 		allowCropping = TRUE
 	}
 }
