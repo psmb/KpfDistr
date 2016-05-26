@@ -6,8 +6,8 @@ prototype(Sfi.Site:NewsExhibitionShort) < prototype(TYPO3.TypoScript:Template) {
 	teaser = ${String.stripTags(node.properties.teaser)}
 	image = TYPO3.Neos:ImageUri {
 		asset = ${iterator.isFirst ? q(node).property('imageSquare') : q(node).property('imageWide')}
-		width = 370
-		height = ${iterator.isFirst ? 384 : 180}
+		width = 358
+		height = ${iterator.isFirst ? 372 : 174}
 		allowCropping = TRUE
 	}
 }
