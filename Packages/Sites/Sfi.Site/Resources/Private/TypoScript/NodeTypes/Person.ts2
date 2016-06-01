@@ -1,4 +1,3 @@
 prototype(Sfi.Site:Person) {
-	phone = ${q(site).property('phone')}
 	email = ${q(site).property('email')}
 }
