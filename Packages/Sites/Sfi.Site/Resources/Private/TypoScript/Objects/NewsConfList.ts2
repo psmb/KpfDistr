@@ -1,8 +1,8 @@
-prototype(Sfi.Site:NewsProjectsList) < prototype(Flowpack.Listable:List) {
-	@context.listTitle = 'Проекты в Истринском районе'
+prototype(Sfi.Site:NewsConfList) < prototype(Flowpack.Listable:List) {
+	@context.listTitle = 'Конференции'
 	@context.listTitleClass = 'H1'
-	@context.archiveLink = ${q(site).children('[uriPathSegment = projects]').get(0)}
-	@context.archiveLinkTitle = 'Все проекты'
+	@context.archiveLink = ${q(site).children('[uriPathSegment = conferences]').get(0)}
+	@context.archiveLinkTitle = 'Все конференции'
 	@context.archiveLinkAdditionalParams = ${{'--listable-paginate': {'@action': 'index'}}}
 	@context.archiveLinkClass = 'ArchiveLink--main'
 	@context.wrapClass = 'position-relative'
@@ -13,7 +13,7 @@ prototype(Sfi.Site:NewsProjectsList) < prototype(Flowpack.Listable:List) {
 		@context.limit = 4
 		@context.paginationEnabled = ${false}
 		@context.itemRenderer = 'Sfi.Site:NewsProjectsShort'
-		collection = ${q(site).children('[uriPathSegment = projects]').find('[instanceof Sfi.Site:News]').get()}
+		collection = ${q(site).children('[uriPathSegment = conferences]').find('[instanceof Sfi.Site:News]').get()}
 	}
 	@cache {
 		mode = 'cached'

@@ -12,20 +12,22 @@
         <p class="H4s HeaderTop-rightItem"><a href="mail-to:{email}">{neos:contentElement.editable(property: 'email', tag: 'span')}</a></p>
       </div>
     </div>
-    <div class="HeaderMiddle row paddingVertical-double contentPadding">
-      <neos:link.node class="large-6" node="~" title="На главную" >
-        <div class="Logo">
-          <div class="Logo-img">
-            <img src="{f:uri.resource(path: 'images/logo.png', package: 'Sfi.Site')}"  alt="Культурно-просветительский фонд Преображение">
+    <div class="contentPadding">
+      <div class="HeaderMiddle row paddingVertical-single">
+        <neos:link.node class="large-6" node="~" title="На главную" style="display: block" >
+          <div class="Logo">
+            <div class="Logo-img">
+              <img src="{f:uri.resource(path: 'images/logo.png', package: 'Sfi.Site')}"  alt="Культурно-просветительский фонд Преображение">
+            </div>
+            <div class="Sign Logo-sign">
+              <p class="Sign-title">Преображение</p>
+              <p class="Sign-subTitle">Культурно-просветительский фонд</p>
+            </div>
           </div>
-          <div class="Sign Logo-sign">
-            <p class="Sign-title">Преображение</p>
-            <p class="Sign-subTitle">Культурно-просветительский фонд</p>
-          </div>
+        </neos:link.node>
+        <div class="HeaderMiddle-description large-6 paddingTop-half">
+          <p class="ParagraphSans">{neos:contentElement.editable(property: 'headerDescription', tag: 'span')}</p>
         </div>
-      </neos:link.node>
-      <div class="HeaderMiddle-description large-6 paddingTop-half">
-        <p class="ParagraphSans">{neos:contentElement.editable(property: 'headerDescription', tag: 'span')}</p>
       </div>
     </div>
   </neos:contentElement.wrap>

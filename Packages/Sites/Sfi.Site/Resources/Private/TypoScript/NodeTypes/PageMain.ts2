@@ -3,9 +3,12 @@ prototype(Sfi.Site:PageMain) {
 	layoutRootPath = 'resource://Sfi.Site/Private/Layouts'
 
 	newsTopList = Sfi.Site:NewsTopList
-	newsExhibitionList = Sfi.Site:NewsExhibitionList
-	newsPublishingList = Sfi.Site:NewsPublishingList
-	newsProjectsList = Sfi.Site:NewsProjectsList
+	main = TYPO3.TypoScript:Array {
+		newsExhibitionList = Sfi.Site:NewsExhibitionList
+		newsPublishingList = Sfi.Site:NewsPublishingList
+		newsConfList = Sfi.Site:NewsConfList
+		newsProjectsList = Sfi.Site:NewsProjectsList
+	}
 
 	smiWidget = Sfi.Site:SmiWidget
 	announcementList = Sfi.Site:AnnouncementList
