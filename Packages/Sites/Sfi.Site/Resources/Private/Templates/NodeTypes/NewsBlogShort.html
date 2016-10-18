@@ -2,8 +2,8 @@
 
 <neos:link.node node="{node}">
   <div class="paddingVertical-double">
-    <h2 class="H2 HeadingWithTopLine paddingVertical-single">{title}</h2>
+    <h2 class="H2 HeadingWithTopLine paddingVertical-single">{title -> f:format.raw()}</h2>
     <img src="{image}" class="fullWidth" alt="{title}"/>
-    <p class="ParagraphSerif paddingTop-single">{teaser}</p>
+    <p class="ParagraphSerif paddingTop-single">{teaser -> f:format.raw()}</p>
   </div>
 </neos:link.node>

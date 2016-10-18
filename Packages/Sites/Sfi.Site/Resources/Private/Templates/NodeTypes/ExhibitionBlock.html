@@ -1,7 +1,7 @@
 {namespace neos=TYPO3\Neos\ViewHelpers}
 
 <div class="ParentExhibition">
-  <p class="H2 ParentExhibition-title">{title}</p>
-  <p class="ParagraphSerif ParentExhibition-describtion">{teaser}</p>
+  <p class="H2 ParentExhibition-title">{title -> f:format.raw()}</p>
+  <p class="ParagraphSerif ParentExhibition-describtion">{teaser -> f:format.raw()}</p>
   <neos:link.node node="{node}" class="H4 ParentExhibition-link">Перейти к выставке</neos:link.node>
 </div>

@@ -4,7 +4,7 @@ prototype(Sfi.Site:AnnouncementShort) < prototype(TYPO3.TypoScript:Template) {
 	title = ${String.stripTags(node.properties.title)}
 	date = ${node.properties.date}
 	dateStart = ${node.properties.dateStart}
-	place = ${node.properties.place}
+	place = ${String.stripTags(node.properties.place)}
 	image = TYPO3.Neos:ImageUri {
 		asset = ${q(node).property('imageSquare')}
 		width = 350

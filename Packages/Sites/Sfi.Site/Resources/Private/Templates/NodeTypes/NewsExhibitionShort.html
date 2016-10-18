@@ -4,9 +4,9 @@
   <div class="overlay">
     <img src="{image}" class="fullWidth" alt="{title}"/>
     <div class="overlay-contents">
-      <h3 class="H2s color-white marginBottom-half textShadow">{title}</h3>
+      <h3 class="H2s color-white marginBottom-half textShadow">{title -> f:format.raw()}</h3>
       <f:if condition="{iterator.isFirst}">
-        <div class="ParagraphSerif color-white textShadow">{teaser}</div>
+        <div class="ParagraphSerif color-white textShadow">{teaser -> f:format.raw()}</div>
       </f:if>
     </div>
   </div>

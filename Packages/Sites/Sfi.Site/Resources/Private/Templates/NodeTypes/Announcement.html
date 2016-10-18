@@ -6,7 +6,7 @@
   <p class="ParagraphSans paddingBottom-double">{neos:contentElement.editable(property: 'teaser', tag: 'span')}</p>
   <p class="ParagraphSans paddingBottom-double">{neos:contentElement.editable(property: 'place', tag: 'span')}</p>
   <f:if condition="{image}">
-    <img class="Image" src="{image}" alt="{title}" />
+    <img class="Image" src="{image}" alt="{title -> f:format.raw()}" />
   </f:if>
   <div class="RteText paddingVertical-double">
     {main -> f:format.raw()}

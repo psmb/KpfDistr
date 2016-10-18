@@ -2,8 +2,8 @@
 
 <neos:link.node node="{node}" >
   <div class="marginVertical-double">
-    <img src="{image}" class="fullWidth" alt="{title}" />
+    <img src="{image}" class="fullWidth" alt="{title -> f:format.raw()}" />
     <p class="H2s HeadingWithLeftLine paddingLeft-single paddingVertical-half marginTop-sesquialteral marginBottom-half">{title}</p>
-    <p class="ParagraphSerif">{description}</p>
+    <p class="ParagraphSerif">{description -> f:format.raw()}</p>
   </div>
 </neos:link.node>
