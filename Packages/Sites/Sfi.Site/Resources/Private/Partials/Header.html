@@ -39,10 +39,7 @@
   <f:if condition="{showCover}">
     <f:then>
       <neos:contentElement.wrap node="{node}">
-        <div class="overlay">
-          <f:if condition="{coverImage}">
-            <img class="fullWidth" src="{coverImage}" >
-          </f:if>
+        <div class="overlay CoverImage" style="background-image: url({coverImage})">
           <div class="overlay-contents padding-single">
             <h1 class="H0 color-white textShadow medium-10 large-8 marginBottom-single">{title}</h1>
             <p class="H4 color-white textShadow-deep medium-6 large-4">{neos:contentElement.editable(property: 'description', tag: 'span')}</p>
