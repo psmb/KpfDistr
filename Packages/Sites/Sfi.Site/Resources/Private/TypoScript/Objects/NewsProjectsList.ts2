@@ -1,5 +1,5 @@
 prototype(Sfi.Site:NewsProjectsList) < prototype(Flowpack.Listable:List) {
-	@context.listTitle = 'Проекты в Истринском районе'
+	@context.listTitle = 'Проекты'
 	@context.listTitleClass = 'H1'
 	@context.archiveLink = ${q(site).children('[uriPathSegment = projects]').get(0)}
 	@context.archiveLinkTitle = 'Все проекты'
