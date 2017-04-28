@@ -1,6 +1,12 @@
 prototype(Sfi.Site:NewsPublishingList) < prototype(Flowpack.Listable:List) {
-	@context.listTitle = 'Книги'
 	@context.listTitleClass = 'H1'
+	@context.listTitle = TYPO3.TypoScript:Tag {
+		tagName = 'a'
+		content = 'Книги'
+		attributes.href = NodeUri {
+			node = ${q(site).children('[instanceof Sfi.Site:PagePublishing]').get(0)}
+		}
+	}
 	@context.archiveLink = ${q(site).find('[instanceof Sfi.Site:PagePublishing]').get(0)}
 	@context.archiveLinkTitle = 'Все новости о книгах'
 	@context.archiveLinkAdditionalParams = ${{'--listable-paginate': {'@action': 'index'}}}
@@ -12,7 +18,7 @@ prototype(Sfi.Site:NewsPublishingList) < prototype(Flowpack.Listable:List) {
 		@context.itemClass = 'column'
 		@context.limit = 2
 		@context.paginationEnabled = ${false}
-		@context.itemRenderer = 'Sfi.Site:NewsPublishingShort'
+		@context.itemRenderer = 'Sfi.Site:NewsStandardShort'
 		collection = ${q(site).find('[instanceof Sfi.Site:PagePublishing]').find('[instanceof Sfi.Site:News]').get()}
 	}
 	@cache {

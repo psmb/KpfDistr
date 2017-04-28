@@ -1,6 +1,12 @@
 prototype(Sfi.Site:NewsProjectsList) < prototype(Flowpack.Listable:List) {
-	@context.listTitle = 'Проекты'
 	@context.listTitleClass = 'H1'
+	@context.listTitle = TYPO3.TypoScript:Tag {
+		tagName = 'a'
+		content = 'Проекты'
+		attributes.href = NodeUri {
+			node = ${q(site).children('[uriPathSegment = projects]').get(0)}
+		}
+	}
 	@context.archiveLink = ${q(site).children('[uriPathSegment = projects]').get(0)}
 	@context.archiveLinkTitle = 'Все проекты'
 	@context.archiveLinkAdditionalParams = ${{'--listable-paginate': {'@action': 'index'}}}
@@ -10,9 +16,9 @@ prototype(Sfi.Site:NewsProjectsList) < prototype(Flowpack.Listable:List) {
 	prototype(Flowpack.Listable:Listable) {
 		@context.listClass = 'row small-up-1 medium-up-1 large-up-2'
 		@context.itemClass = 'column'
-		@context.limit = 4
+		@context.limit = 2
 		@context.paginationEnabled = ${false}
-		@context.itemRenderer = 'Sfi.Site:NewsProjectsShort'
+		@context.itemRenderer = 'Sfi.Site:NewsStandardShort'
 		collection = ${q(site).children('[uriPathSegment = projects]').find('[instanceof Sfi.Site:News]').get()}
 	}
 	@cache {

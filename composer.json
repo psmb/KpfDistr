@@ -1,7 +1,6 @@
 {
-    "name": "typo3/boilerplate-distribution",
-    "description" : "Boilerplate Distribution",
-    "license": "GPL-3.0+",
+    "name": "psmb/kpf-distr",
+    "description" : "KP-F.ru dist",
     "config": {
         "vendor-dir": "Packages/Libraries",
         "bin-dir": "bin"
@@ -17,7 +16,8 @@
         "typo3/setup": "~2.0",
         "sfi/grid": "^0.1.0",
         "sfi/youtube": "^0.1.5",
-        "flowpack/listable": "^0.4.0"
+        "flowpack/listable": "^0.4.0",
+        "opsdev/cache-breaker": "^1.0"
     },
     "require-dev": {
         "typo3/buildessentials": "3.0.*@rc",
