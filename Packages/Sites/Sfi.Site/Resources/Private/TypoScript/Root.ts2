@@ -22,13 +22,22 @@ prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 		partialRootPath = 'resource://Sfi.Site/Private/Partials'
 		layoutRootPath = 'resource://Sfi.Site/Private/Layouts'
 
-		mainMenu = Menu {
-			entryLevel = 1
-			maximumLevels = 1
-			attributes.class = 'MainMenu'
-			normal.attributes.class = 'MainMenu-item'
-			active.attributes.class = 'MainMenu-item isActive'
-			current.attributes.class = 'MainMenu-item isActive'
+		mainMenu = TYPO3.TypoScript:Collection {
+			@process.tmpl = ${'<div class="MainMenu">' + value + '</div>'}
+			collection = ${q(site).children('[instanceof TYPO3.Neos:Document]').filter('[_hiddenInIndex = FALSE]').get()}
+			itemName = 'node'
+			itemRenderer = TYPO3.TypoScript:Tag {
+				tagName = 'a'
+				attributes.class = TYPO3.TypoScript:RawArray {
+					default = 'MainMenu-item'
+					active = 'isActive'
+					active.@if.active = ${documentNode == node || q(documentNode).parents('[_identifier = "' + node.identifier + '"]').count() > 0}
+				}
+				attributes.href = NodeUri {
+					node = ${node}
+				}
+				content = ${node.properties.navTitle || node.properties.title}
+			}
 		}
 		breadcrumbs = TYPO3.Neos:BreadcrumbMenu {
 			@if.notMain = ${documentNode != site}

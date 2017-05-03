@@ -9,7 +9,7 @@ prototype(Sfi.Site:NewsConfList) < prototype(Flowpack.Listable:List) {
 	@context.listTitleClass = 'H1'
 	@context.listTitle = TYPO3.TypoScript:Tag {
 		tagName = 'a'
-		content = 'Конференции'
+		content = 'Конференции, выставки, встречи'
 		attributes.href = NodeUri {
 			node = ${q(site).children('[uriPathSegment = conferences]').get(0)}
 		}

@@ -60,6 +60,13 @@ blah: &alohaRich
   superTypes:
     - 'TYPO3.Neos.NodeTypes:Page'
   properties:
+    navTitle:
+      type: string
+      ui:
+        label: 'Название для меню (опционально)'
+        reloadIfChanged: FALSE
+        inspector:
+          group: document
     description:
       type: string
       ui:
