@@ -3,7 +3,8 @@
 <neos:link.node node="{node}">
   <div class="marginBottom-double">
     <img src="{image}" class="fullWidth" alt="{title}" />
-    <p class="H2s HeadingWithLeftLine paddingLeft-single paddingVertical-half marginVertical-sesquialteral">{title}</p>
+    <p class="H2s HeadingWithLeftLine paddingLeft-single paddingVertical-half marginVertical-single">{title}</p>
     <p class="ParagraphSerif">{teaser}</p>
+    <p class="H4s marginTop-half"><f:format.date forceLocale="{true}" cldrFormat="dd MMMM yyyy">{date}</f:format.date></p>
   </div>
 </neos:link.node>

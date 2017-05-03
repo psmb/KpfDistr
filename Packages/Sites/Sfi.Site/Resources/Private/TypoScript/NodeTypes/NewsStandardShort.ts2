@@ -9,4 +9,5 @@ prototype(Sfi.Site:NewsStandardShort) < prototype(TYPO3.TypoScript:Template) {
 		height = 174
 		allowCropping = TRUE
 	}
+	date = ${node.properties.date}
 }
