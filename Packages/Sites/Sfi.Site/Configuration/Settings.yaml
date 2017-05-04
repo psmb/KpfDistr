@@ -9,12 +9,12 @@ Neos:
     http:
       baseUri: 'https://kp-f.ru/'
   Neos:
-    typoScript:
-      autoInclude:
-        Sfi.Site: true
     userInterface:
       navigateComponent:
         structureTree:
           loadingDepth: 0
         nodeTree:
           loadingDepth: 1
+    fusion:
+      autoInclude:
+        Sfi.Site: true
