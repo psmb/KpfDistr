@@ -8,7 +8,7 @@ prototype(Sfi.Site:SmiWidget) < prototype(Flowpack.Listable:List) {
 	// @context.archiveLinkClass = 'ArchiveLink'
 
 	prototype(Flowpack.Listable:Listable) {
-		@context.limit = 3
+		@context.limit = 10
 		@context.paginationEnabled = ${false}
 		@context.itemRenderer = 'Sfi.Site:SmiShort'
 		@context.listClass = 'SmiWidget-contents js-Carousel--slider Carousel'
