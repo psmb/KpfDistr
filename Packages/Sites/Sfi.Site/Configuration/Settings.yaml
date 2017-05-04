@@ -1,13 +1,9 @@
+
 TYPO3:
-  Flow:
-    i18n:
-      defaultLocale: 'ru'
-    http:
-      baseUri: 'https://kp-f.ru/'
   Neos:
     typoScript:
       autoInclude:
-        'Sfi.Site': TRUE
+        Sfi.Site: true
     userInterface:
       navigateComponent:
         structureTree:
@@ -17,3 +13,9 @@ TYPO3:
 Sfi:
   YouTube:
     className: 'YouTube flex-video widescreen marginVertical-double'
+Neos:
+  Flow:
+    i18n:
+      defaultLocale: ru
+    http:
+      baseUri: 'https://kp-f.ru/'
