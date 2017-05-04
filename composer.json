@@ -10,8 +10,8 @@
         "neos/nodetypes": "~3.0.0",
         "neos/setup": "~4.0.0",
         "neos/seo": "~2.0.0",
-        "sfi/grid": "^0.1.0",
-        "sfi/youtube": "^0.1.5",
+        "sfi/grid": "^2.0",
+        "sfi/youtube": "^2.1",
         "flowpack/listable": "^2.0",
         "opsdev/cache-breaker": "^2.0"
     },

@@ -3,7 +3,7 @@
 <div class="column">
   <div class="marginBottom-double">
     <f:if condition="{image}">
-        <img src="{m:uri.image(asset:image, maximumWidth: 315, maximumHeight: 366, allowCropping: true, allowUpScaling: true)}" class="fullWidth" alt="{title}" />
+        <img src="{m:uri.image(image:image, maximumWidth: 315, maximumHeight: 366, allowCropping: true, allowUpScaling: true)}" class="fullWidth" alt="{title}" />
     </f:if>
     <p class="H2s HeadingWithLeftLine paddingLeft-single paddingVertical-half marginVertical-sesquialteral">{neos:contentElement.editable(property: 'title', tag: 'span')}</p>
     <p class="ParagraphSerif">{neos:contentElement.editable(property: 'subTitle', tag: 'span')}</p>
