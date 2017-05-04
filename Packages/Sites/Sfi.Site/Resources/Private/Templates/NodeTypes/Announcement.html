@@ -2,7 +2,7 @@
 <f:layout name="2col" />
 
 <f:section name="Main">
-  <p class="H1">{neos:contentElement.editable(property: 'title', tag: 'span')}</p>
+  <p class="H1 HeadingWithBottomLine">{neos:contentElement.editable(property: 'title', tag: 'span')}</p>
   <p class="ParagraphSans paddingBottom-double">{neos:contentElement.editable(property: 'teaser', tag: 'span')}</p>
   <p class="ParagraphSans paddingBottom-double">{neos:contentElement.editable(property: 'place', tag: 'span')}</p>
   <f:if condition="{image}">

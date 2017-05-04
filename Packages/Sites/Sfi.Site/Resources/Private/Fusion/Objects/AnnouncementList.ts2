@@ -1,6 +1,6 @@
 prototype(Sfi.Site:AnnouncementList) < prototype(Flowpack.Listable:List) {
 	@context.listTitle = 'Анонсы'
-	@context.listTitleClass = 'H1'
+	@context.listTitleClass = 'H1 HeadingWithBottomLine'
 	prototype(Flowpack.Listable:Listable) {
 		@context.limit = 3
 		@context.paginationEnabled = ${false}

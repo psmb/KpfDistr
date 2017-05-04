@@ -5,7 +5,7 @@ prototype(Sfi.Site:PresentationalBlock) < prototype(Neos.Fusion:Array) {
     block = Neos.Fusion:Tag {
         attributes.class = 'paddingTop-triple paddingHorizontal-double PresentationalBlock-mainBlock'
         attributes.style = ImageUri {
-            @process.tmpl = ${'overflow: auto; background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 1) 50%), url(' + value + '); background-size: contain; background-position: top center;'}
+            @process.tmpl = ${'overflow: auto; background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 1) 42%), url(' + value + '); background-size: contain; background-position: top center;'}
             asset = ${node.properties.image}
             width = 960
             height = 640
@@ -15,7 +15,7 @@ prototype(Sfi.Site:PresentationalBlock) < prototype(Neos.Fusion:Array) {
         content = Neos.Fusion:Array {
             title = ${'<h2 class="H1 color-white">' + sectionNode.properties.title + '</h2>'}
             description = Neos.Fusion:Tag {
-                attributes.class = 'H4 color-white textShadow-deep marginVertical-double'
+                attributes.class = 'H4 color-white textShadow-deep marginTop-single marginBottom-double'
                 content = ${q(node).property('description')}
                 @process.contentElementEditable = ContentElementEditable {
                     property = 'description'
@@ -42,7 +42,6 @@ prototype(Sfi.Site:PresentationalBlock) < prototype(Neos.Fusion:Array) {
                     height = 450
                     maximumWidth>
                     allowCropping = true
-                    imageClassName = 'border-white'
                 }
             }
         }

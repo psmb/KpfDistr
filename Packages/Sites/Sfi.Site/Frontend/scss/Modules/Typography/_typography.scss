@@ -16,12 +16,6 @@
 	font-style: italic;
 	font-size: 30px;
 	color: $gray-dark;
-	background-image: url('../images/line.png');
-	background-repeat: no-repeat;
-	background-position: left bottom;
-	padding-bottom: $u/2;
-	margin-top: 2*$u;
-	margin-bottom: 2*$u;
 }
 .H1s {
 	font-family: 'Regal', sans-serif;
@@ -100,4 +94,12 @@
 	background-image: url('../images/line.png');
 	background-position: top left;
 	background-repeat: no-repeat;
+}
+.HeadingWithBottomLine {
+	background-image: url('../images/line.png');
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	padding-bottom: $u/2;
+	margin-top: 2*$u;
+	margin-bottom: 2*$u;
 }
