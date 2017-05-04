@@ -9,6 +9,7 @@ prototype(Sfi.Site:NewsTopList) < prototype(Flowpack.Listable:List) {
 	}
 	@cache {
 		mode = 'cached'
+		entryIdentifier.node = ${node}
 		entryTags {
 			1 = ${'NodeType_Sfi.Site:AbstractNews'}
 		}

@@ -19,6 +19,7 @@ prototype(Sfi.Site:AnnouncementList) < prototype(Flowpack.Listable:List) {
 	@cache {
 		mode = 'cached'
 		maximumLifetime = ${q(collection).first().property('date').timestamp - Date.now().timestamp}
+		entryIdentifier.node = ${node}
 		entryTags {
 			1 = ${'NodeType_Sfi.Site:Announcement'}
 		}
