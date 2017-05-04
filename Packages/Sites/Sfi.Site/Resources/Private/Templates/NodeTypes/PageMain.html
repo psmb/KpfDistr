@@ -1,8 +1,14 @@
-<f:layout name="2col" />
-<f:section name="Top">
-  {newsTopList -> f:format.raw()}
-</f:section>
-<f:section name="Main">
-  {main -> f:format.raw()}
-  <f:render partial="Partners" />
-</f:section>
+{newsTopList -> f:format.raw()}
+{main -> f:format.raw()}
+
+<div class="column">
+  {announcementList -> f:format.raw()}
+</div>
+<div class="column">
+  {smiWidget -> f:format.raw()}
+</div>
+<div class="column">
+  <f:render partial="SocialWidgets" />
+</div>
+
+<f:render partial="Partners" />

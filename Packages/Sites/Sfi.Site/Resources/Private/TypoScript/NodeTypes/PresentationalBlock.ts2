@@ -1,0 +1,45 @@
+prototype(Sfi.Site:PresentationalBlock)>
+prototype(Sfi.Site:PresentationalBlock) < prototype(TYPO3.TypoScript:Array) {
+    @process.tmpl = ${'<div class="medium-6 small-12 columns marginTop-double">' + value + '</div>'}
+    @context.sectionNode = ${node.properties.section}
+    block = TYPO3.TypoScript:Tag {
+        attributes.style = ImageUri {
+            @process.tmpl = ${'background-image: url(' + value + ')'}
+            asset = ${node.properties.image}
+        }
+        attributes.class = 'padding-triple'
+        content = TYPO3.TypoScript:Array {
+            title = ${'<h2 class="H1 color-white">' + sectionNode.properties.title + '</h2>'}
+            description = TYPO3.TypoScript:Tag {
+                attributes.class = 'H4 color-white textShadow-deep marginVertical-double'
+                content = ${q(node).property('description')}
+                @process.contentElementEditable = ContentElementEditable {
+                    property = 'description'
+                }
+            }
+            button = TYPO3.TypoScript:Tag {
+                tagName = 'a'
+                attributes.class = 'H4 Button color-white'
+                attributes.href = NodeUri {
+                    node = ${sectionNode}
+                }
+                content = ${q(node).property('buttonText')}
+                @process.contentElementEditable = ContentElementEditable {
+                    property = 'buttonText'
+                }
+            }
+            children = ContentCollectionRenderer
+        }
+    }
+
+    news = Flowpack.Listable:Listable {
+        @if.sectionIsSet = ${sectionNode ? true : false}
+        @context.listClass = 'row small-up-1 medium-up-1 large-up-2 marginVertical-double'
+        @context.itemClass = 'column'
+        @context.limit = 2
+        @context.paginationEnabled = ${false}
+        @context.itemRenderer = 'Sfi.Site:NewsStandardShort'
+        collection = ${q(sectionNode).find('[instanceof Sfi.Site:News]').get()}
+    }
+    @process.contentElementWrapping = ContentElementWrapping
+}

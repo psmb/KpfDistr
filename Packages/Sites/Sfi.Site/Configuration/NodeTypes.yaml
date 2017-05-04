@@ -58,7 +58,10 @@ blah: &alohaRich
 'Sfi.Site:AbstractPage':
   abstract: TRUE
   superTypes:
-    - 'TYPO3.Neos.NodeTypes:Page'
+    'TYPO3.Neos:Document': TRUE
+  childNodes:
+    main:
+      type: 'TYPO3.Neos:ContentCollection'
   properties:
     navTitle:
       type: string
@@ -128,13 +131,13 @@ blah: &alohaRich
 
 'Sfi.Site:Page':
   superTypes:
-    - 'Sfi.Site:AbstractPage'
+    'Sfi.Site:AbstractPage': true
   ui:
     label: 'Обычная страница'
 
 'Sfi.Site:PageMain':
   superTypes:
-    - 'Sfi.Site:AbstractPage'
+    'Sfi.Site:AbstractPage': true
   ui:
     label: 'Главная страница'
   properties:
@@ -206,8 +209,8 @@ blah: &alohaRich
                   height: 164
 'Sfi.Site:PageAbout':
   superTypes:
-    - 'Sfi.Site:AbstractPage'
-    - 'Sfi.Site:HasCover'
+    'Sfi.Site:AbstractPage': true
+    'Sfi.Site:HasCover': true
   ui:
     label: 'О проекте'
   properties:
@@ -227,43 +230,43 @@ blah: &alohaRich
           placeholder: 'Описание КПЦ'
 'Sfi.Site:PageExhibitions':
   superTypes:
-    - 'Sfi.Site:AbstractPage'
-    - 'Sfi.Site:HasCover'
+    'Sfi.Site:AbstractPage': true
+    'Sfi.Site:HasCover': true
   ui:
     label: 'Выставки'
 
 'Sfi.Site:PageExhibition':
   superTypes:
-    - 'Sfi.Site:AbstractPage'
+    'Sfi.Site:AbstractPage': true
   ui:
     label: 'Выставка'
 'Sfi.Site:PagePublishing':
   superTypes:
-    - 'Sfi.Site:AbstractPage'
-    - 'Sfi.Site:HasCover'
+    'Sfi.Site:AbstractPage': true
+    'Sfi.Site:HasCover': true
   ui:
     label: 'Издательство'
 
 'Sfi.Site:PageProjects':
   superTypes:
-    - 'Sfi.Site:AbstractPage'
-    - 'Sfi.Site:HasCover'
+    'Sfi.Site:AbstractPage': true
+    'Sfi.Site:HasCover': true
   ui:
     label: 'Проекты'
     label: 'Издательство'
 
 'Sfi.Site:PageSmi':
   superTypes:
-    - 'Sfi.Site:AbstractPage'
-    - 'Sfi.Site:HasCover'
+    'Sfi.Site:AbstractPage': true
+    'Sfi.Site:HasCover': true
   ui:
     label: 'СМИ о нас'
 
 
 'Sfi.Site:AbstractNews':
   superTypes:
-    - 'Sfi.Site:AbstractPage'
-    - 'Flowpack.Listable:ListableMixin'
+    'Sfi.Site:AbstractPage': true
+    'Flowpack.Listable:ListableMixin': true
   properties:
     teaser:
       type: string
@@ -293,13 +296,13 @@ blah: &alohaRich
 
 'Sfi.Site:News':
   superTypes:
-    - 'Sfi.Site:AbstractNews'
+    'Sfi.Site:AbstractNews': true
   ui:
     label: 'Новость'
 
 'Sfi.Site:Announcement':
   superTypes:
-    - 'Sfi.Site:AbstractNews'
+    'Sfi.Site:AbstractNews': true
   ui:
     label: 'Анонс'
   properties:
@@ -323,7 +326,7 @@ blah: &alohaRich
         'TYPO3.Neos/Validation/DateTimeValidator': []
 'Sfi.Site:Person':
   superTypes:
-    - 'TYPO3.Neos:Content'
+    'TYPO3.Neos:Content': true
   ui:
     label: 'Персона'
   properties:
@@ -351,7 +354,7 @@ blah: &alohaRich
 
 'Sfi.Site:Book':
   superTypes:
-    - 'TYPO3.Neos:Content'
+    'TYPO3.Neos:Content': true
   ui:
     label: 'Книжка'
   properties:
@@ -401,3 +404,45 @@ blah: &alohaRich
         inspector:
           group: type
           editor: 'TYPO3.Neos/Inspector/Editors/LinkEditor'
+
+'Sfi.Site:PresentationalBlock':
+  superTypes:
+    'TYPO3.Neos:Content': true
+    'TYPO3.Neos:ContentCollection': true
+  ui:
+    label: 'Презентационный блок на главную'
+  properties:
+    title:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          <<: *alohaPlain
+          placeholder: 'Заголовок'
+    description:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          <<: *alohaPlain
+          placeholder: 'Описание'
+    buttonText:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          <<: *alohaPlain
+          placeholder: 'Текст на кнопке'
+    section:
+      type: reference
+      ui:
+        label: 'Представляемый раздел'
+        inspector:
+          group: type
+    image:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Фото на обложку'
+        reloadIfChanged: FALSE
+        inspector:
+          group: type
