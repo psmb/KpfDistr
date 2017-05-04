@@ -1,7 +1,7 @@
 
 Sfi:
   YouTube:
-    className: 'YouTube flex-video widescreen marginVertical-double'
+    className: 'YouTube flex-video widescreen paddingVertical-double'
 Neos:
   Flow:
     i18n:
