@@ -3,7 +3,7 @@
     "type": "typo3-flow-site",
     "description": "Website package. See distribution for more info.",
     "require": {
-        "typo3/neos": "*",
+        "neos/neos": "*",
         "opsdev/cache-breaker": "*",
         "sfi/youtube": "*"
     },
