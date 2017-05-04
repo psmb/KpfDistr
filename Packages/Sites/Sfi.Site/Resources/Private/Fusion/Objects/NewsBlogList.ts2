@@ -13,6 +13,7 @@ prototype(Sfi.Site:NewsBlogList) < prototype(Flowpack.Listable:List) {
 	}
 	@cache {
 		mode = 'cached'
+		entryIdentifier.node = ${node}
 		entryTags {
 			1 = ${'DescendantOf_' + documentNode.identifier}
 		}
