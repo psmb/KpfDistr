@@ -70,7 +70,7 @@ blah:
             formatlessPasteOption: true
             autoparagraph: true
     imageWide:
-      type: TYPO3\Media\Domain\Model\ImageInterface
+      type: Neos\Media\Domain\Model\ImageInterface
       ui:
         label: 'Широкая фотка (для карусели и др.)'
         reloadIfChanged: false
@@ -87,7 +87,7 @@ blah:
                   width: 1170
                   height: 440
     imageNormal:
-      type: TYPO3\Media\Domain\Model\ImageInterface
+      type: Neos\Media\Domain\Model\ImageInterface
       ui:
         label: 'Стандартная фотка'
         reloadIfChanged: false
@@ -104,7 +104,7 @@ blah:
                   width: 960
                   height: 640
     imageSquare:
-      type: TYPO3\Media\Domain\Model\ImageInterface
+      type: Neos\Media\Domain\Model\ImageInterface
       ui:
         label: 'Почти квадратная фотка'
         reloadIfChanged: false
@@ -321,7 +321,7 @@ blah:
             formatlessPasteOption: true
             autoparagraph: true
     contactPersonImage:
-      type: TYPO3\Media\Domain\Model\ImageInterface
+      type: Neos\Media\Domain\Model\ImageInterface
       ui:
         label: 'Фотка контактной персоны'
         reloadIfChanged: true
@@ -587,7 +587,7 @@ blah:
             formatlessPasteOption: true
             autoparagraph: true
     image:
-      type: TYPO3\Media\Domain\Model\ImageInterface
+      type: Neos\Media\Domain\Model\ImageInterface
       ui:
         label: 'Фотка персоны'
         reloadIfChanged: false
@@ -681,7 +681,7 @@ blah:
             formatlessPasteOption: true
             autoparagraph: true
     image:
-      type: TYPO3\Media\Domain\Model\ImageInterface
+      type: Neos\Media\Domain\Model\ImageInterface
       ui:
         label: 'Обложка книги'
         reloadIfChanged: false
@@ -800,7 +800,7 @@ blah:
         inspector:
           group: type
     image:
-      type: TYPO3\Media\Domain\Model\ImageInterface
+      type: Neos\Media\Domain\Model\ImageInterface
       ui:
         label: 'Фото на обложку'
         reloadIfChanged: false
