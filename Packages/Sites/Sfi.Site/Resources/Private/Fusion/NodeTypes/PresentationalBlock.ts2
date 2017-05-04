@@ -59,9 +59,9 @@ prototype(Sfi.Site:PresentationalBlock) < prototype(Neos.Fusion:Array) {
         entryIdentifier.node = ${node}
         entryTags {
             1 = ${'Node_' + node.identifier}
-            1 = ${'DescendantOf_' + node.identifier}
-            1 = ${'Node_' + sectionNode.identifier}
-            1 = ${'DescendantOf_' + sectionNode.identifier}
+            2 = ${'DescendantOf_' + node.identifier}
+            3 = ${'Node_' + sectionNode.identifier}
+            4 = ${'DescendantOf_' + sectionNode.identifier}
         }
     }
 
