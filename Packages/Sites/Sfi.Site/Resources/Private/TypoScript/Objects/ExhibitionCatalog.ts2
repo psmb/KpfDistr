@@ -3,7 +3,7 @@ prototype(Sfi.Site:ExhibitionCatalogItem) < prototype(Neos.Fusion:Template) {
 	node = ${node}
 	title = ${String.stripTags(node.properties.title)}
 	description = ${String.stripTags(node.properties.description)}
-	image = TYPO3.Neos:ImageUri {
+	image = Neos.Neos:ImageUri {
 		asset = ${node.properties.imageSquare}
 		width = 220
 		height = 254

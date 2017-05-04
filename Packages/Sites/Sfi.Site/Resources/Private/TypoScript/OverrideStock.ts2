@@ -3,6 +3,6 @@ prototype(Neos.NodeTypes:Image) {
   maximumHeight = 640
   attributes.class = 'marginVertical-double'
 }
-prototype(TYPO3.Neos:BreadcrumbMenu) {
+prototype(Neos.Neos:BreadcrumbMenu) {
     templatePath = 'resource://Sfi.Site/Private/Templates/Objects/BreadcrumbMenu.html'
 }

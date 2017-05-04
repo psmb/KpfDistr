@@ -2,7 +2,7 @@ include: OverrideStock.ts2
 include: NodeTypes/**/*.ts2
 include: Objects/**/*.ts2
 
-prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
+prototype(Sfi.Site:Root) < prototype(Neos.Neos:Page) {
 	head {
 		titleTag.content = ${String.stripTags(q(node).property('title'))}
 		stylesheets.site = Neos.Fusion:Template {
@@ -24,7 +24,7 @@ prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 
 		mainMenu = Neos.Fusion:Collection {
 			@process.tmpl = ${'<div class="MainMenu">' + value + '</div>'}
-			collection = ${q(site).children('[instanceof TYPO3.Neos:Document]').filter('[_hiddenInIndex = FALSE]').get()}
+			collection = ${q(site).children('[instanceof Neos.Neos:Document]').filter('[_hiddenInIndex = FALSE]').get()}
 			itemName = 'node'
 			itemRenderer = Neos.Fusion:Tag {
 				tagName = 'a'
@@ -39,7 +39,7 @@ prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 				content = ${node.properties.navTitle || node.properties.title}
 			}
 		}
-		breadcrumbs = TYPO3.Neos:BreadcrumbMenu {
+		breadcrumbs = Neos.Neos:BreadcrumbMenu {
 			@if.notMain = ${documentNode != site}
 		}
 
@@ -67,7 +67,7 @@ prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 		title = ${node.properties.title}
 		description = ${node.properties.description}
 		showCover = ${q(node).is('[instanceof Sfi.Site:HasCover]') && !request.pluginArguments.listable-paginate['@action']}
-		coverImage = TYPO3.Neos:ImageUri {
+		coverImage = Neos.Neos:ImageUri {
 			asset = ${node.properties.imageWide}
 			width = 1168
 			height = 437
@@ -90,8 +90,8 @@ prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 
 root.@cache.entryIdentifier.paginationFlag = ${request.pluginArguments.listable-paginate['@action']}
 root.@cache.entryIdentifier.pagination = ${request.pluginArguments.listable-paginate.currentPage}
-prototype(TYPO3.Neos:Page).@cache.entryIdentifier.paginationFlag = ${request.pluginArguments.listable-paginate['@action']}
-prototype(TYPO3.Neos:Page).@cache.entryIdentifier.pagination = ${request.pluginArguments.listable-paginate.currentPage}
+prototype(Neos.Neos:Page).@cache.entryIdentifier.paginationFlag = ${request.pluginArguments.listable-paginate['@action']}
+prototype(Neos.Neos:Page).@cache.entryIdentifier.pagination = ${request.pluginArguments.listable-paginate.currentPage}
 
 
 root.fallbackPage {

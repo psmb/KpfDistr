@@ -1,5 +1,5 @@
 prototype(Sfi.Site:Announcement) < prototype(Sfi.Site:News) {
-  image = TYPO3.Neos:ImageUri {
+  image = Neos.Neos:ImageUri {
     asset = ${node.properties.imageNormal}
     width = 960
     height = 640

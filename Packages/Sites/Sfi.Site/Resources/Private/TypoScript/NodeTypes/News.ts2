@@ -1,7 +1,7 @@
 prototype(Sfi.Site:News) {
 	partialRootPath = 'resource://Sfi.Site/Private/Partials'
 	layoutRootPath = 'resource://Sfi.Site/Private/Layouts'
-	main = TYPO3.Neos:ContentCollection{
+	main = Neos.Neos:ContentCollection{
 		nodePath = 'main'
 	}
 	parentExhibition = Sfi.Site:ExhibitionBlock {
@@ -11,7 +11,7 @@ prototype(Sfi.Site:News) {
 	smiWidget = Sfi.Site:SmiWidget
 	announcementList = Sfi.Site:AnnouncementList
 
-	image = TYPO3.Neos:ImageUri {
+	image = Neos.Neos:ImageUri {
 		asset = ${node.properties.imageNormal}
 		width = 960
 		height = 640
@@ -19,5 +19,5 @@ prototype(Sfi.Site:News) {
 		allowUpScaling = TRUE
 	}
 
-	@process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping
+	@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
 }

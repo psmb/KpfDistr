@@ -3,7 +3,7 @@ prototype(Sfi.Site:NewsRelatedShort) < prototype(Neos.Fusion:Template) {
 	templatePath = 'resource://Sfi.Site/Private/Templates/NodeTypes/NewsRelatedShort.html'
 	title = ${String.stripTags(node.properties.title)}
 	teaser = ${String.stripTags(node.properties.teaser)}
-	image = TYPO3.Neos:ImageUri {
+	image = Neos.Neos:ImageUri {
 		asset = ${q(node).property('imageSquare')}
 		width = 350
 		height = 384
