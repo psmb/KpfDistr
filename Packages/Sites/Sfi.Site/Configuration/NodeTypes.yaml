@@ -30,10 +30,10 @@ blah:
 'Sfi.Site:AbstractPage':
   abstract: true
   superTypes:
-    'TYPO3.Neos:Document': true
+    'Neos.Neos:Document': true
   childNodes:
     main:
-      type: 'TYPO3.Neos:ContentCollection'
+      type: 'Neos.Neos:ContentCollection'
   properties:
     navTitle:
       type: string
@@ -470,7 +470,7 @@ blah:
           editorOptions:
             format: 'd-m-Y H:i'
       validation:
-        TYPO3.Neos/Validation/DateTimeValidator: {  }
+        Neos.Neos/Validation/DateTimeValidator: {  }
     important:
       type: boolean
       ui:
@@ -525,10 +525,10 @@ blah:
           editorOptions:
             format: 'd-m-Y H:i'
       validation:
-        TYPO3.Neos/Validation/DateTimeValidator: {  }
+        Neos.Neos/Validation/DateTimeValidator: {  }
 'Sfi.Site:Person':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'Neos.Neos:Content': true
   ui:
     label: Персона
   properties:
@@ -595,7 +595,7 @@ blah:
           group: type
 'Sfi.Site:Book':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'Neos.Neos:Content': true
   ui:
     label: Книжка
   properties:
@@ -704,11 +704,11 @@ blah:
         reloadIfChanged: false
         inspector:
           group: type
-          editor: TYPO3.Neos/Inspector/Editors/LinkEditor
+          editor: Neos.Neos/Inspector/Editors/LinkEditor
 'Sfi.Site:PresentationalBlock':
   superTypes:
-    'TYPO3.Neos:Content': true
-    'TYPO3.Neos:ContentCollection': true
+    'Neos.Neos:Content': true
+    'Neos.Neos:ContentCollection': true
   ui:
     label: 'Презентационный блок на главную'
   properties:

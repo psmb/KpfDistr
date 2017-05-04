@@ -1,5 +1,13 @@
 
-TYPO3:
+Sfi:
+  YouTube:
+    className: 'YouTube flex-video widescreen marginVertical-double'
+Neos:
+  Flow:
+    i18n:
+      defaultLocale: ru
+    http:
+      baseUri: 'https://kp-f.ru/'
   Neos:
     typoScript:
       autoInclude:
@@ -10,12 +18,3 @@ TYPO3:
           loadingDepth: 0
         nodeTree:
           loadingDepth: 1
-Sfi:
-  YouTube:
-    className: 'YouTube flex-video widescreen marginVertical-double'
-Neos:
-  Flow:
-    i18n:
-      defaultLocale: ru
-    http:
-      baseUri: 'https://kp-f.ru/'
