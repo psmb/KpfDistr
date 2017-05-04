@@ -1,25 +1,24 @@
 {
     "name": "psmb/kpf-distr",
-    "description" : "KP-F.ru dist",
+    "description": "KP-F.ru dist",
     "config": {
         "vendor-dir": "Packages/Libraries",
         "bin-dir": "bin"
     },
     "require": {
-        "neos/neos": "2.3.*",
-        "neos/nodetypes": "2.3.*",
-
-        "neos/setup": "~3.0@dev",
-        "neos/seo": "~1.0",
+        "neos/neos": "~3.0.0",
+        "neos/nodetypes": "~3.0.0",
+        "neos/setup": "~4.0.0",
+        "neos/seo": "~2.0.0",
         "sfi/grid": "^0.1.0",
         "sfi/youtube": "^0.1.5",
-        "flowpack/listable": "^0.4.0",
-        "opsdev/cache-breaker": "^1.0"
+        "flowpack/listable": "^2.0",
+        "opsdev/cache-breaker": "^2.0"
     },
     "scripts": {
-        "post-update-cmd": "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
-        "post-install-cmd": "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
-        "post-package-update":"TYPO3\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
-        "post-package-install":"TYPO3\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
+        "post-update-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+        "post-install-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+        "post-package-update": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
+        "post-package-install": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
     }
 }
