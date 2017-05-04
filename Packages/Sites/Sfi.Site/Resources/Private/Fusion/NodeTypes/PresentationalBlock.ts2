@@ -3,12 +3,13 @@ prototype(Sfi.Site:PresentationalBlock) < prototype(Neos.Fusion:Array) {
     @process.tmpl = ${'<div class="medium-6 small-12 columns marginTop-double">' + value + '</div>'}
     @context.sectionNode = ${node.properties.section}
     block = Neos.Fusion:Tag {
-        attributes.class = 'paddingTop-triple paddingBottom-double paddingHorizontal-double PresentationalBlock-mainBlock'
+        attributes.class = 'paddingTop-triple paddingHorizontal-double PresentationalBlock-mainBlock'
         attributes.style = ImageUri {
             @process.tmpl = ${'background-size: contain; background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 1) 50%), url(' + value + ')'}
             asset = ${node.properties.image}
             width = 960
             height = 640
+            maximumWidth>
             allowCropping = true
         }
         content = Neos.Fusion:Array {
@@ -35,8 +36,8 @@ prototype(Sfi.Site:PresentationalBlock) < prototype(Neos.Fusion:Array) {
                 prototype(Neos.NodeTypes:Image) {
                     width = 800
                     height = 450
+                    maximumWidth>
                     allowCropping = true
-                    attributes.class>
                     imageClassName = 'border-white'
                 }
             }
