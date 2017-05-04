@@ -6,13 +6,11 @@ prototype(Sfi.Site:PresentationalBlock) < prototype(Neos.Fusion:Array) {
         attributes.style = ImageUri {
             @process.tmpl = ${'background-size: contain; background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 1) 50%), url(' + value + ')'}
             asset = ${node.properties.image}
-            maximumWidth = 960
             width = 960
-            maximumHeight = 640
             height = 640
             allowCropping = true
         }
-        attributes.class = 'paddingTop-triple paddingHorizontal-double PresentationalBlock-mainBlock'
+        attributes.class = 'paddingTop-triple paddingBottom-double paddingHorizontal-double PresentationalBlock-mainBlock'
         content = Neos.Fusion:Array {
             title = ${'<h2 class="H1 color-white">' + sectionNode.properties.title + '</h2>'}
             description = Neos.Fusion:Tag {
@@ -38,6 +36,7 @@ prototype(Sfi.Site:PresentationalBlock) < prototype(Neos.Fusion:Array) {
                     width = 800
                     height = 450
                     allowCropping = true
+                    attributes.class>
                     imageClassName = 'border-white'
                 }
             }
@@ -49,6 +48,8 @@ prototype(Sfi.Site:PresentationalBlock) < prototype(Neos.Fusion:Array) {
         @context.listClass = 'row small-up-1 medium-up-1 large-up-2 marginVertical-double'
         @context.itemClass = 'column'
         @context.limit = 2
+        @context.sortProperty = 'date'
+        @context.sortOrder = 'DESC'
         @context.paginationEnabled = ${false}
         @context.itemRenderer = 'Sfi.Site:NewsStandardShort'
         collection = ${q(sectionNode).find('[instanceof Sfi.Site:News]').get()}
