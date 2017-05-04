@@ -23,7 +23,7 @@ blah:
     button: false
     formatlessPasteOption: true
     autoparagraph: true
-'TYPO3.Neos.NodeTypes:Page':
+'Neos.NodeTypes:Page':
   abstract: true
 'Sfi.Site:HasCover':
   abstract: true
