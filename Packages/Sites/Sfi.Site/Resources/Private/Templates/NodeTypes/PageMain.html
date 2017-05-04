@@ -3,13 +3,13 @@
 
 <div class="row">
   <div class="column small-12 medium-4">
+    {announcementList -> f:format.raw()}
+  </div>
+  <div class="column small-12 medium-4">
     {smiWidget -> f:format.raw()}
   </div>
   <div class="column small-12 medium-4">
     <f:render partial="SocialWidgets" />
-  </div>
-  <div class="column small-12 medium-4">
-    {announcementList -> f:format.raw()}
   </div>
 </div>
 
