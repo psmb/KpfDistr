@@ -13,7 +13,8 @@
         "sfi/grid": "^2.0",
         "sfi/youtube": "^2.1",
         "flowpack/listable": "^2.0",
-        "opsdev/cache-breaker": "^2.0"
+        "opsdev/cache-breaker": "^2.0",
+        "psmb/carousel": "@dev"
     },
     "scripts": {
         "post-update-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",

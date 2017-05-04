@@ -4,10 +4,15 @@ prototype(Sfi.Site:PresentationalBlock) < prototype(Neos.Fusion:Array) {
     @context.sectionNode = ${node.properties.section}
     block = Neos.Fusion:Tag {
         attributes.style = ImageUri {
-            @process.tmpl = ${'background-image: url(' + value + ')'}
+            @process.tmpl = ${'background-size: contain; background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 1) 50%), url(' + value + ')'}
             asset = ${node.properties.image}
+            maximumWidth = 960
+            width = 960
+            maximumHeight = 640
+            height = 640
+            allowCropping = true
         }
-        attributes.class = 'padding-triple'
+        attributes.class = 'paddingTop-triple paddingHorizontal-double PresentationalBlock-mainBlock'
         content = Neos.Fusion:Array {
             title = ${'<h2 class="H1 color-white">' + sectionNode.properties.title + '</h2>'}
             description = Neos.Fusion:Tag {
@@ -28,7 +33,14 @@ prototype(Sfi.Site:PresentationalBlock) < prototype(Neos.Fusion:Array) {
                     property = 'buttonText'
                 }
             }
-            children = ContentCollectionRenderer
+            children = ContentCollectionRenderer {
+                prototype(Neos.NodeTypes:Image) {
+                    width = 800
+                    height = 450
+                    allowCropping = true
+                    imageClassName = 'border-white'
+                }
+            }
         }
     }
 
@@ -41,5 +53,17 @@ prototype(Sfi.Site:PresentationalBlock) < prototype(Neos.Fusion:Array) {
         @context.itemRenderer = 'Sfi.Site:NewsStandardShort'
         collection = ${q(sectionNode).find('[instanceof Sfi.Site:News]').get()}
     }
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier.node = ${node}
+        entryTags {
+            1 = ${'Node_' + node.identifier}
+            1 = ${'DescendantOf_' + node.identifier}
+            1 = ${'Node_' + sectionNode.identifier}
+            1 = ${'DescendantOf_' + sectionNode.identifier}
+        }
+    }
+
     @process.contentElementWrapping = ContentElementWrapping
 }
