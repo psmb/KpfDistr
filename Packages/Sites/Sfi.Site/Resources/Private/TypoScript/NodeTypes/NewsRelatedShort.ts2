@@ -1,4 +1,4 @@
-prototype(Sfi.Site:NewsRelatedShort) < prototype(TYPO3.TypoScript:Template) {
+prototype(Sfi.Site:NewsRelatedShort) < prototype(Neos.Fusion:Template) {
 	node = ${node}
 	templatePath = 'resource://Sfi.Site/Private/Templates/NodeTypes/NewsRelatedShort.html'
 	title = ${String.stripTags(node.properties.title)}

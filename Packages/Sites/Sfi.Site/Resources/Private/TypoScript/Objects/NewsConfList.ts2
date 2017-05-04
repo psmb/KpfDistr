@@ -7,7 +7,7 @@ prototype(Sfi.Site:NewsConfList) < prototype(Flowpack.Listable:List) {
 	@context.archiveLinkClass = 'ArchiveLink--main'
 	@context.wrapClass = 'position-relative'
 	@context.listTitleClass = 'H1'
-	@context.listTitle = TYPO3.TypoScript:Tag {
+	@context.listTitle = Neos.Fusion:Tag {
 		tagName = 'a'
 		content = 'Конференции, выставки, встречи'
 		attributes.href = NodeUri {

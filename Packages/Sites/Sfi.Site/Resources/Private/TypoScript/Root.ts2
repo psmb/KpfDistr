@@ -5,11 +5,11 @@ include: Objects/**/*.ts2
 prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 	head {
 		titleTag.content = ${String.stripTags(q(node).property('title'))}
-		stylesheets.site = TYPO3.TypoScript:Template {
+		stylesheets.site = Neos.Fusion:Template {
 			templatePath = 'resource://Sfi.Site/Private/Partials/SharedResources.html'
 			sectionName = 'stylesheets'
 		}
-		javascripts.headScripts = TYPO3.TypoScript:Template {
+		javascripts.headScripts = Neos.Fusion:Template {
 			templatePath = 'resource://Sfi.Site/Private/Partials/SharedResources.html'
 			sectionName = 'headScripts'
 		}
@@ -22,13 +22,13 @@ prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 		partialRootPath = 'resource://Sfi.Site/Private/Partials'
 		layoutRootPath = 'resource://Sfi.Site/Private/Layouts'
 
-		mainMenu = TYPO3.TypoScript:Collection {
+		mainMenu = Neos.Fusion:Collection {
 			@process.tmpl = ${'<div class="MainMenu">' + value + '</div>'}
 			collection = ${q(site).children('[instanceof TYPO3.Neos:Document]').filter('[_hiddenInIndex = FALSE]').get()}
 			itemName = 'node'
-			itemRenderer = TYPO3.TypoScript:Tag {
+			itemRenderer = Neos.Fusion:Tag {
 				tagName = 'a'
-				attributes.class = TYPO3.TypoScript:RawArray {
+				attributes.class = Neos.Fusion:RawArray {
 					default = 'MainMenu-item'
 					active = 'isActive'
 					active.@if.active = ${documentNode == node || q(documentNode).parents('[_identifier = "' + node.identifier + '"]').count() > 0}
@@ -55,7 +55,7 @@ prototype(Sfi.Site:Root) < prototype(TYPO3.Neos:Page) {
 		}
 
 
-		javascripts.bodyScripts = TYPO3.TypoScript:Template {
+		javascripts.bodyScripts = Neos.Fusion:Template {
 			templatePath = 'resource://Sfi.Site/Private/Partials/SharedResources.html'
 			partialRootPath = 'resource://Sfi.Site/Private/Partials'
 			sectionName = 'bodyScripts'

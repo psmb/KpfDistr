@@ -1,4 +1,4 @@
-prototype(Sfi.Site:ExhibitionBlock) < prototype(TYPO3.TypoScript:Template) {
+prototype(Sfi.Site:ExhibitionBlock) < prototype(Neos.Fusion:Template) {
   templatePath = 'resource://Sfi.Site/Private/Templates/NodeTypes/ExhibitionBlock.html'
   title = ${String.stripTags(q(this.node).property('title'))}
   teaser = ${String.stripTags(q(this.node).property('teaser'))}

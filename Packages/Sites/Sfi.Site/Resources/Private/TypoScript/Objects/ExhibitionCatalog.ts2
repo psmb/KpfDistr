@@ -1,4 +1,4 @@
-prototype(Sfi.Site:ExhibitionCatalogItem) < prototype(TYPO3.TypoScript:Template) {
+prototype(Sfi.Site:ExhibitionCatalogItem) < prototype(Neos.Fusion:Template) {
 	templatePath = 'resource://Sfi.Site/Private/Templates/NodeTypes/ExhibitionCatalogItem.html'
 	node = ${node}
 	title = ${String.stripTags(node.properties.title)}

@@ -1,6 +1,6 @@
 prototype(Sfi.Site:NewsProjectsList) < prototype(Flowpack.Listable:List) {
 	@context.listTitleClass = 'H1'
-	@context.listTitle = TYPO3.TypoScript:Tag {
+	@context.listTitle = Neos.Fusion:Tag {
 		tagName = 'a'
 		content = 'Проекты'
 		attributes.href = NodeUri {

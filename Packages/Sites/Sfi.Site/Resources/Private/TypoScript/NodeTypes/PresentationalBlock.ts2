@@ -1,23 +1,23 @@
 prototype(Sfi.Site:PresentationalBlock)>
-prototype(Sfi.Site:PresentationalBlock) < prototype(TYPO3.TypoScript:Array) {
+prototype(Sfi.Site:PresentationalBlock) < prototype(Neos.Fusion:Array) {
     @process.tmpl = ${'<div class="medium-6 small-12 columns marginTop-double">' + value + '</div>'}
     @context.sectionNode = ${node.properties.section}
-    block = TYPO3.TypoScript:Tag {
+    block = Neos.Fusion:Tag {
         attributes.style = ImageUri {
             @process.tmpl = ${'background-image: url(' + value + ')'}
             asset = ${node.properties.image}
         }
         attributes.class = 'padding-triple'
-        content = TYPO3.TypoScript:Array {
+        content = Neos.Fusion:Array {
             title = ${'<h2 class="H1 color-white">' + sectionNode.properties.title + '</h2>'}
-            description = TYPO3.TypoScript:Tag {
+            description = Neos.Fusion:Tag {
                 attributes.class = 'H4 color-white textShadow-deep marginVertical-double'
                 content = ${q(node).property('description')}
                 @process.contentElementEditable = ContentElementEditable {
                     property = 'description'
                 }
             }
-            button = TYPO3.TypoScript:Tag {
+            button = Neos.Fusion:Tag {
                 tagName = 'a'
                 attributes.class = 'H4 Button color-white'
                 attributes.href = NodeUri {
