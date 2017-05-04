@@ -5,7 +5,7 @@ prototype(Sfi.Site:PresentationalBlock) < prototype(Neos.Fusion:Array) {
     block = Neos.Fusion:Tag {
         attributes.class = 'paddingTop-triple paddingHorizontal-double PresentationalBlock-mainBlock'
         attributes.style = ImageUri {
-            @process.tmpl = ${'background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 1) 50%), url(' + value + '); background-size: contain; background-position: top center;'}
+            @process.tmpl = ${'overflow: auto; background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 1) 50%), url(' + value + '); background-size: contain; background-position: top center;'}
             asset = ${node.properties.image}
             width = 960
             height = 640
@@ -33,6 +33,10 @@ prototype(Sfi.Site:PresentationalBlock) < prototype(Neos.Fusion:Array) {
                 }
             }
             children = ContentCollectionRenderer {
+                prototype(Sfi.YouTube:YouTube) {
+                    # Fix youtube wrap
+                    @process.tmpl = ${'<div>' + value + '</div>'}
+                }
                 prototype(Neos.NodeTypes:Image) {
                     width = 800
                     height = 450
