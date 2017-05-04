@@ -30,7 +30,7 @@ blah:
 'Sfi.Site:AbstractPage':
   abstract: true
   superTypes:
-    'TYPO3.Neos:Document': '1'
+    'TYPO3.Neos:Document': true
   childNodes:
     main:
       type: 'TYPO3.Neos:ContentCollection'
@@ -122,12 +122,12 @@ blah:
                   height: 367
 'Sfi.Site:Page':
   superTypes:
-    'Sfi.Site:AbstractPage': '1'
+    'Sfi.Site:AbstractPage': true
   ui:
     label: 'Обычная страница'
 'Sfi.Site:PageMain':
   superTypes:
-    'Sfi.Site:AbstractPage': '1'
+    'Sfi.Site:AbstractPage': true
   ui:
     label: 'Главная страница'
   properties:
@@ -339,8 +339,8 @@ blah:
                   height: 164
 'Sfi.Site:PageAbout':
   superTypes:
-    'Sfi.Site:AbstractPage': '1'
-    'Sfi.Site:HasCover': '1'
+    'Sfi.Site:AbstractPage': true
+    'Sfi.Site:HasCover': true
   ui:
     label: 'О проекте'
   properties:
@@ -400,37 +400,37 @@ blah:
             autoparagraph: true
 'Sfi.Site:PageExhibitions':
   superTypes:
-    'Sfi.Site:AbstractPage': '1'
-    'Sfi.Site:HasCover': '1'
+    'Sfi.Site:AbstractPage': true
+    'Sfi.Site:HasCover': true
   ui:
     label: Выставки
 'Sfi.Site:PageExhibition':
   superTypes:
-    'Sfi.Site:AbstractPage': '1'
+    'Sfi.Site:AbstractPage': true
   ui:
     label: Выставка
 'Sfi.Site:PagePublishing':
   superTypes:
-    'Sfi.Site:AbstractPage': '1'
-    'Sfi.Site:HasCover': '1'
+    'Sfi.Site:AbstractPage': true
+    'Sfi.Site:HasCover': true
   ui:
     label: Издательство
 'Sfi.Site:PageProjects':
   superTypes:
-    'Sfi.Site:AbstractPage': '1'
-    'Sfi.Site:HasCover': '1'
+    'Sfi.Site:AbstractPage': true
+    'Sfi.Site:HasCover': true
   ui:
     label: Проекты
 'Sfi.Site:PageSmi':
   superTypes:
-    'Sfi.Site:AbstractPage': '1'
-    'Sfi.Site:HasCover': '1'
+    'Sfi.Site:AbstractPage': true
+    'Sfi.Site:HasCover': true
   ui:
     label: 'СМИ о нас'
 'Sfi.Site:AbstractNews':
   superTypes:
-    'Sfi.Site:AbstractPage': '1'
-    'Flowpack.Listable:ListableMixin': '1'
+    'Sfi.Site:AbstractPage': true
+    'Flowpack.Listable:ListableMixin': true
   properties:
     teaser:
       type: string
@@ -479,12 +479,12 @@ blah:
           group: document
 'Sfi.Site:News':
   superTypes:
-    'Sfi.Site:AbstractNews': '1'
+    'Sfi.Site:AbstractNews': true
   ui:
     label: Новость
 'Sfi.Site:Announcement':
   superTypes:
-    'Sfi.Site:AbstractNews': '1'
+    'Sfi.Site:AbstractNews': true
   ui:
     label: Анонс
   properties:
@@ -528,7 +528,7 @@ blah:
         TYPO3.Neos/Validation/DateTimeValidator: {  }
 'Sfi.Site:Person':
   superTypes:
-    'TYPO3.Neos:Content': '1'
+    'TYPO3.Neos:Content': true
   ui:
     label: Персона
   properties:
@@ -595,7 +595,7 @@ blah:
           group: type
 'Sfi.Site:Book':
   superTypes:
-    'TYPO3.Neos:Content': '1'
+    'TYPO3.Neos:Content': true
   ui:
     label: Книжка
   properties:
@@ -707,8 +707,8 @@ blah:
           editor: TYPO3.Neos/Inspector/Editors/LinkEditor
 'Sfi.Site:PresentationalBlock':
   superTypes:
-    'TYPO3.Neos:Content': '1'
-    'TYPO3.Neos:ContentCollection': '1'
+    'TYPO3.Neos:Content': true
+    'TYPO3.Neos:ContentCollection': true
   ui:
     label: 'Презентационный блок на главную'
   properties:
