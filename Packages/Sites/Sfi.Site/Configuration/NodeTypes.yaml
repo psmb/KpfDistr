@@ -1,5 +1,6 @@
 # Define Aloha presets to reuse throughout the document
-blah: &alohaPlain
+
+blah:
   placeholder: 'Enter title here'
   format:
     b: false
@@ -19,46 +20,17 @@ blah: &alohaPlain
     a: false
   alignment: {  }
   formatlesspaste:
-    'button': FALSE
-    'formatlessPasteOption': TRUE
-    'autoparagraph': TRUE
-
-blah: &alohaRich
-  placeholder: 'Enter title here'
-  format:
-    b: true
-    i: true
-    u: false
-    sub: true
-    sup: true
-    p: true
-    h1: false
-    h2: true
-    h3: true
-    pre: false
-    removeFormat: false
-  table: {  }
-  list:
-    'ul': TRUE
-    'ol': TRUE
-  link:
-    a: true
-  alignment: {  }
-  formatlesspaste:
-    'button': TRUE
-    'formatlessPasteOption': TRUE
-    'autoparagraph': TRUE
-
+    button: false
+    formatlessPasteOption: true
+    autoparagraph: true
 'TYPO3.Neos.NodeTypes:Page':
-  abstract: TRUE
-
+  abstract: true
 'Sfi.Site:HasCover':
-  abstract: TRUE
-
+  abstract: true
 'Sfi.Site:AbstractPage':
-  abstract: TRUE
+  abstract: true
   superTypes:
-    'TYPO3.Neos:Document': TRUE
+    'TYPO3.Neos:Document': '1'
   childNodes:
     main:
       type: 'TYPO3.Neos:ContentCollection'
@@ -67,7 +39,7 @@ blah: &alohaRich
       type: string
       ui:
         label: 'Название для меню (опционально)'
-        reloadIfChanged: FALSE
+        reloadIfChanged: false
         inspector:
           group: document
     description:
@@ -75,22 +47,42 @@ blah: &alohaRich
       ui:
         inlineEditable: true
         aloha:
-          <<: *alohaPlain
           placeholder: 'Описание раздела'
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
     imageWide:
       type: TYPO3\Media\Domain\Model\ImageInterface
       ui:
         label: 'Широкая фотка (для карусели и др.)'
-        reloadIfChanged: FALSE
+        reloadIfChanged: false
         inspector:
           group: document
           editorOptions:
             features:
-              resize: TRUE
+              resize: true
             crop:
               aspectRatio:
-                enableOriginal: FALSE
-                allowCustom: FALSE
+                enableOriginal: false
+                allowCustom: false
                 locked:
                   width: 1170
                   height: 440
@@ -98,16 +90,16 @@ blah: &alohaRich
       type: TYPO3\Media\Domain\Model\ImageInterface
       ui:
         label: 'Стандартная фотка'
-        reloadIfChanged: FALSE
+        reloadIfChanged: false
         inspector:
           group: document
           editorOptions:
             features:
-              resize: TRUE
+              resize: true
             crop:
               aspectRatio:
-                enableOriginal: FALSE
-                allowCustom: FALSE
+                enableOriginal: false
+                allowCustom: false
                 locked:
                   width: 960
                   height: 640
@@ -115,29 +107,27 @@ blah: &alohaRich
       type: TYPO3\Media\Domain\Model\ImageInterface
       ui:
         label: 'Почти квадратная фотка'
-        reloadIfChanged: FALSE
+        reloadIfChanged: false
         inspector:
           group: document
           editorOptions:
             features:
-              resize: TRUE
+              resize: true
             crop:
               aspectRatio:
-                enableOriginal: FALSE
-                allowCustom: FALSE
+                enableOriginal: false
+                allowCustom: false
                 locked:
                   width: 350
                   height: 367
-
 'Sfi.Site:Page':
   superTypes:
-    'Sfi.Site:AbstractPage': true
+    'Sfi.Site:AbstractPage': '1'
   ui:
     label: 'Обычная страница'
-
 'Sfi.Site:PageMain':
   superTypes:
-    'Sfi.Site:AbstractPage': true
+    'Sfi.Site:AbstractPage': '1'
   ui:
     label: 'Главная страница'
   properties:
@@ -146,71 +136,211 @@ blah: &alohaRich
       ui:
         inlineEditable: true
         aloha:
-          <<: *alohaPlain
           placeholder: 'Строка дополнительной информации'
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
     headerDescription:
       type: string
       ui:
         inlineEditable: true
         aloha:
-          <<: *alohaPlain
           placeholder: 'Описание о фонде и центре'
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
     address:
       type: string
       ui:
         inlineEditable: true
         aloha:
-          <<: *alohaPlain
-          placeholder: 'Адрес'
+          placeholder: Адрес
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
     phone:
       type: string
       ui:
         inlineEditable: true
         aloha:
-          <<: *alohaPlain
-          placeholder: 'Телефон'
+          placeholder: Телефон
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
     email:
       type: string
       ui:
         inlineEditable: true
         aloha:
-          <<: *alohaPlain
-          placeholder: 'e-mail'
+          placeholder: e-mail
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
     contactPersonName:
       type: string
       ui:
         inlineEditable: true
         aloha:
-          <<: *alohaPlain
           placeholder: 'имя контактного лица'
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
     contactPersonPosition:
       type: string
       ui:
         inlineEditable: true
         aloha:
-          <<: *alohaPlain
           placeholder: 'должность контактного лица'
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
     contactPersonImage:
       type: TYPO3\Media\Domain\Model\ImageInterface
       ui:
         label: 'Фотка контактной персоны'
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
           group: document
           editorOptions:
             features:
-              resize: TRUE
+              resize: true
             crop:
               aspectRatio:
-                enableOriginal: FALSE
-                allowCustom: FALSE
+                enableOriginal: false
+                allowCustom: false
                 locked:
                   width: 137
                   height: 164
 'Sfi.Site:PageAbout':
   superTypes:
-    'Sfi.Site:AbstractPage': true
-    'Sfi.Site:HasCover': true
+    'Sfi.Site:AbstractPage': '1'
+    'Sfi.Site:HasCover': '1'
   ui:
     label: 'О проекте'
   properties:
@@ -219,100 +349,172 @@ blah: &alohaRich
       ui:
         inlineEditable: true
         aloha:
-          <<: *alohaPlain
           placeholder: 'Описание КПФ'
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
     centreDescription:
       type: string
       ui:
         inlineEditable: true
         aloha:
-          <<: *alohaPlain
           placeholder: 'Описание КПЦ'
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
 'Sfi.Site:PageExhibitions':
   superTypes:
-    'Sfi.Site:AbstractPage': true
-    'Sfi.Site:HasCover': true
+    'Sfi.Site:AbstractPage': '1'
+    'Sfi.Site:HasCover': '1'
   ui:
-    label: 'Выставки'
-
+    label: Выставки
 'Sfi.Site:PageExhibition':
   superTypes:
-    'Sfi.Site:AbstractPage': true
+    'Sfi.Site:AbstractPage': '1'
   ui:
-    label: 'Выставка'
+    label: Выставка
 'Sfi.Site:PagePublishing':
   superTypes:
-    'Sfi.Site:AbstractPage': true
-    'Sfi.Site:HasCover': true
+    'Sfi.Site:AbstractPage': '1'
+    'Sfi.Site:HasCover': '1'
   ui:
-    label: 'Издательство'
-
+    label: Издательство
 'Sfi.Site:PageProjects':
   superTypes:
-    'Sfi.Site:AbstractPage': true
-    'Sfi.Site:HasCover': true
+    'Sfi.Site:AbstractPage': '1'
+    'Sfi.Site:HasCover': '1'
   ui:
-    label: 'Проекты'
-    label: 'Издательство'
-
+    label: Проекты
 'Sfi.Site:PageSmi':
   superTypes:
-    'Sfi.Site:AbstractPage': true
-    'Sfi.Site:HasCover': true
+    'Sfi.Site:AbstractPage': '1'
+    'Sfi.Site:HasCover': '1'
   ui:
     label: 'СМИ о нас'
-
-
 'Sfi.Site:AbstractNews':
   superTypes:
-    'Sfi.Site:AbstractPage': true
-    'Flowpack.Listable:ListableMixin': true
+    'Sfi.Site:AbstractPage': '1'
+    'Flowpack.Listable:ListableMixin': '1'
   properties:
     teaser:
       type: string
       ui:
         inlineEditable: true
         aloha:
-          <<: *alohaRich
-          placeholder: 'Тизер'
+          placeholder: Тизер
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
     date:
       type: DateTime
-      defaultValue: 'now'
+      defaultValue: now
       ui:
-        label: 'Дата'
+        label: Дата
         reloadIfChanged: true
         inspector:
           group: document
           editorOptions:
             format: 'd-m-Y H:i'
       validation:
-        'TYPO3.Neos/Validation/DateTimeValidator': []
+        TYPO3.Neos/Validation/DateTimeValidator: {  }
     important:
       type: boolean
       ui:
         label: 'В карусель на главной'
         inspector:
           group: document
-
 'Sfi.Site:News':
   superTypes:
-    'Sfi.Site:AbstractNews': true
+    'Sfi.Site:AbstractNews': '1'
   ui:
-    label: 'Новость'
-
+    label: Новость
 'Sfi.Site:Announcement':
   superTypes:
-    'Sfi.Site:AbstractNews': true
+    'Sfi.Site:AbstractNews': '1'
   ui:
-    label: 'Анонс'
+    label: Анонс
   properties:
     place:
       type: string
       ui:
         inlineEditable: true
         aloha:
-          <<: *alohaPlain
-          placeholder: 'Место'
+          placeholder: Место
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
     dateStart:
       type: DateTime
       ui:
@@ -323,76 +525,175 @@ blah: &alohaRich
           editorOptions:
             format: 'd-m-Y H:i'
       validation:
-        'TYPO3.Neos/Validation/DateTimeValidator': []
+        TYPO3.Neos/Validation/DateTimeValidator: {  }
 'Sfi.Site:Person':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'TYPO3.Neos:Content': '1'
   ui:
-    label: 'Персона'
+    label: Персона
   properties:
     name:
       type: string
       ui:
         inlineEditable: true
         aloha:
-          <<: *alohaPlain
-          placeholder: 'Место'
+          placeholder: Место
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
     position:
       type: string
       ui:
         inlineEditable: true
         aloha:
-          <<: *alohaPlain
-          placeholder: 'Должность'
+          placeholder: Должность
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
     image:
       type: TYPO3\Media\Domain\Model\ImageInterface
       ui:
         label: 'Фотка персоны'
-        reloadIfChanged: FALSE
+        reloadIfChanged: false
         inspector:
           group: type
-
 'Sfi.Site:Book':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'TYPO3.Neos:Content': '1'
   ui:
-    label: 'Книжка'
+    label: Книжка
   properties:
     title:
       type: string
       ui:
         inlineEditable: true
         aloha:
-          <<: *alohaPlain
           placeholder: 'Название книги'
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
     subTitle:
       type: string
       ui:
         inlineEditable: true
         aloha:
-          <<: *alohaPlain
           placeholder: 'Краткое описание книги'
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
     description:
       type: string
       ui:
         inlineEditable: true
         aloha:
-          <<: *alohaPlain
           placeholder: 'Развернутое описание книги'
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
     image:
       type: TYPO3\Media\Domain\Model\ImageInterface
       ui:
         label: 'Обложка книги'
-        reloadIfChanged: FALSE
+        reloadIfChanged: false
         inspector:
           group: type
           editorOptions:
             features:
-              resize: TRUE
+              resize: true
             crop:
               aspectRatio:
-                enableOriginal: FALSE
-                allowCustom: FALSE
+                enableOriginal: false
+                allowCustom: false
                 locked:
                   width: 315
                   height: 366
@@ -400,15 +701,14 @@ blah: &alohaRich
       type: string
       ui:
         label: 'Ссылка на магазин предание'
-        reloadIfChanged: FALSE
+        reloadIfChanged: false
         inspector:
           group: type
-          editor: 'TYPO3.Neos/Inspector/Editors/LinkEditor'
-
+          editor: TYPO3.Neos/Inspector/Editors/LinkEditor
 'Sfi.Site:PresentationalBlock':
   superTypes:
-    'TYPO3.Neos:Content': true
-    'TYPO3.Neos:ContentCollection': true
+    'TYPO3.Neos:Content': '1'
+    'TYPO3.Neos:ContentCollection': '1'
   ui:
     label: 'Презентационный блок на главную'
   properties:
@@ -417,22 +717,82 @@ blah: &alohaRich
       ui:
         inlineEditable: true
         aloha:
-          <<: *alohaPlain
-          placeholder: 'Заголовок'
+          placeholder: Заголовок
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
     description:
       type: string
       ui:
         inlineEditable: true
         aloha:
-          <<: *alohaPlain
-          placeholder: 'Описание'
+          placeholder: Описание
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
     buttonText:
       type: string
       ui:
         inlineEditable: true
         aloha:
-          <<: *alohaPlain
           placeholder: 'Текст на кнопке'
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
     section:
       type: reference
       ui:
@@ -443,6 +803,6 @@ blah: &alohaRich
       type: TYPO3\Media\Domain\Model\ImageInterface
       ui:
         label: 'Фото на обложку'
-        reloadIfChanged: FALSE
+        reloadIfChanged: false
         inspector:
           group: type
