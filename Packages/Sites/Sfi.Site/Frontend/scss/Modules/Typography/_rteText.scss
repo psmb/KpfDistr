@@ -11,7 +11,7 @@
   }
   h1 {
     @extend .H1;
-    margin-top: $u;
+    margin-top: 3*$u;
     margin-bottom: $u;
   }
   h2 {
