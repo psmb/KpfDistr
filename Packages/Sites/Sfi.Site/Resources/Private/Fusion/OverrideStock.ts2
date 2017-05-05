@@ -27,8 +27,9 @@ prototype(ContentElementWrapping).@process.visibility = Neos.Fusion:Case {
   }
 }
 
-
 prototype(Flowpack.Listable:Listable) {
     @context.sortProperty = 'date'
     @context.sortOrder = 'DESC'
 }
+
+prototype(Neos.NodeTypes:Headline).attributes.class = 'RteText'

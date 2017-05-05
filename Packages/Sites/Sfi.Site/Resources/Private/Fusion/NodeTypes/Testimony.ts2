@@ -1,6 +1,6 @@
 prototype(Sfi.Site:Testimony)>
 prototype(Sfi.Site:Testimony) < prototype(Neos.Fusion:Tag) {
-    @process.tmpl = ${'<div>' + value + '</div>'}
+    @process.tmpl = ${'<div class="textAlign-center">' + value + '</div>'}
     tagName = 'a'
     attributes {
         href = Neos.Fusion:ResourceUri {
@@ -20,10 +20,17 @@ prototype(Sfi.Site:Testimony) < prototype(Neos.Fusion:Tag) {
             }
         }
         title = Neos.Fusion:Tag {
-            attributes.class = 'H4'
+            attributes.class = 'HDecor paddingTop-single paddingBottom-half'
             content = ${q(node).property('title')}
             @process.contentElementEditable = ContentElementEditable {
                 property = 'title'
+            }
+        }
+        description = Neos.Fusion:Tag {
+            attributes.class = 'H4'
+            content = ${q(node).property('description')}
+            @process.contentElementEditable = ContentElementEditable {
+                property = 'description'
             }
         }
     }

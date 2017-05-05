@@ -764,6 +764,12 @@ blah:
         inlineEditable: true
         aloha:
           placeholder: 'Название организации'
+    description:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Описание документа'
     image:
       type: Neos\Media\Domain\Model\ImageInterface
       ui:
