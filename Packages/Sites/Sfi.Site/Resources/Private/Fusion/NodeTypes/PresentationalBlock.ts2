@@ -15,7 +15,7 @@ prototype(Sfi.Site:PresentationalBlock) < prototype(Neos.Fusion:Array) {
         content = Neos.Fusion:Array {
             title = ${'<h2 class="H1 color-white marginTop-single">' + sectionNode.properties.title + '</h2>'}
             description = Neos.Fusion:Tag {
-                attributes.class = 'H4 color-white textShadow-deep marginTop-single marginBottom-double'
+                attributes.class = 'H4 color-white textShadow-deep marginTop-single marginBottom-double large-8'
                 content = ${q(node).property('description')}
                 @process.contentElementEditable = ContentElementEditable {
                     property = 'description'

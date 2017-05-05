@@ -20,3 +20,6 @@ prototype(Flowpack.Listable:Listable) {
 }
 
 prototype(Neos.NodeTypes:Headline).attributes.class = 'RteText'
+
+prototype(Sfi.YouTube:YouTube).@process.caption = ${'<div class="ParagraphSans marginTop-double" style="margin-bottom: -18px">' + node.properties.caption + '</div>' + value}
+prototype(Sfi.YouTube:YouTube).@process.caption.@if.isset = ${node.properties.caption ? true : false}
