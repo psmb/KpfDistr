@@ -1,30 +1,17 @@
 prototype(Neos.NodeTypes:Image) {
-  maximumWidth = 960
-  maximumHeight = 640
-  attributes.class = 'marginVertical-double'
+    maximumWidth = 960
+    maximumHeight = 640
+    attributes.class = 'marginVertical-double'
 }
 prototype(Neos.Neos:BreadcrumbMenu) {
     templatePath = 'resource://Sfi.Site/Private/Templates/Objects/BreadcrumbMenu.html'
 }
 
-prototype(ContentElementWrapping).@process.visibility = Neos.Fusion:Case {
-  document {
-    condition = ${documentNode == node || q(node).is('[instanceof Sfi.Grid:Column]') || q(node).is('[instanceof Sfi.Site:Book]')}
-    renderer = ${value}
-  }
-  default {
-    condition = ${true}
-    renderer = Neos.Fusion:Tag {
-      attributes.class = Neos.Fusion:RawArray {
-        visibility = ${node.properties.visibility}
-      }
-      attributes.style = Neos.Fusion:RawArray {
+prototype(Sfi.Grid:Row) {
+    attributes.style = Neos.Fusion:RawArray {
         paddingTop = ${node.properties.paddingTop && ('padding-top: ' + node.properties.paddingTop * 12 + 'px;')}
         paddingBottom = ${node.properties.paddingBottom && ('padding-bottom: ' + node.properties.paddingBottom * 12 + 'px;')}
-      }
-      content = ${value}
     }
-  }
 }
 
 prototype(Flowpack.Listable:Listable) {

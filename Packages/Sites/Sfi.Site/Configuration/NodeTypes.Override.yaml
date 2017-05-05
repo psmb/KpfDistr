@@ -1,6 +1,5 @@
-'Neos.Neos:Content':
+'Sfi.Grid:Row':
   superTypes:
-    'Sfi.Site:VisibilityMixin': true
     'Sfi.Site:SpacingMixin': true
   ui:
     inspector:
