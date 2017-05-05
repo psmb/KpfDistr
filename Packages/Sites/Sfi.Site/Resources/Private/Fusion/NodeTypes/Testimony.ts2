@@ -35,6 +35,7 @@ prototype(Sfi.Site:Testimony) < prototype(Neos.Fusion:Tag) {
                 property = 'description'
             }
         }
+        download = ${'<div class="color-primary H4 marginTop-half">Читать отзыв</div>'}
     }
     @process.contentElementWrapping = ContentElementWrapping
 }
