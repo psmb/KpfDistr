@@ -121,6 +121,7 @@ blah:
                   width: 350
                   height: 367
 'Sfi.Site:Page':
+  abstract: true
   superTypes:
     'Sfi.Site:AbstractPage': true
   ui:
@@ -658,7 +659,6 @@ blah:
 'Sfi.Site:PresentationalBlock':
   superTypes:
     'Neos.Neos:Content': true
-    'Neos.Neos:ContentCollection': true
   ui:
     label: 'Презентационный блок на главную'
   properties:

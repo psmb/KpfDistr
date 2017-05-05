@@ -1,6 +1,6 @@
 prototype(Sfi.Site:Testimony)>
 prototype(Sfi.Site:Testimony) < prototype(Neos.Fusion:Tag) {
-    @process.tmpl = ${'<div class="textAlign-center">' + value + '</div>'}
+    @process.tmpl = ${'<div class="textAlign-center marginBottom-triple">' + value + '</div>'}
     tagName = 'a'
     attributes {
         href = Neos.Fusion:ResourceUri {
@@ -11,11 +11,13 @@ prototype(Sfi.Site:Testimony) < prototype(Neos.Fusion:Tag) {
     content = Neos.Fusion:Array {
         image = Neos.Fusion:Tag {
             tagName = 'img'
+            attributes.title = 'Читать отзыв'
+            attributes.style = 'padding: 0 48px'
             attributes.src = ImageUri {
                 asset = ${node.properties.image}
                 maximumWidth>
-                width = 300
-                height = 300
+                width = 256
+                height = 256
                 allowCropping = ${true}
             }
         }
