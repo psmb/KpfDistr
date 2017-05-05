@@ -5,6 +5,7 @@ prototype(Sfi.Site:ExhibitionCatalogItem) < prototype(Neos.Fusion:Template) {
 	description = ${String.stripTags(node.properties.description)}
 	image = Neos.Neos:ImageUri {
 		asset = ${node.properties.imageSquare}
+		maximumWidth>
 		width = 220
 		height = 254
 		allowCropping = TRUE

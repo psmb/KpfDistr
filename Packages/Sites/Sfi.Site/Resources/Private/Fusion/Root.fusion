@@ -69,6 +69,7 @@ prototype(Sfi.Site:Root) < prototype(Neos.Neos:Page) {
 		showCover = ${q(node).is('[instanceof Sfi.Site:HasCover]') && !request.pluginArguments.listable-paginate['@action']}
 		coverImage = Neos.Neos:ImageUri {
 			asset = ${node.properties.imageWide}
+			maximumWidth>
 			width = 1168
 			height = 437
 			allowCropping = TRUE

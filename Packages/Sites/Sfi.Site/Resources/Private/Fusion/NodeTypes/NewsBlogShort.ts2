@@ -5,8 +5,10 @@ prototype(Sfi.Site:NewsBlogShort) < prototype(Neos.Fusion:Template) {
 	teaser = ${String.stripTags(node.properties.teaser)}
 	image = Neos.Neos:ImageUri {
 		asset = ${q(node).property('imageWide')}
+		maximumWidth>
 		width = 740
 		height = 360
 		allowCropping = TRUE
 	}
+	date = ${node.properties.date}
 }

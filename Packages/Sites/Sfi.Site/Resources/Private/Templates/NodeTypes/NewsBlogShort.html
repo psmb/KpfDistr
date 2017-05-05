@@ -5,5 +5,6 @@
     <h2 class="H2 HeadingWithTopLine paddingVertical-single">{title -> f:format.raw()}</h2>
     <img src="{image}" class="fullWidth" alt="{title}"/>
     <p class="ParagraphSerif paddingTop-single">{teaser -> f:format.raw()}</p>
+    <p class="H4s marginTop-half"><f:format.date forceLocale="{true}" cldrFormat="dd MMMM yyyy">{date}</f:format.date></p>
   </div>
 </neos:link.node>

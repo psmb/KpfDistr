@@ -10,6 +10,7 @@ prototype(Sfi.Site:PageExhibition) {
 		asset = ${node.properties.imageWide}
 		width = 1168
 		height = 437
+		maximumWidth>
 		allowCropping = TRUE
 		allowUpScaling = TRUE
 	}

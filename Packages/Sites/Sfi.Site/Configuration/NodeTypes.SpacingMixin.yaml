@@ -1,0 +1,61 @@
+'Sfi.Site:SpacingMixin':
+  abstract: true
+  properties:
+    paddingTop:
+      defaultValue: ''
+      type: string
+      ui:
+        label: Отступ сверху
+        reloadIfChanged: true
+        inspector:
+          group: helpers
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              '':
+                label: '0'
+              0.5:
+                label: '0.5u'
+              1:
+                label: '1u'
+              1.5:
+                label: '1.5u'
+              2:
+                label: '2u'
+              3:
+                label: '3u'
+              4:
+                label: '4u'
+              5:
+                label: '5u'
+              6:
+                label: '6u'
+    paddingBottom:
+      defaultValue: ''
+      type: string
+      ui:
+        label: 'Отступ снизу'
+        reloadIfChanged: true
+        inspector:
+          group: helpers
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              '':
+                label: '0'
+              0.5:
+                label: '0.5u'
+              1:
+                label: '1u'
+              1.5:
+                label: '1.5u'
+              2:
+                label: '2u'
+              3:
+                label: '3u'
+              4:
+                label: '4u'
+              5:
+                label: '5u'
+              6:
+                label: '6u'

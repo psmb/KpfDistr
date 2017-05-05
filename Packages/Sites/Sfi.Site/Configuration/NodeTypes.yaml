@@ -343,61 +343,6 @@ blah:
     'Sfi.Site:HasCover': true
   ui:
     label: 'О проекте'
-  properties:
-    fondDescription:
-      type: string
-      ui:
-        inlineEditable: true
-        aloha:
-          placeholder: 'Описание КПФ'
-          format:
-            b: false
-            i: false
-            u: false
-            sub: false
-            sup: false
-            p: false
-            h1: false
-            h2: false
-            h3: false
-            pre: false
-            removeFormat: false
-          table: {  }
-          list: {  }
-          link:
-            a: false
-          alignment: {  }
-          formatlesspaste:
-            button: false
-            formatlessPasteOption: true
-            autoparagraph: true
-    centreDescription:
-      type: string
-      ui:
-        inlineEditable: true
-        aloha:
-          placeholder: 'Описание КПЦ'
-          format:
-            b: false
-            i: false
-            u: false
-            sub: false
-            sup: false
-            p: false
-            h1: false
-            h2: false
-            h3: false
-            pre: false
-            removeFormat: false
-          table: {  }
-          list: {  }
-          link:
-            a: false
-          alignment: {  }
-          formatlesspaste:
-            button: false
-            formatlessPasteOption: true
-            autoparagraph: true
 'Sfi.Site:PageExhibitions':
   superTypes:
     'Sfi.Site:AbstractPage': true
@@ -806,3 +751,108 @@ blah:
         reloadIfChanged: false
         inspector:
           group: type
+
+'Sfi.Site:Testimony':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: 'Отзыв'
+  properties:
+    title:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Название организации'
+    image:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Логотип организации'
+        inspector:
+          group: type
+    asset:
+      type: Neos\Media\Domain\Model\Asset
+      ui:
+        inspector:
+          group: type
+        label: 'Файл с отзывом в формате pdf'
+
+'Sfi.Site:AttachedPaper':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: 'Приложенный документ'
+  properties:
+    title:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Название документа'
+    image:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Картинка с документом'
+        inspector:
+          group: type
+
+'Sfi.Site:AboutBlock':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: 'Блок с информацией о нас'
+  properties:
+    fondDescription:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Описание КПФ'
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
+    centreDescription:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Описание КПЦ'
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true

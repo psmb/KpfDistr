@@ -3,6 +3,7 @@ prototype(Sfi.Site:Announcement) < prototype(Sfi.Site:News) {
     asset = ${node.properties.imageNormal}
     width = 960
     height = 640
+    maximumWidth>
     allowCropping = TRUE
     allowUpScaling = TRUE
   }

@@ -1,0 +1,9 @@
+'Neos.Neos:Content':
+  superTypes:
+    'Sfi.Site:VisibilityMixin': true
+    'Sfi.Site:SpacingMixin': true
+  ui:
+    inspector:
+      groups:
+        helpers:
+          label: 'Штучки'

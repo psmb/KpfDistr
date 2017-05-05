@@ -7,6 +7,7 @@ prototype(Sfi.Site:AnnouncementShort) < prototype(Neos.Fusion:Template) {
 	place = ${String.stripTags(node.properties.place)}
 	image = Neos.Neos:ImageUri {
 		asset = ${q(node).property('imageSquare')}
+		maximumWidth>
 		width = 350
 		height = 368
 		allowCropping = TRUE

@@ -5,6 +5,7 @@ prototype(Sfi.Site:NewsTopShort) < prototype(Neos.Fusion:Template) {
 	teaser = ${String.stripTags(node.properties.teaser)}
 	image = Neos.Neos:ImageUri {
 		asset = ${node.properties.imageWide}
+		maximumWidth>
 		width = 1168
 		height = 437
 		allowCropping = TRUE

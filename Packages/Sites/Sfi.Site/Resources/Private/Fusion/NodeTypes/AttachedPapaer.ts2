@@ -1,0 +1,32 @@
+prototype(Sfi.Site:AttachedPaper)>
+prototype(Sfi.Site:AttachedPaper) < prototype(Neos.Fusion:Tag) {
+    @process.tmpl = ${'<div>' + value + '</div>'}
+    tagName = 'a'
+    attributes {
+        href = Neos.Fusion:ResourceUri {
+            resource = ${node.properties.image.resource}
+        }
+        target = '_blank'
+    }
+    content = Neos.Fusion:Array {
+        title = Neos.Fusion:Tag {
+            attributes.class = 'H4'
+            content = ${q(node).property('title')}
+            @process.contentElementEditable = ContentElementEditable {
+                property = 'title'
+            }
+        }
+        image = Neos.Fusion:Tag {
+            tagName = 'img'
+            attributes.src = ImageUri {
+                asset = ${node.properties.image}
+                maximumWidth>
+                width = 200
+                height = 300
+                allowCropping = ${true}
+            }
+        }
+    }
+
+    @process.contentElementWrapping = ContentElementWrapping
+}

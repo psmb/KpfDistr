@@ -1,0 +1,31 @@
+prototype(Sfi.Site:Testimony)>
+prototype(Sfi.Site:Testimony) < prototype(Neos.Fusion:Tag) {
+    @process.tmpl = ${'<div>' + value + '</div>'}
+    tagName = 'a'
+    attributes {
+        href = Neos.Fusion:ResourceUri {
+            resource = ${node.properties.asset.resource}
+        }
+        target = '_blank'
+    }
+    content = Neos.Fusion:Array {
+        image = Neos.Fusion:Tag {
+            tagName = 'img'
+            attributes.src = ImageUri {
+                asset = ${node.properties.image}
+                maximumWidth>
+                width = 300
+                height = 300
+                allowCropping = ${true}
+            }
+        }
+        title = Neos.Fusion:Tag {
+            attributes.class = 'H4'
+            content = ${q(node).property('title')}
+            @process.contentElementEditable = ContentElementEditable {
+                property = 'title'
+            }
+        }
+    }
+    @process.contentElementWrapping = ContentElementWrapping
+}

@@ -13,6 +13,7 @@ prototype(Sfi.Site:News) {
 
 	image = Neos.Neos:ImageUri {
 		asset = ${node.properties.imageNormal}
+		maximumWidth>
 		width = 960
 		height = 640
 		allowCropping = TRUE

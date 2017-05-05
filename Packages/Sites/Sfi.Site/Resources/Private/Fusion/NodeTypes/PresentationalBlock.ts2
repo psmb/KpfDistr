@@ -52,8 +52,6 @@ prototype(Sfi.Site:PresentationalBlock) < prototype(Neos.Fusion:Array) {
         @context.listClass = 'row small-up-1 medium-up-1 large-up-2 marginVertical-double'
         @context.itemClass = 'column'
         @context.limit = 2
-        @context.sortProperty = 'date'
-        @context.sortOrder = 'DESC'
         @context.paginationEnabled = ${false}
         @context.itemRenderer = 'Sfi.Site:NewsStandardShort'
         collection = ${q(sectionNode).find('[instanceof Sfi.Site:News]').get()}

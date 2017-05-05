@@ -1,0 +1,30 @@
+'Sfi.Site:VisibilityMixin':
+  abstract: true
+  properties:
+    visibility:
+      defaultValue: ''
+      type: string
+      ui:
+        label: Видимость
+        reloadIfChanged: true
+        inspector:
+          group: helpers
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              '':
+                label: Везде
+              show-for-small-only:
+                label: 'Только small'
+              show-for-medium-only:
+                label: 'Только medium'
+              show-for-medium:
+                label: 'medium и больше'
+              show-for-large-only:
+                label: 'Только large'
+              show-for-large:
+                label: 'large и больше'
+              show-for-xlarge-only:
+                label: 'Только xlarge'
+              show-for-xlarge:
+                label: 'xlarge и больше'

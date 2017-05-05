@@ -1,27 +1,4 @@
-{namespace neos=Neos\Neos\ViewHelpers}
 <f:layout name="1col"/>
 <f:section name="Main">
-  <div class="row">
-    <div class="large-8 columns">
-      <p class="H1 HeadingWithBottomLine">Культурно-просветительский фонд</p>
-      <div class="display-flex">
-        <div style="flex: 0 0 auto">
-          <img class="paddingRight-double" src="{f:uri.resource(path: 'images/logo.png', package: 'Sfi.Site')}"  alt="Культурно-просветительский фонд">
-        </div>
-        <p class="ParagraphSerif">{neos:contentElement.editable(property: 'fondDescription', tag: 'span')}</p>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-8 columns">
-      <p class="H1 HeadingWithBottomLine">Культурно-просветительский центр</p>
-      <div class="display-flex">
-        <div style="flex: 0 0 auto">
-          <img class="paddingRight-double" src="{f:uri.resource(path: 'images/logo_blue.png', package: 'Sfi.Site')}"  alt="Культурно-просветительский центр">
-        </div>
-        <p class="ParagraphSerif">{neos:contentElement.editable(property: 'centreDescription', tag: 'span')}</p>
-      </div>
-    </div>
-  </div>
   {main -> f:format.raw()}
 </f:section>

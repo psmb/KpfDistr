@@ -7,6 +7,7 @@ prototype(Sfi.Site:NewsRelatedShort) < prototype(Neos.Fusion:Template) {
 		asset = ${q(node).property('imageSquare')}
 		width = 350
 		height = 384
+		maximumWidth>
 		allowCropping = TRUE
 	}
 }
