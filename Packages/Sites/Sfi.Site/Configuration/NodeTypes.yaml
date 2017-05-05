@@ -134,6 +134,8 @@ blah:
       type: 'Neos.Neos:ContentCollection'
     sidebar:
       type: 'Neos.Neos:ContentCollection'
+    bottom:
+      type: 'Neos.Neos:ContentCollection'
   ui:
     label: 'Главная страница'
   properties:

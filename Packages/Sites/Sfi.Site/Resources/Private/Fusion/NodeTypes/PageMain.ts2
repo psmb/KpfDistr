@@ -9,6 +9,9 @@ prototype(Sfi.Site:PageMain) {
 	sidebar = ContentCollection {
 		nodePath = 'sidebar'
 	}
+	bottom = ContentCollection {
+		nodePath = 'bottom'
+	}
 
 	smiWidget = Sfi.Site:SmiWidget
 	announcementList = Sfi.Site:AnnouncementList
