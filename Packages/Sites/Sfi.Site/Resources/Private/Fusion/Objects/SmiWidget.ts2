@@ -19,7 +19,7 @@ prototype(Sfi.Site:SmiWidget) < prototype(Flowpack.Listable:List) {
 		mode = 'cached'
 		entryIdentifier.node = ${node}
 		entryTags {
-			1 = ${'NodeType_Sfi.Site:PageSmi'}
+			1 = ${'NodeType_Sfi.Site:News'}
 		}
 	}
 }
