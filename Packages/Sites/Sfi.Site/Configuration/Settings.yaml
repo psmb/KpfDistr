@@ -8,6 +8,9 @@ Neos:
       defaultLocale: ru
     http:
       baseUri: 'https://kp-f.ru/'
+    error:
+      exceptionHandler:
+        className: 'Yeebase\Graylog\Error\GraylogExceptionHandler'
   Neos:
     userInterface:
       navigateComponent:
@@ -18,3 +21,8 @@ Neos:
     fusion:
       autoInclude:
         Sfi.Site: true
+Yeebase:
+  Graylog:
+    host: '172.17.42.1'
+    port: 12201
+    chunksize: 'wan'
