@@ -16,7 +16,8 @@
         "flowpack/listable": "^2.0",
         "opsdev/cache-breaker": "^2.0",
         "psmb/carousel": "@dev",
-        "yeebase/graylog": "@dev"
+        "yeebase/graylog": "@dev",
+        "flownative/aws-s3": "^2.0"
     },
     "scripts": {
         "post-update-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
