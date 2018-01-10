@@ -5,7 +5,8 @@
     "require": {
         "neos/neos": "*",
         "opsdev/cache-breaker": "*",
-        "sfi/youtube": "*"
+        "sfi/youtube": "*",
+        "flownative/aws-s3": "*"
     },
     "suggest": {
         "typo3/neos-seo": "*"
