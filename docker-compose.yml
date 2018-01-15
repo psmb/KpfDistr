@@ -13,6 +13,7 @@ db:
     MYSQL_PASSWORD: pass
 
 web:
+  hostname: 'kp-f.ru'
   image: dimaip/docker-neos-alpine:latest
   ports:
     - '80'
