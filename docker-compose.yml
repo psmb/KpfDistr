@@ -1,36 +1,46 @@
-redis:
-  image: redis:3.2
+version: "3.1"
+services:
+  redis:
+    image: redis:3.2
+  db:
+    image: mariadb:10.3
+    volumes:
+      - db-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: db
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: pass
+  web:
+    image: dimaip/kpfdistr:latest
+    hostname: kpfru
+    networks:
+      - default
+      - main
+    secrets:
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.port=80"
+        - "traefik.default.protocol=http"
+        - "traefik.docker.network=main"
+        - "traefik.frontend.rule=Host:kp-f.ru,dev.kp-f.ru,www.kp-f.ru"
+    ports:
+      - '80'
+    depends_on:
+      - db
+      - redis
+volumes:
+  db-data:
+secrets:
+  AWS_ACCESS_KEY_ID:
+    external: true
+  AWS_SECRET_ACCESS_KEY:
+    external: true
+networks:
+  main:
+    external:
+      name: main
 
-db:
-  image: mariadb:10.3
-  restart: always
-  volumes:
-    - /var/lib/mysql
-  environment:
-    MYSQL_ROOT_PASSWORD: pass
-    MYSQL_DATABASE: db
-    MYSQL_USER: admin
-    MYSQL_PASSWORD: pass
-
-web:
-  hostname: 'kp-f.ru'
-  image: dimaip/kpfdistr:latest
-  ports:
-    - '80'
-    - '1125:22'
-  links:
-    - db
-    - redis
-  volumes:
-    - /data
-  environment:
-    - PHP_TIMEZONE=Europe/Moscow
-    - REPOSITORY_URL=https://github.com/psmb/KpfDistr
-    - VIRTUAL_HOST=kp-f.ru,dev.kp-f.ru,next.kp-f.ru,www.kp-f.ru
-    - LETSENCRYPT_HOST=kp-f.ru,dev.kp-f.ru,www.kp-f.ru
-    - LETSENCRYPT_EMAIL=dimaip@gmail.com
-    - IMPORT_GITHUB_PUB_KEYS=dimaip
-    - AWS_ENDPOINT=https://hb.bizmrg.com
-    - AWS_BACKUP_ARN=s3://psmb-neos-resources/db/kpf/
-    - AWS_ACCESS_KEY_ID
-    - AWS_SECRET_ACCESS_KEY
