@@ -6,10 +6,10 @@
         "bin-dir": "bin"
     },
     "require": {
-        "neos/neos": "~3.2.0",
+        "neos/neos": "~3.3.0",
         "neos/neos-ui": "dev-master",
         "neos/neos-ui-compiled": "dev-master",
-        "neos/nodetypes": "~3.2.0",
+        "neos/nodetypes": "~3.3.0",
         "neos/seo": "^2.0",
         "sfi/grid": "^2.0",
         "sfi/youtube": "^2.1",
