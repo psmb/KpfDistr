@@ -13,7 +13,11 @@
             <f:format.date format="d.m">{date}</f:format.date><span class="AnnouncementShort-cornerRight"/>
           </f:then>
           <f:else>
-            <f:format.date localeFormatLength="short" localeFormatType="date" forceLocale="ru">{date}</f:format.date><span class="AnnouncementShort-cornerRight"/>
+            <f:format.date localeFormatLength="short" localeFormatType="date" forceLocale="ru">{date}</f:format.date>
+            <f:if condition="{date -> f:format.date(format:'G:i')} != '0:00'">    
+              <f:format.date format="G:i">{date}</f:format.date>
+            </f:if>                                                                
+            <span class="AnnouncementShort-cornerRight"/>
           </f:else>
         </f:if>
       </p>
