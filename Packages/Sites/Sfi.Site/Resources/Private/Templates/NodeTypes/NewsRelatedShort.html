@@ -4,6 +4,6 @@
   <div class="marginBottom-double">
     <img src="{image}" class="fullWidth" alt="{title}" />
     <p class="H2s HeadingWithLeftLine paddingLeft-single paddingVertical-half marginVertical-sesquialteral">{title}</p>
-    <p class="ParagraphSerif">{teaser}</p>
+    <p class="ParagraphSerif">{teaser -> f:format.raw()}</p>
   </div>
 </neos:link.node>
