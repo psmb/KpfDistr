@@ -4,7 +4,7 @@
   <div class="overlay NewsTopShort CoverImage" style="background-image:url({image})">
     <div class="overlay-contents padding-single">
       <h2 class="NewsTopShort-title H0 color-white textShadow medium-10 large-8 marginBottom-single js-Carousel-itemTitle">{title}</h2>
-      <p class="NewsTopShort-teaser H4 color-white textShadow-deep medium-6 large-4">{teaser}</p>
+      <p class="NewsTopShort-teaser H4 color-white textShadow-deep medium-6 large-4">{teaser -> f:format.raw()}</p>
     </div>
   </div>
 </neos:link.node>
