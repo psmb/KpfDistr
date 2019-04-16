@@ -15,7 +15,7 @@
         "flowpack/listable": "^2.0",
         "opsdev/cache-breaker": "^2.0",
         "psmb/carousel": "@dev",
-        "yeebase/graylog": "@dev",
+        "yeebase/graylog": "^3.1",
         "flownative/aws-s3": "^2.0"
     },
     "scripts": {

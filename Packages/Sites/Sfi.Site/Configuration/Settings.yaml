@@ -39,11 +39,6 @@ Neos:
     fusion:
       autoInclude:
         Sfi.Site: true
-Yeebase:
-  Graylog:
-    host: '172.17.42.1'
-    port: 12201
-    chunksize: 'wan'
 Flownative:
   Aws:
     S3:
