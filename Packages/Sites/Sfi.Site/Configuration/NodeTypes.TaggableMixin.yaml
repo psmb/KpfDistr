@@ -17,6 +17,6 @@
             nodeTypes:
               - 'Sfi.Site:TagMixin'
             createNew:
-              path: /sites/site/node-d8ujvt3a8es63
+              path: /sites/site/node-4ikz115kuuqmr
               type: 'Sfi.Site:Tag'
             icon: tags
