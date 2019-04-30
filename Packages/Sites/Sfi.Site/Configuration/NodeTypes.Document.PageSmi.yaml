@@ -1,0 +1,7 @@
+'Sfi.Site:PageSmi':
+  superTypes:
+    'Sfi.Site:AbstractPage': true
+    'Sfi.Site:HasCover': true
+    'Sfi.Site:Constraint.TopLevel': true
+  ui:
+    label: 'СМИ о нас'

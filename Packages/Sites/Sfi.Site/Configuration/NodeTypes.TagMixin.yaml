@@ -1,0 +1,4 @@
+'Sfi.Site:TagMixin':
+  abstract: true
+  superTypes:
+    'Psmb.Term:TermMixin': true

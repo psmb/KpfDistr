@@ -1,0 +1,30 @@
+'Sfi.Site:Testimony':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: 'Отзыв'
+  properties:
+    title:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Название организации'
+    description:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Описание документа'
+    image:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Логотип организации'
+        inspector:
+          group: type
+    asset:
+      type: Neos\Media\Domain\Model\Asset
+      ui:
+        inspector:
+          group: type
+        label: 'Файл с отзывом в формате pdf'

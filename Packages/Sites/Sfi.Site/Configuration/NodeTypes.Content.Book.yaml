@@ -1,0 +1,112 @@
+'Sfi.Site:Book':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: Книжка
+  properties:
+    title:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Название книги'
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
+    subTitle:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Краткое описание книги'
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
+    description:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Развернутое описание книги'
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
+    image:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Обложка книги'
+        reloadIfChanged: false
+        inspector:
+          group: type
+          editorOptions:
+            features:
+              resize: true
+            crop:
+              aspectRatio:
+                enableOriginal: false
+                allowCustom: false
+                locked:
+                  width: 315
+                  height: 366
+    link:
+      type: string
+      ui:
+        label: 'Ссылка на магазин предание'
+        reloadIfChanged: false
+        inspector:
+          group: type
+          editor: Neos.Neos/Inspector/Editors/LinkEditor

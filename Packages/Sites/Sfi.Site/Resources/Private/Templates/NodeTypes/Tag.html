@@ -1,0 +1,10 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+<f:layout name="2col" />
+<f:section name="Main">
+    <p class="H1 HeadingWithBottomLine">{neos:contentElement.editable(property: 'title', tag: 'span')}</p>
+    {image -> f:format.raw()}
+    <div class="RteText paddingVertical-double">
+        {main -> f:format.raw()}
+    </div>
+    {newsList -> f:format.raw()}
+</f:section>

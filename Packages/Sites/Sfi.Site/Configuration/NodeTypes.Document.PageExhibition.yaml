@@ -1,0 +1,10 @@
+'Sfi.Site:PageExhibition':
+  superTypes:
+    'Sfi.Site:AbstractPage': true
+  ui:
+    label: Выставка
+
+'Neos.Neos:Document':
+  constraints:
+    nodeTypes:
+      'Sfi.Site:PageExhibition': false

@@ -1,0 +1,9 @@
+'Sfi.Site:Constraint.TopLevel':
+  superTypes:
+    'Neos.Neos:Document': true
+  abstract: true
+
+'Neos.Neos:Document':
+  constraints:
+    nodeTypes:
+      'Sfi.Site:Constraint.TopLevel': false

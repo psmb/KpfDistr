@@ -1,0 +1,6 @@
+'Sfi.Site:Page':
+  abstract: true
+  superTypes:
+    'Sfi.Site:AbstractPage': true
+  ui:
+    label: 'Обычная страница'

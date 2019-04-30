@@ -1,0 +1,10 @@
+'Sfi.Site:PageExhibitions':
+  superTypes:
+    'Sfi.Site:AbstractPage': true
+    'Sfi.Site:HasCover': true
+    'Sfi.Site:Constraint.TopLevel': true
+  ui:
+    label: Выставки
+  constraints:
+    nodeTypes:
+      'Sfi.Site:PageExhibition': true

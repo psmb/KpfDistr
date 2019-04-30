@@ -1,0 +1,12 @@
+'Sfi.Site:Tag':
+  superTypes:
+    'Sfi.Site:AbstractPage': true
+    'Sfi.Site:TagMixin': true
+    'Sfi.Site:Constraint.Inner': true
+  ui:
+    label: Тег
+    icon: tag
+    inspector:
+      groups:
+        tag:
+          label: Тег

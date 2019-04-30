@@ -1,0 +1,6 @@
+'Sfi.Site:News':
+  superTypes:
+    'Sfi.Site:AbstractNews': true
+  ui:
+    label: Новость
+    icon: newspaper

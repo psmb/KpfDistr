@@ -1,0 +1,22 @@
+'Sfi.Site:TaggableMixin':
+  ui:
+    inspector:
+      groups:
+        relations:
+          label: 'Тэги'
+  properties:
+    tags:
+      type: references
+      ui:
+        label: 'Теги'
+        reloadIfChanged: true
+        inline:
+          editor: 'Flowpack.StructuredEditing/EditorEnvelope'
+          editorOptions:
+            editor: 'Neos.Neos/Inspector/Editors/ReferencesEditor'
+            nodeTypes:
+              - 'Sfi.Site:TagMixin'
+            createNew:
+              path: /sites/site/node-d8ujvt3a8es63
+              type: 'Sfi.Site:Tag'
+            icon: tags

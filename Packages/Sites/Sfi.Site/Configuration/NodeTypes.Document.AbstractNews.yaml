@@ -1,0 +1,103 @@
+'Sfi.Site:AbstractNews':
+  superTypes:
+    'Sfi.Site:AbstractPage': true
+    'Flowpack.Listable:ListableMixin': true
+    'Sfi.Site:TaggableMixin': true
+    'Sfi.Site:Constraint.Inner': true
+  properties:
+    teaser:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: Тизер
+          format:
+            b: false
+            i: false
+            u: false
+            sub: false
+            sup: false
+            p: false
+            h1: false
+            h2: false
+            h3: false
+            pre: false
+            removeFormat: false
+          table: {  }
+          list: {  }
+          link:
+            a: false
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
+            autoparagraph: true
+    date:
+      type: DateTime
+      defaultValue: now
+      ui:
+        label: Дата
+        reloadIfChanged: true
+        inspector:
+          group: document
+          editorOptions:
+            format: 'd-m-Y H:i'
+      validation:
+        Neos.Neos/Validation/DateTimeValidator: {  }
+    important:
+      type: boolean
+      ui:
+        label: 'В карусель на главной'
+        inspector:
+          group: document
+    imageWide:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Широкая фотка (для карусели и др.)'
+        reloadIfChanged: false
+        inspector:
+          group: document
+          editorOptions:
+            features:
+              resize: true
+            crop:
+              aspectRatio:
+                enableOriginal: false
+                allowCustom: false
+                locked:
+                  width: 1170
+                  height: 440
+    imageNormal:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Стандартная фотка'
+        reloadIfChanged: false
+        inspector:
+          group: document
+          editorOptions:
+            features:
+              resize: true
+            crop:
+              aspectRatio:
+                enableOriginal: false
+                allowCustom: false
+                locked:
+                  width: 960
+                  height: 640
+    imageSquare:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Почти квадратная фотка'
+        reloadIfChanged: false
+        inspector:
+          group: document
+          editorOptions:
+            features:
+              resize: true
+            crop:
+              aspectRatio:
+                enableOriginal: false
+                allowCustom: false
+                locked:
+                  width: 350
+                  height: 367

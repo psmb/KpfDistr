@@ -1,0 +1,18 @@
+'Sfi.Site:AttachedPaper':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: 'Приложенный документ'
+  properties:
+    title:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Название документа'
+    image:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Картинка с документом'
+        inspector:
+          group: type

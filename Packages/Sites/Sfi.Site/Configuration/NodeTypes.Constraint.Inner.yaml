@@ -1,0 +1,9 @@
+'Sfi.Site:Constraint.Inner':
+  superTypes:
+    'Neos.Neos:Document': true
+  abstract: true
+
+'Neos.Neos:Document':
+  constraints:
+    nodeTypes:
+      'Sfi.Site:Constraint.Inner': true

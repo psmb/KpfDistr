@@ -1,3 +1,0 @@
-prototype(Sfi.Site:NewsShort) < prototype(Neos.Fusion:Template) {
-	templatePath = 'resource://Sfi.Site/Private/Templates/NodeTypes/NewsShort.html'
-}

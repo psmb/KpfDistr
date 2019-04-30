@@ -1,4 +1,4 @@
-prototype(Sfi.Site:News) {
+prototype(Sfi.Site:Tag) {
 	partialRootPath = 'resource://Sfi.Site/Private/Partials'
 	layoutRootPath = 'resource://Sfi.Site/Private/Layouts'
 	main = Neos.Neos:ContentCollection{
@@ -7,22 +7,15 @@ prototype(Sfi.Site:News) {
 	tagsEditable = ContentElementEditable {
 		property = 'tags'
 	}
-	tagList = Sfi.Site:TagList
-	parentExhibition = Sfi.Site:ExhibitionBlock {
-		node = ${q(node).parent('[instanceof Sfi.Site:PageExhibition]').get(0)}
+	newsList = Neos.Fusion:Collection {
+		collection = ${q(site).find('[instanceof Sfi.Site:AbstractNews]').get()}
+		collection.@process.filterByReference = ${q(value).filterByReference('tags', documentNode).get()}
+		itemName = 'node'
+		itemRenderer = Sfi.Site:NewsStandardShort
 	}
 
 	smiWidget = Sfi.Site:SmiWidget
 	announcementList = Sfi.Site:AnnouncementList
-
-	image = Neos.Neos:ImageUri {
-		asset = ${node.properties.imageNormal}
-		maximumWidth>
-		width = 960
-		height = 640
-		allowCropping = TRUE
-		allowUpScaling = TRUE
-	}
 
 	@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
 }
