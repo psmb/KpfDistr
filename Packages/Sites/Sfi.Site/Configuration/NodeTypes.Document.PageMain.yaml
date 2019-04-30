@@ -6,6 +6,12 @@
       type: 'Neos.Neos:ContentCollection'
     sidebar:
       type: 'Neos.Neos:ContentCollection'
+    videos:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'Sfi.YouTube:YouTube': true
     bottom:
       type: 'Neos.Neos:ContentCollection'
   ui:

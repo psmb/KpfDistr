@@ -12,6 +12,14 @@ prototype(Sfi.Site:PageMain) {
 	bottom = ContentCollection {
 		nodePath = 'bottom'
 	}
+	videos = Neos.Fusion:Collection {
+		collection = ${q(site).children('videos').children('[instanceof Sfi.YouTube:YouTube]').slice(0, 3).get()}
+		itemName = 'node'
+		itemRenderer = Neos.Neos:ContentCase
+		@process.link = afx`{value}
+			<div class="textAlign-center"><a class="H4 Button color-white" href="/?videos=1">Все видео</a></div>
+		`
+	}
 
 	smiWidget = Sfi.Site:SmiWidget
 	announcementList = Sfi.Site:AnnouncementList

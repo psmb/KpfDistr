@@ -1,0 +1,6 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+<f:layout name="2col" />
+<f:section name="Main">
+    <p class="H1 HeadingWithBottomLine" style="padding-top: 60px">Видео</p>
+    {videos -> f:format.raw()}
+</f:section>

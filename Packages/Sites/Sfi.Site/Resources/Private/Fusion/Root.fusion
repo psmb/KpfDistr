@@ -44,6 +44,10 @@ prototype(Sfi.Site:Root) < prototype(Neos.Neos:Page) {
 		}
 
 		main = PrimaryContent {
+			videosArchive {
+				condition = ${request.arguments.videos}
+				type = 'Sfi.Site:VideosArchive'
+			}
 			renderArchive {
 				condition = ${request.pluginArguments.listable-paginate['@action']}
 				type = 'Sfi.Site:NewsBlogArchive'
