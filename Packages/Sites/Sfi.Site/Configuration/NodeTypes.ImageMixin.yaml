@@ -1,0 +1,53 @@
+'Sfi.Site:ImageMixin':
+  properties:
+    imageWide:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Широкая фотка (для карусели и др.)'
+        reloadIfChanged: false
+        inspector:
+          group: document
+          editorOptions:
+            features:
+              resize: true
+            crop:
+              aspectRatio:
+                enableOriginal: false
+                allowCustom: false
+                locked:
+                  width: 1170
+                  height: 440
+    imageNormal:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Стандартная фотка'
+        reloadIfChanged: false
+        inspector:
+          group: document
+          editorOptions:
+            features:
+              resize: true
+            crop:
+              aspectRatio:
+                enableOriginal: false
+                allowCustom: false
+                locked:
+                  width: 960
+                  height: 640
+    imageSquare:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Почти квадратная фотка'
+        reloadIfChanged: false
+        inspector:
+          group: document
+          editorOptions:
+            features:
+              resize: true
+            crop:
+              aspectRatio:
+                enableOriginal: false
+                allowCustom: false
+                locked:
+                  width: 350
+                  height: 367
