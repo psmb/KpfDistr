@@ -1,6 +1,7 @@
 'Sfi.Site:PageExhibition':
   superTypes:
     'Sfi.Site:AbstractPage': true
+    'Sfi.Site:ImageMixin': true
   ui:
     label: Выставка
 
