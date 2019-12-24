@@ -1,4 +1,7 @@
 prototype(Sfi.Site:Announcement) < prototype(Sfi.Site:News) {
+  date = ${node.properties.date}
+	dateStart = ${node.properties.dateStart}
+	place = ${String.stripTags(node.properties.place)}
   image = Neos.Neos:ImageUri {
     asset = ${node.properties.imageNormal}
     width = 960

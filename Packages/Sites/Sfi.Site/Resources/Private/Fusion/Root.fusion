@@ -13,6 +13,9 @@ prototype(Sfi.Site:Root) < prototype(Neos.Neos:Page) {
 			templatePath = 'resource://Sfi.Site/Private/Partials/SharedResources.html'
 			sectionName = 'headScripts'
 		}
+
+		opengraph = Sfi.Site:Opengraph
+		opengraph.@if.hasImage = ${q(node).is('[instanceof Sfi.Site:ImageMixin]')}
 	}
 	htmlTag.attributes.lang="ru"
 	bodyTag.attributes.class = 'Page'

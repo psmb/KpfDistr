@@ -3,8 +3,22 @@
 
 <f:section name="Main">
   <p class="H1 HeadingWithBottomLine">{neos:contentElement.editable(property: 'title', tag: 'span')}</p>
+  <p class="H4 paddingBottom-single">
+    <f:if condition="{dateStart}">
+      <f:then>
+        <f:format.date forceLocale="{true}" cldrFormat="dd MMMM yyyy">{dateStart}</f:format.date> –
+        <f:format.date forceLocale="{true}" cldrFormat="dd MMMM yyyy">{date}</f:format.date>
+      </f:then>
+      <f:else>
+        <f:format.date forceLocale="{true}" cldrFormat="dd MMMM yyyy">{date}</f:format.date>
+        <f:if condition="{date -> f:format.date(format:'G:i')} != '0:00'">
+          <f:format.date format="G:i">{date}</f:format.date>
+        </f:if>
+      </f:else>
+    </f:if>
+  </p>
+  <p class="H4 paddingBottom-double">{neos:contentElement.editable(property: 'place', tag: 'span')}</p>
   <p class="ParagraphSans paddingBottom-double">{neos:contentElement.editable(property: 'teaser', tag: 'span')}</p>
-  <p class="ParagraphSans paddingBottom-double">{neos:contentElement.editable(property: 'place', tag: 'span')}</p>
   <f:if condition="{image}">
     <img class="Image" src="{image}" alt="{title -> f:format.raw()}" />
   </f:if>

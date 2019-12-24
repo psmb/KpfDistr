@@ -1,0 +1,16 @@
+prototype(Sfi.Site:Opengraph) < prototype(Neos.Fusion:Template) {
+	templatePath = 'resource://Sfi.Site/Private/Templates/Objects/Opengraph.html'
+	title = ${String.stripTags(q(node).property('title'))}
+	description = ${String.stripTags(q(node).property('teaser'))}
+	url = Neos.Neos:NodeUri {
+		node = ${node}
+		absolute = TRUE
+	}
+	image = Neos.Neos:ImageUri {
+		asset = ${q(node).property('imageWide')}
+		width = 1200
+		height = 628
+		allowCropping = TRUE
+    allowUpscaling = TRUE
+	}
+}

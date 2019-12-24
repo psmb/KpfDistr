@@ -3,6 +3,9 @@ prototype(Sfi.Site:NewsTopShort) < prototype(Neos.Fusion:Template) {
 	templatePath = 'resource://Sfi.Site/Private/Templates/NodeTypes/NewsTopShort.html'
 	title = ${String.stripTags(node.properties.title)}
 	teaser = ${String.stripTags(node.properties.teaser)}
+	isAnnouncement = ${node.nodeType.name == 'Sfi.Site:Announcement'}
+	date = ${node.properties.date}
+	dateStart = ${node.properties.dateStart}
 	image = Neos.Neos:ImageUri {
 		asset = ${node.properties.imageWide}
 		maximumWidth>

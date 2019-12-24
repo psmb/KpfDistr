@@ -4,7 +4,24 @@
   <div class="overlay NewsTopShort CoverImage" style="background-image:url({image})">
     <div class="overlay-contents padding-single">
       <h2 class="NewsTopShort-title H0 color-white textShadow medium-10 large-8 marginBottom-single js-Carousel-itemTitle">{title}</h2>
-      <p class="NewsTopShort-teaser H4 color-white textShadow-deep medium-6 large-4">{teaser -> f:format.raw()}</p>
+      <p class="NewsTopShort-teaser H4 color-white textShadow-deep medium-6 large-4">
+        {teaser -> f:format.raw()}
+        <f:if condition="{isAnnouncement} && ({date}||{dateStart})">
+          <br/>
+          <f:if condition="{dateStart}">
+            <f:then>
+              <f:format.date forceLocale="{true}" cldrFormat="dd MMMM">{dateStart}</f:format.date> –
+              <f:format.date forceLocale="{true}" cldrFormat="dd MMMM">{date}</f:format.date>
+            </f:then>
+            <f:else>
+              <f:format.date forceLocale="{true}" cldrFormat="dd MMMM">{date}</f:format.date>
+              <f:if condition="{date -> f:format.date(format:'G:i')} != '0:00'">
+                <f:format.date format="G:i">{date}</f:format.date>
+              </f:if>
+            </f:else>
+          </f:if>
+        </f:if>
+      </p>
     </div>
   </div>
 </neos:link.node>
