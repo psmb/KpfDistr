@@ -1,6 +1,6 @@
 prototype(Sfi.Site:NewsTopList) < prototype(Flowpack.Listable:List) {
 	prototype(Flowpack.Listable:Listable) {
-		@context.limit = 4
+		@context.limit = 3
 		@context.paginationEnabled = ${false}
 		@context.itemRenderer = 'Sfi.Site:NewsTopShort'
 		@context.listClass = 'js-Carousel Carousel'
