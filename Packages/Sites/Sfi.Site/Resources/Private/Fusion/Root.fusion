@@ -1,6 +1,6 @@
-include: OverrideStock.ts2
-include: NodeTypes/**/*.ts2
-include: Objects/**/*.ts2
+include: OverrideStock.fusion
+include: NodeTypes/**/*.fusion
+include: Objects/**/*.fusion
 
 prototype(Sfi.Site:Root) < prototype(Neos.Neos:Page) {
 	head {
