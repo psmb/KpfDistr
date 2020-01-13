@@ -12,7 +12,6 @@
         inline:
           editorOptions:
             formatting:
-              u: false
               sub: false
               sup: false
               p: false
@@ -24,6 +23,7 @@
               a: false
               strong: false
               em: false
+              underline: false
             placeholder: Заголовок
     description:
       type: string
@@ -32,7 +32,6 @@
         inline:
           editorOptions:
             formatting:
-              u: false
               sub: false
               sup: false
               p: false
@@ -44,6 +43,7 @@
               a: false
               strong: false
               em: false
+              underline: false
             placeholder: Описание
     buttonText:
       type: string
@@ -52,7 +52,6 @@
         inline:
           editorOptions:
             formatting:
-              u: false
               sub: false
               sup: false
               p: false
@@ -64,6 +63,7 @@
               a: false
               strong: false
               em: false
+              underline: false
             placeholder: 'Текст на кнопке'
     section:
       type: reference

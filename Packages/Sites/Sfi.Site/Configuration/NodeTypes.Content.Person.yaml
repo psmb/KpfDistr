@@ -12,7 +12,6 @@
         inline:
           editorOptions:
             formatting:
-              u: false
               sub: false
               sup: false
               p: false
@@ -24,6 +23,7 @@
               a: false
               strong: false
               em: false
+              underline: false
             placeholder: Место
     position:
       type: string
@@ -32,7 +32,6 @@
         inline:
           editorOptions:
             formatting:
-              u: false
               sub: false
               sup: false
               p: false
@@ -44,6 +43,7 @@
               a: false
               strong: false
               em: false
+              underline: false
             placeholder: Должность
     image:
       type: Neos\Media\Domain\Model\ImageInterface

@@ -30,7 +30,6 @@
         inline:
           editorOptions:
             formatting:
-              u: false
               sub: false
               sup: false
               p: false
@@ -42,6 +41,7 @@
               a: false
               strong: false
               em: false
+              underline: false
             placeholder: 'Строка дополнительной информации'
     headerDescription:
       type: string
@@ -50,7 +50,6 @@
         inline:
           editorOptions:
             formatting:
-              u: false
               sub: false
               sup: false
               p: false
@@ -62,6 +61,7 @@
               a: false
               strong: false
               em: false
+              underline: false
             placeholder: 'Описание о фонде и центре'
     address:
       type: string
@@ -70,7 +70,6 @@
         inline:
           editorOptions:
             formatting:
-              u: false
               sub: false
               sup: false
               p: false
@@ -82,6 +81,7 @@
               a: false
               strong: false
               em: false
+              underline: false
             placeholder: Адрес
     phone:
       type: string
@@ -90,7 +90,6 @@
         inline:
           editorOptions:
             formatting:
-              u: false
               sub: false
               sup: false
               p: false
@@ -102,6 +101,7 @@
               a: false
               strong: false
               em: false
+              underline: false
             placeholder: Телефон
     email:
       type: string
@@ -110,7 +110,6 @@
         inline:
           editorOptions:
             formatting:
-              u: false
               sub: false
               sup: false
               p: false
@@ -122,6 +121,7 @@
               a: false
               strong: false
               em: false
+              underline: false
             placeholder: e-mail
     contactPersonName:
       type: string
@@ -130,7 +130,6 @@
         inline:
           editorOptions:
             formatting:
-              u: false
               sub: false
               sup: false
               p: false
@@ -142,6 +141,7 @@
               a: false
               strong: false
               em: false
+              underline: false
             placeholder: 'имя контактного лица'
     contactPersonPosition:
       type: string
@@ -150,7 +150,6 @@
         inline:
           editorOptions:
             formatting:
-              u: false
               sub: false
               sup: false
               p: false
@@ -162,6 +161,7 @@
               a: false
               strong: false
               em: false
+              underline: false
             placeholder: 'должность контактного лица'
     contactPersonImage:
       type: Neos\Media\Domain\Model\ImageInterface

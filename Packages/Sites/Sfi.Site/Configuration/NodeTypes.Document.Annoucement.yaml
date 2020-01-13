@@ -13,7 +13,6 @@
         inline:
           editorOptions:
             formatting:
-              u: false
               sub: false
               sup: false
               p: false
@@ -25,6 +24,7 @@
               a: false
               strong: false
               em: false
+              underline: false
             placeholder: Место
     dateStart:
       type: DateTime
