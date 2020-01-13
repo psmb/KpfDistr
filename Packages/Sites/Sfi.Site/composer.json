@@ -8,8 +8,8 @@
         "flownative/aws-s3": "*"
     },
     "autoload": {
-        "psr-0": {
-            "Sfi\\Site": "Classes"
+        "psr-4": {
+            "Sfi\\Site\\": "Classes"
         }
     },
     "extra": {

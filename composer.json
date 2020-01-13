@@ -12,7 +12,6 @@
         "neos/seo": "^2.0",
         "sfi/grid": "^2.0",
         "sfi/youtube": "^2.1",
-        "flowpack/listable": "^2.0",
         "flowpack/cachebuster": "^1.0",
         "psmb/carousel": "@dev",
         "yeebase/graylog": "^3.1",

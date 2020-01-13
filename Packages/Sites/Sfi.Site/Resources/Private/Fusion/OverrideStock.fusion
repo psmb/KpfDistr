@@ -27,3 +27,5 @@ prototype(Sfi.YouTube:YouTube).@process.caption.@if.isset = ${node.properties.ca
 prototype(Neos.NodeTypes:Text) {
 	text.@process.replaceTerms = Psmb.Term:ReplaceTerms
 }
+
+root.documentType>

@@ -1,8 +1,12 @@
 /Build/
 /Configuration/
 /Data/
-/Packages/*
-!/Packages/Sites/
+/Packages/Application/*
+!/Packages/Application/Flowpack.Listable/
+/Packages/Framework/
+/Packages/Libraries/
+/Packages/Plugins/
+/Packages/Yeebase/
 /Web/_Resources/
 /Web/index.php
 /Web/.htaccess
