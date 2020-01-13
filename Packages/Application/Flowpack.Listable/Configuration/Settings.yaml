@@ -1,0 +1,10 @@
+Neos:
+  Neos:
+    userInterface:
+      translation:
+        autoInclude:
+          Flowpack.Listable:
+            - 'NodeTypes/*'
+    fusion:
+      autoInclude:
+        Flowpack.Listable: true
