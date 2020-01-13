@@ -13,7 +13,7 @@ prototype(Sfi.Site:Testimony) < prototype(Neos.Fusion:Tag) {
             tagName = 'img'
             attributes.title = 'Читать отзыв'
             attributes.style = 'padding: 0 48px'
-            attributes.src = ImageUri {
+            attributes.src = Neos.Neos:ImageUri {
                 asset = ${node.properties.image}
                 maximumWidth>
                 width = 256
@@ -24,18 +24,18 @@ prototype(Sfi.Site:Testimony) < prototype(Neos.Fusion:Tag) {
         title = Neos.Fusion:Tag {
             attributes.class = 'HDecor paddingTop-single paddingBottom-half'
             content = ${q(node).property('title')}
-            @process.contentElementEditable = ContentElementEditable {
+            @process.contentElementEditable = Neos.Neos:ContentElementEditable {
                 property = 'title'
             }
         }
         description = Neos.Fusion:Tag {
             attributes.class = 'H4'
             content = ${q(node).property('description')}
-            @process.contentElementEditable = ContentElementEditable {
+            @process.contentElementEditable = Neos.Neos:ContentElementEditable {
                 property = 'description'
             }
         }
         download = ${'<div class="color-primary H4 marginTop-half">Читать отзыв</div>'}
     }
-    @process.contentElementWrapping = ContentElementWrapping
+    @process.contentElementWrapping = Neos.Neos:ContentElementWrapping
 }

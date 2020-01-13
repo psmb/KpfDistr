@@ -4,7 +4,7 @@ prototype(Sfi.Site:PresentationalBlock) < prototype(Neos.Fusion:Array) {
     @context.sectionNode = ${node.properties.section}
     block = Neos.Fusion:Tag {
         attributes.class = 'paddingTop-triple paddingBottom-double paddingHorizontal-double PresentationalBlock-mainBlock'
-        attributes.style = ImageUri {
+        attributes.style = Neos.Neos:ImageUri {
             @process.tmpl = ${'overflow: auto; background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.35)), url(' + value + '); background-size: cover; background-position: top center;'}
             asset = ${node.properties.image}
             width = 960
@@ -17,18 +17,18 @@ prototype(Sfi.Site:PresentationalBlock) < prototype(Neos.Fusion:Array) {
             description = Neos.Fusion:Tag {
                 attributes.class = 'H4 color-white textShadow-deep marginTop-single marginBottom-double large-8'
                 content = ${q(node).property('description')}
-                @process.contentElementEditable = ContentElementEditable {
+                @process.contentElementEditable = Neos.Neos:ContentElementEditable {
                     property = 'description'
                 }
             }
             button = Neos.Fusion:Tag {
                 tagName = 'a'
                 attributes.class = 'H4 Button color-white'
-                attributes.href = NodeUri {
+                attributes.href = Neos.Neos:NodeUri {
                     node = ${sectionNode}
                 }
                 content = ${q(node).property('buttonText')}
-                @process.contentElementEditable = ContentElementEditable {
+                @process.contentElementEditable = Neos.Neos:ContentElementEditable {
                     property = 'buttonText'
                 }
             }
@@ -56,5 +56,5 @@ prototype(Sfi.Site:PresentationalBlock) < prototype(Neos.Fusion:Array) {
         }
     }
 
-    @process.contentElementWrapping = ContentElementWrapping
+    @process.contentElementWrapping = Neos.Neos:ContentElementWrapping
 }

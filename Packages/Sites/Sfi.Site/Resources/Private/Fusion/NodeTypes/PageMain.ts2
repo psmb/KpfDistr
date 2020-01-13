@@ -3,13 +3,13 @@ prototype(Sfi.Site:PageMain) {
 	layoutRootPath = 'resource://Sfi.Site/Private/Layouts'
 
 	newsTopList = Sfi.Site:NewsTopList
-	main = ContentCollection {
+	main = Neos.Neos:ContentCollection {
 		nodePath = 'main'
 	}
-	sidebar = ContentCollection {
+	sidebar = Neos.Neos:ContentCollection {
 		nodePath = 'sidebar'
 	}
-	bottom = ContentCollection {
+	bottom = Neos.Neos:ContentCollection {
 		nodePath = 'bottom'
 	}
 	videos = Neos.Fusion:Collection {

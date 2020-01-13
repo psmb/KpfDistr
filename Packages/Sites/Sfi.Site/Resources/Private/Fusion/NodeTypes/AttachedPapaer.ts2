@@ -12,14 +12,14 @@ prototype(Sfi.Site:AttachedPaper) < prototype(Neos.Fusion:Tag) {
         title = Neos.Fusion:Tag {
             attributes.class = 'H4 marginVertical-single'
             content = ${q(node).property('title')}
-            @process.contentElementEditable = ContentElementEditable {
+            @process.contentElementEditable = Neos.Neos:ContentElementEditable {
                 property = 'title'
             }
         }
         image = Neos.Fusion:Tag {
             tagName = 'img'
             attributes.class = 'border'
-            attributes.src = ImageUri {
+            attributes.src = Neos.Neos:ImageUri {
                 asset = ${node.properties.image}
                 maximumWidth>
                 width = 200
@@ -29,5 +29,5 @@ prototype(Sfi.Site:AttachedPaper) < prototype(Neos.Fusion:Tag) {
         }
     }
 
-    @process.contentElementWrapping = ContentElementWrapping
+    @process.contentElementWrapping = Neos.Neos:ContentElementWrapping
 }
