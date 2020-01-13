@@ -11,7 +11,7 @@ use Neos\Flow\Mvc\Routing\UriBuilder;
  * Testcase for the TypoScript View
  *
  */
-abstract class AbstractTypoScriptObjectTest extends \Neos\Flow\Tests\FunctionalTestCase
+abstract class AbstractFusionObjectTest extends \Neos\Flow\Tests\FunctionalTestCase
 {
     /**
      * @var ControllerContext

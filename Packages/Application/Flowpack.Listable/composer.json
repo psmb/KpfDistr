@@ -82,7 +82,8 @@
             "TYPO3.Neos.NodeTypes-201309111655",
             "Neos.NodeTypes-20161125002300",
             "Neos.NodeTypes-20161125104800",
-            "Neos.Neos-20170115114620"
+            "Neos.Neos-20170115114620",
+            "Neos.Fusion-20170120013047"
         ]
     }
 }

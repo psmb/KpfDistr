@@ -2,12 +2,12 @@
 namespace Flowpack\Listable\Tests\Functional\TypoScriptObjects;
 
 use Neos\ContentRepository\Domain\Model\NodeInterface;
-use Flowpack\Listable\Tests\Functional\TypoScriptObjects\AbstractTypoScriptObjectTest;
+use Flowpack\Listable\Tests\Functional\TypoScriptObjects\AbstractFusionObjectTest;
 
 /**
  * Testcase for the Listable object
  */
-class ListableTest extends AbstractTypoScriptObjectTest
+class ListableTest extends AbstractFusionObjectTest
 {
     /**
      * @test
