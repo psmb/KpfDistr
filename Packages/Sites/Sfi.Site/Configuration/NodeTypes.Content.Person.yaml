@@ -1,3 +1,4 @@
+
 'Sfi.Site:Person':
   superTypes:
     'Neos.Neos:Content': true
@@ -8,56 +9,42 @@
       type: string
       ui:
         inlineEditable: true
-        aloha:
-          placeholder: Место
-          format:
-            b: false
-            i: false
-            u: false
-            sub: false
-            sup: false
-            p: false
-            h1: false
-            h2: false
-            h3: false
-            pre: false
-            removeFormat: false
-          table: {  }
-          list: {  }
-          link:
-            a: false
-          alignment: {  }
-          formatlesspaste:
-            button: false
-            formatlessPasteOption: true
-            autoparagraph: true
+        inline:
+          editorOptions:
+            formatting:
+              u: false
+              sub: false
+              sup: false
+              p: false
+              h1: false
+              h2: false
+              h3: false
+              pre: false
+              removeFormat: false
+              a: false
+              strong: false
+              em: false
+            placeholder: Место
     position:
       type: string
       ui:
         inlineEditable: true
-        aloha:
-          placeholder: Должность
-          format:
-            b: false
-            i: false
-            u: false
-            sub: false
-            sup: false
-            p: false
-            h1: false
-            h2: false
-            h3: false
-            pre: false
-            removeFormat: false
-          table: {  }
-          list: {  }
-          link:
-            a: false
-          alignment: {  }
-          formatlesspaste:
-            button: false
-            formatlessPasteOption: true
-            autoparagraph: true
+        inline:
+          editorOptions:
+            formatting:
+              u: false
+              sub: false
+              sup: false
+              p: false
+              h1: false
+              h2: false
+              h3: false
+              pre: false
+              removeFormat: false
+              a: false
+              strong: false
+              em: false
+            placeholder: Должность
     image:
       type: Neos\Media\Domain\Model\ImageInterface
       ui:

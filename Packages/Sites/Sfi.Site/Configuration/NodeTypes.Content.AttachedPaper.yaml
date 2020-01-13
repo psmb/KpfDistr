@@ -1,3 +1,4 @@
+
 'Sfi.Site:AttachedPaper':
   superTypes:
     'Neos.Neos:Content': true
@@ -8,8 +9,9 @@
       type: string
       ui:
         inlineEditable: true
-        aloha:
-          placeholder: 'Название документа'
+        inline:
+          editorOptions:
+            placeholder: 'Название документа'
     image:
       type: Neos\Media\Domain\Model\ImageInterface
       ui:
