@@ -1,10 +1,8 @@
 {namespace neos=Neos\Neos\ViewHelpers}
-{namespace opsdev=OpsDev\CacheBreaker\ViewHelpers}
 
 <head>
 	<f:section name="stylesheets">
-		<link rel="stylesheet" href="{opsdev:resource(path: 'built/index.css', package: 'Sfi.Site')}" />
-		<link rel="stylesheet" href="{f:uri.resource(path: 'built/index.css', package: 'Sfi.Site')}?{f:format.date(date:'now',format:'U')}" />
+		<link rel="stylesheet" href="{f:uri.resource(path: 'built/index.css', package: 'Sfi.Site')}" />
 	</f:section>
 	<f:section name="headScripts">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />

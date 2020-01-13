@@ -1,15 +1,11 @@
 {
     "name": "sfi/site",
-    "type": "typo3-flow-site",
+    "type": "neos-site",
     "description": "Website package. See distribution for more info.",
     "require": {
         "neos/neos": "*",
-        "opsdev/cache-breaker": "*",
         "sfi/youtube": "*",
         "flownative/aws-s3": "*"
-    },
-    "suggest": {
-        "typo3/neos-seo": "*"
     },
     "autoload": {
         "psr-0": {
