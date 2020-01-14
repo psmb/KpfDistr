@@ -1,6 +1,6 @@
-include: OverrideStock.ts2
-include: NodeTypes/**/*.ts2
-include: Objects/**/*.ts2
+include: OverrideStock.fusion
+include: NodeTypes/**/*.fusion
+include: Objects/**/*.fusion
 
 prototype(Sfi.Site:Root) < prototype(Neos.Neos:Page) {
 	head {
@@ -36,7 +36,7 @@ prototype(Sfi.Site:Root) < prototype(Neos.Neos:Page) {
 					active = 'isActive'
 					active.@if.active = ${documentNode == node || q(documentNode).parents('[_identifier = "' + node.identifier + '"]').count() > 0}
 				}
-				attributes.href = NodeUri {
+				attributes.href = Neos.Neos:NodeUri {
 					node = ${node}
 				}
 				content = ${node.properties.navTitle || node.properties.title}
@@ -46,7 +46,7 @@ prototype(Sfi.Site:Root) < prototype(Neos.Neos:Page) {
 			@if.notMain = ${documentNode != site}
 		}
 
-		main = PrimaryContent {
+		main = Neos.Neos:PrimaryContent {
 			videosArchive {
 				condition = ${request.arguments.videos}
 				type = 'Sfi.Site:VideosArchive'

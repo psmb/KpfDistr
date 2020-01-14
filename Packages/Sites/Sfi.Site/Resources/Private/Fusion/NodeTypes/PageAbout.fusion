@@ -6,5 +6,5 @@ prototype(Sfi.Site:PageAbout) {
 		nodePath = 'main'
 	}
 
-	@process.contentElementWrapping = ContentElementWrapping
+	@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
 }

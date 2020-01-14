@@ -1,15 +1,17 @@
 {
-    "name": "sfi/site",
-    "type": "neos-site",
-    "description": "Website package. See distribution for more info.",
+    "name": "flowpack/listable",
+    "replace": {
+        "sfi/listable": "v0.1"
+    },
+    "type": "neos-flow-package",
+    "description": "Tiny extension for listing things",
+    "license": "MIT",
     "require": {
-        "neos/neos": "*",
-        "sfi/youtube": "*",
-        "flownative/aws-s3": "*"
+        "neos/neos": "*"
     },
     "autoload": {
         "psr-4": {
-            "Sfi\\Site\\": "Classes"
+            "Flowpack\\Listable\\": "Classes"
         }
     },
     "extra": {
@@ -25,7 +27,6 @@
             "TYPO3.TypoScript-130516234520",
             "TYPO3.TypoScript-130516235550",
             "TYPO3.TYPO3CR-130523180140",
-            "TYPO3.Neos.NodeTypes-201309111655",
             "TYPO3.Flow-201310031523",
             "TYPO3.Flow-201405111147",
             "TYPO3.Neos-201407061038",
@@ -52,17 +53,19 @@
             "Neos.Flow-20161124224015",
             "Neos.Party-20161124225257",
             "Neos.Eel-20161124230101",
+            "Neos.Kickstart-20161124230102",
             "Neos.Setup-20161124230842",
             "Neos.Imagine-20161124231742",
             "Neos.Media-20161124233100",
-            "Neos.NodeTypes-20161125002300",
+            "Neos.SiteKickstarter-20161125002311",
             "Neos.Neos-20161125002322",
             "Neos.ContentRepository-20161125012000",
             "Neos.Fusion-20161125013710",
             "Neos.Setup-20161125014759",
+            "Neos.SiteKickstarter-20161125095901",
             "Neos.Fusion-20161125104701",
-            "Neos.NodeTypes-20161125104800",
             "Neos.Neos-20161125104802",
+            "Neos.Kickstarter-20161125110814",
             "Neos.Neos-20161125122412",
             "Neos.Flow-20161125124112",
             "TYPO3.FluidAdaptor-20161130112935",
@@ -76,6 +79,9 @@
             "Neos.Neos-20161219122512",
             "Neos.Fusion-20161219130100",
             "Neos.Neos-20161220163741",
+            "TYPO3.Neos.NodeTypes-201309111655",
+            "Neos.NodeTypes-20161125002300",
+            "Neos.NodeTypes-20161125104800",
             "Neos.Neos-20170115114620",
             "Neos.Fusion-20170120013047",
             "Neos.Flow-20170125103800",

@@ -1,21 +1,24 @@
+
 'Sfi.Site:Testimony':
   superTypes:
     'Neos.Neos:Content': true
   ui:
-    label: 'Отзыв'
+    label: Отзыв
   properties:
     title:
       type: string
       ui:
         inlineEditable: true
-        aloha:
-          placeholder: 'Название организации'
+        inline:
+          editorOptions:
+            placeholder: 'Название организации'
     description:
       type: string
       ui:
         inlineEditable: true
-        aloha:
-          placeholder: 'Описание документа'
+        inline:
+          editorOptions:
+            placeholder: 'Описание документа'
     image:
       type: Neos\Media\Domain\Model\ImageInterface
       ui:

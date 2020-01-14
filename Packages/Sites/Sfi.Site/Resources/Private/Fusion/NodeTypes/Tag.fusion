@@ -4,7 +4,7 @@ prototype(Sfi.Site:Tag) {
 	main = Neos.Neos:ContentCollection{
 		nodePath = 'main'
 	}
-	tagsEditable = ContentElementEditable {
+	tagsEditable = Neos.Neos:ContentElementEditable {
 		property = 'tags'
 	}
 	newsList = Neos.Fusion:Collection {
