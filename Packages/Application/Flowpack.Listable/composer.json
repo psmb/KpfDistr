@@ -3,15 +3,15 @@
     "replace": {
         "sfi/listable": "v0.1"
     },
-    "type": "typo3-flow-package",
+    "type": "neos-flow-package",
     "description": "Tiny extension for listing things",
     "license": "MIT",
     "require": {
-        "typo3/neos": "*"
+        "neos/neos": "*"
     },
     "autoload": {
-        "psr-0": {
-            "Flowpack\\Listable": "Classes"
+        "psr-4": {
+            "Flowpack\\Listable\\": "Classes"
         }
     },
     "extra": {

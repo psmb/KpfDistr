@@ -11,7 +11,7 @@
         "neos/nodetypes": "~4.3.0",
         "neos/seo": "^2.0",
         "sfi/grid": "^2.0",
-        "sfi/youtube": "^2.1",
+        "sfi/youtube": "^2.2",
         "flowpack/cachebuster": "^1.0",
         "psmb/carousel": "@dev",
         "yeebase/graylog": "^3.1",
