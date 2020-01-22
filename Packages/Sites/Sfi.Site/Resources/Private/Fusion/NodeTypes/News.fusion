@@ -19,8 +19,6 @@ prototype(Sfi.Site:News) {
 		asset = ${node.properties.imageNormal}
 		maximumWidth>
 		width = 960
-		height = 640
-		allowCropping = TRUE
 		allowUpScaling = TRUE
 	}
 
