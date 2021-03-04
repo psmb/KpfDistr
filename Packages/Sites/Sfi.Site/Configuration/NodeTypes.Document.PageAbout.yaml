@@ -3,5 +3,6 @@
     'Sfi.Site:AbstractPage': true
     'Sfi.Site:HasCover': true
     'Sfi.Site:Constraint.TopLevel': true
+    'Sfi.Site:ImageMixin': true
   ui:
     label: 'О проекте'
