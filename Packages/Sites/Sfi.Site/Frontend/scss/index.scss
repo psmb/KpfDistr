@@ -1,6 +1,6 @@
 $grid-column-gutter: (
-  small: 12px,
-  medium: 24px,
+    small: 12px,
+    medium: 24px,
 );
 
 @import "../node_modules/foundation-sites/scss/foundation";
@@ -10,12 +10,12 @@ $grid-column-gutter: (
 @import "overrideVendor";
 
 @include foundation-flex-grid;
-@include foundation-flex-video;
+// @include foundation-flex-video;
 @include foundation-visibility-classes;
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: $gray-dark;
-  background-image: url('../images/bg_grey.png');
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: $gray-dark;
+    background-image: url("../images/bg_grey.png");
 }

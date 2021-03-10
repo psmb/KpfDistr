@@ -1,27 +1,40 @@
 .RteText {
-  a {
-      color: $blue;
-  }
-  a:hover {
-      text-decoration: underline;
-  }
-  p {
-    @extend .ParagraphSerif;
-    margin-bottom: $u;
-  }
-  h1 {
-    @extend .H1;
-    margin-top: 3*$u;
-    margin-bottom: $u;
-  }
-  h2 {
-    @extend .H2;
-    margin-top: $u;
-    margin-bottom: $u;
-  }
-  h3 {
-    @extend .H25;
-    margin-top: $u;
-    margin-bottom: $u;
-  }
+    a {
+        color: $blue;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    p {
+        @extend .ParagraphSerif;
+        margin-bottom: $u;
+    }
+    h1 {
+        @extend .H1;
+        margin-top: 3 * $u;
+        margin-bottom: $u;
+    }
+    h2 {
+        @extend .H2;
+        margin-top: $u;
+        margin-bottom: $u;
+    }
+    h3 {
+        @extend .H25;
+        margin-top: $u;
+        margin-bottom: $u;
+    }
+    ul {
+        list-style-type: disc;
+        padding-left: 25px;
+        margin-bottom: $u;
+    }
+    ol {
+        list-style-type: decimal;
+        padding-left: 25px;
+        margin-bottom: $u;
+    }
+    li {
+        @extend .ParagraphSerif;
+    }
 }
