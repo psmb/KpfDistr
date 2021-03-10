@@ -1,23 +1,25 @@
 <div class="contentPadding">
-  <f:if condition="{showCallout}">
-    <f:render partial="Callout" arguments="{_all}"/>
-  </f:if>
+    <f:if condition="{showCallout}">
+        <f:render partial="Callout" arguments="{_all}" />
+    </f:if>
 </div>
 
 <footer class="Footer contentPadding">
-  <div class="Footer-top">
-		<div class="Sign Footer-sign">
-			<p class="Sign-title">Преображение</p>
-			<p class="Sign-subTitle">Культурно-просветительский фонд</p>
-		</div>
-    <div class="Footer-contacts">
-      <p class="H4s marginBottom-single">{address}</p>
-      <p class="H4s marginBottom-single">{phone}</p>
-      <p class="H4s marginBottom-single"><a href="mailto:{email}">{email}</a></p>
+    <div class="Footer-top">
+        <div class="Sign Footer-sign">
+            <p class="Sign-title">Преображение</p>
+            <p class="Sign-subTitle">Культурно-просветительский центр</p>
+        </div>
+        <div class="Footer-contacts">
+            <p class="H4s marginBottom-single">{address}</p>
+            <p class="H4s marginBottom-single">{phone}</p>
+            <p class="H4s marginBottom-single">
+                <a href="mailto:{email}">{email}</a>
+            </p>
+        </div>
     </div>
-  </div>
-  <div class="Footer-copyright">
-    <p class="H3s">Культурно-просветительский фонд “Преображение”</p>
-    <p class="H3s">Все права защищены</p>
-  </div>
+    <div class="Footer-copyright">
+        <p class="H3s">Культурно-просветительский фонд “Преображение”</p>
+        <p class="H3s">Все права защищены</p>
+    </div>
 </footer>
