@@ -8,9 +8,6 @@ Neos:
       defaultLocale: ru
     http:
       baseUri: 'https://kp-f.ru/'
-    error:
-      exceptionHandler:
-        className: 'Yeebase\Graylog\Error\GraylogExceptionHandler'
     resource:
       collections:
         persistent:
