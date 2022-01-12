@@ -16,7 +16,7 @@ services:
       - "neos"
     volumes:
       - /data/www-provisioned/Web/_Resources
-    image: dimaip/kpfdistr:latest
+    image: ghcr.io/psmb/kpfdistr:master
     hostname: kpfru
     networks:
       - default
