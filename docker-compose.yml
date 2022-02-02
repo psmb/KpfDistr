@@ -17,6 +17,11 @@ services:
     restart: always
     labels:
       - "neos"
+      - "traefik.enable=true"
+      - "traefik.port=80"
+      - "traefik.default.protocol=http"
+      - "traefik.docker.network=main"
+      - "traefik.frontend.rule=Host:kp-f.ru,dev.kp-f.ru,www.kp-f.ru"
     volumes:
       - /data/www-provisioned/Web/_Resources
     image: ghcr.io/psmb/kpfdistr:master
@@ -27,15 +32,6 @@ services:
     environment:
       - AWS_ACCESS_KEY_ID
       - AWS_SECRET_ACCESS_KEY
-    deploy:
-      update_config:
-        order: start-first
-      labels:
-        - "traefik.enable=true"
-        - "traefik.port=80"
-        - "traefik.default.protocol=http"
-        - "traefik.docker.network=main"
-        - "traefik.frontend.rule=Host:kp-f.ru,dev.kp-f.ru,www.kp-f.ru"
     ports:
       - '80'
     depends_on:
