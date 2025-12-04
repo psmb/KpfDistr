@@ -103,3 +103,10 @@
 	margin-top: 2*$u;
 	margin-bottom: 2*$u;
 }
+
+.Link {
+	color: $blue;
+}
+.Link:hover {
+	text-decoration: underline;
+}
