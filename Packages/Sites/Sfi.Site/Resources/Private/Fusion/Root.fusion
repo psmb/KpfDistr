@@ -93,6 +93,8 @@ prototype(Sfi.Site:Root) < prototype(Neos.Neos:Page) {
 		contactPersonName = ${q(site).property('contactPersonName')}
 		contactPersonPosition = ${q(site).property('contactPersonPosition')}
 		contactPersonImage = ${q(site).property('contactPersonImage')}
+
+		cookieBanner = Sfi.Site:CookieBanner
 	}
 }
 
